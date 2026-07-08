@@ -26,6 +26,9 @@ const telHref = person.contact.phone.replace(/\s+/g, '');
         <a href={person.contact.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-brand">
           LinkedIn
         </a>
+        <a href={person.contact.github} target="_blank" rel="noopener noreferrer" class="hover:text-brand">
+          GitHub
+        </a>
       </div>
       <nav aria-label="Footer navigation" class="flex flex-col gap-1 text-sm text-ink-soft">
         <a href={`${prefix}/experience`} class="hover:text-brand">{strings.nav.experience}</a>

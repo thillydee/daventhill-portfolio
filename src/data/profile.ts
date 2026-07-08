@@ -2,6 +2,7 @@ export interface Contact {
   email: string;
   phone: string;
   linkedin: string;
+  github: string;
 }
 
 export interface Person {
@@ -75,6 +76,7 @@ const profile: Profile = {
       email: 'daventhill@gmail.com',
       phone: '+41 79 586 90 72',
       linkedin: 'https://linkedin.com/in/daventhill',
+      github: 'https://github.com/thillydee',
     },
     nationality:
       'Luxembourg (EU), Swiss C permit, fully authorized to work in Switzerland',
