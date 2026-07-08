@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  path: string;
+  ogImageSlug: string;
+  type?: 'website' | 'article';
+}
+
+const { title, description, path, ogImageSlug, type = 'website' } = Astro.props;
+
+const siteName = 'Daven Thill — Product Owner Basel';
+const fullTitle = `${title} | Daven Thill`;
+const canonicalURL = new URL(path, Astro.site);
+const ogImageURL = new URL(`/og/${ogImageSlug}.png`, Astro.site);
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:site_name" content={siteName} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={ogImageURL} />
+<meta property="og:locale" content="en_CH" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageURL} />
+
+<meta name="theme-color" content="#0f172a" />

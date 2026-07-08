@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import profile from '../data/profile';
+
+const { person, skills, leadershipApproach, languages } = profile;
+
+const skillGroups = [
+  { label: 'Product & Agile', items: skills.productAndAgile },
+  { label: 'Data & AI', items: skills.dataAndAi },
+  { label: 'E-commerce', items: skills.ecommerce },
+  { label: 'Tools', items: skills.tools },
+];
+
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Skills', path: '/skills' },
+];
+---
+
+<BaseLayout
+  title="Skills"
+  description="Product, agile, data and AI skills of Daven Thill, a data-driven Product Owner based in Basel, Switzerland."
+  path="/skills"
+  ogImageSlug="skills"
+  breadcrumbs={breadcrumbs}
+>
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{person.location}</p>
+    <h1 class="mt-2 text-4xl font-bold tracking-tight text-ink sm:text-5xl">Skills & approach</h1>
+    <p class="mt-6 max-w-3xl text-base leading-relaxed text-ink-soft">{leadershipApproach}</p>
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-2">
+      {skillGroups.map((group) => (
+        <div class="rounded-xl border border-border bg-surface p-6">
+          <h2 class="text-sm font-semibold uppercase tracking-wide text-brand">{group.label}</h2>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {group.items.map((item) => (
+              <li class="rounded-full border border-border bg-surface-alt px-3 py-1 text-sm text-ink-soft">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold text-ink sm:text-3xl">Languages</h2>
+      <ul class="mt-6 flex flex-wrap gap-3">
+        {languages.map((lang) => (
+          <li class="rounded-full border border-border bg-surface px-4 py-2 text-sm text-ink-soft">
+            <span class="font-semibold text-ink">{lang.language}</span> · {lang.level}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

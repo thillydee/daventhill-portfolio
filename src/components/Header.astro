@@ -1,0 +1,67 @@
+---
+const navItems = [
+  { label: 'Experience', href: '/experience' },
+  { label: 'Case Studies', href: '/case-studies' },
+  { label: 'Skills', href: '/skills' },
+];
+
+const currentPath = Astro.url.pathname;
+
+const linkClass = (href: string) =>
+  currentPath.startsWith(href) ? 'text-brand' : 'text-ink-soft hover:text-ink';
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6">
+    <input type="checkbox" id="nav-toggle" class="peer hidden" />
+
+    <div class="flex items-center justify-between py-4">
+      <a href="/" class="text-lg font-semibold tracking-tight text-ink">
+        Daven Thill
+      </a>
+
+      <nav aria-label="Main navigation" class="hidden items-center gap-6 sm:flex">
+        {navItems.map((item) => (
+          <a href={item.href} class:list={['text-sm font-medium', linkClass(item.href)]}>
+            {item.label}
+          </a>
+        ))}
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+        >
+          Let's talk
+        </a>
+      </nav>
+
+      <label
+        for="nav-toggle"
+        class="cursor-pointer p-2 text-ink sm:hidden"
+        aria-label="Toggle navigation menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </label>
+    </div>
+
+    <nav
+      aria-label="Mobile navigation"
+      class="hidden flex-col items-start gap-1 border-t border-border py-4 peer-checked:flex sm:hidden"
+    >
+      {navItems.map((item) => (
+        <a href={item.href} class:list={['w-full py-2 text-sm font-medium', linkClass(item.href)]}>
+          {item.label}
+        </a>
+      ))}
+      <a
+        href="/contact"
+        class="mt-2 inline-flex w-full items-center justify-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+      >
+        Let's talk
+      </a>
+    </nav>
+  </div>
+</header>

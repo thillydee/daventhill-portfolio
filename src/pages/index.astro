@@ -1,17 +1,133 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import profile from '../data/profile';
 
+const { person, experience, caseStudies } = profile;
+const currentRole = experience[0];
+
+const faq = [
+  {
+    question: 'What does a Product Owner in Basel do?',
+    answer:
+      'A Product Owner in Basel typically owns the roadmap and backlog for a digital product, working across business, UX, and IT to turn requirements into shipped features. In B2B and industrial contexts, like Basel\'s life sciences and industrial technology cluster, that also means grounding decisions in real data rather than assumptions.',
+  },
+  {
+    question: 'Why work with Daven Thill?',
+    answer: person.bioShort,
+  },
+  {
+    question: 'Does Daven Thill work with AI-powered product features?',
+    answer:
+      'Yes. At Endress+Hauser he has initiated and led AI and data driven features including a sales-data-based cross-selling engine, a relevance ranking model for product listings, and a PIM data migration designed with AI consumption in mind.',
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title={`${person.name} — ${person.currentTitle}`}
+  description={person.positioningLine}
+  path="/"
+  ogImageSlug="index"
+  faq={faq}
+>
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">
+      {person.location}
+    </p>
+    <h1 class="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      {person.name} — {person.currentTitle} in Basel
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-ink-soft">
+      {person.positioningLine}
+    </p>
+    <p class="mt-4 max-w-2xl text-base leading-relaxed text-muted">
+      {person.bioShort}
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="/case-studies"
+        class="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+      >
+        View case studies
+      </a>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+      >
+        Get in touch
+      </a>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">Current role</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">
+        {currentRole.title} at {currentRole.company}
+      </h2>
+      <p class="mt-2 text-sm text-muted">{currentRole.dates} · {currentRole.location}</p>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
+        {currentRole.summary}
+      </p>
+      <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+        {currentRole.highlights.slice(0, 4).map((highlight) => (
+          <li class="flex gap-3 rounded-lg border border-border bg-surface p-4 text-sm text-ink-soft">
+            <span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+            <span>{highlight}</span>
+          </li>
+        ))}
+      </ul>
+      <a href="/experience" class="mt-6 inline-block text-sm font-semibold text-brand hover:text-brand-dark">
+        See full experience →
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">Case studies</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">Data and AI driven product work</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      {caseStudies.map((caseStudy) => (
+        <a
+          href={`/case-studies/${caseStudy.slug}`}
+          class="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-brand"
+        >
+          <h3 class="text-lg font-semibold text-ink group-hover:text-brand">
+            {caseStudy.title}
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{caseStudy.summary}</p>
+          <span class="mt-4 inline-block text-sm font-semibold text-brand">Read case study →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">FAQ</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">Common questions</h2>
+      <dl class="mt-8 space-y-6">
+        {faq.map((item) => (
+          <div>
+            <dt class="text-base font-semibold text-ink">{item.question}</dt>
+            <dd class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{item.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6">
+    <h2 class="text-2xl font-bold text-ink sm:text-3xl">Let's talk about your product</h2>
+    <p class="mx-auto mt-3 max-w-xl text-base text-muted">
+      Based in Basel and open to Product Owner roles and projects across Basel-Landschaft and
+      Switzerland.
+    </p>
+    <a
+      href="/contact"
+      class="mt-6 inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+    >
+      Contact Daven
+    </a>
+  </section>
+</BaseLayout>
