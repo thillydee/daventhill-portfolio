@@ -40,7 +40,7 @@ export const strings = {
       faqHeading: 'Common questions',
       ctaHeading: "Let's talk about your product",
       ctaText:
-        'Based in Basel and open to Product Owner roles and projects across Basel-Landschaft and Switzerland.',
+        'Based in Basel and open to both full-time Product Owner roles and freelance or interim engagements across Basel-Landschaft and Switzerland.',
       ctaButton: 'Contact Daven',
     },
     experience: {
@@ -86,7 +86,7 @@ export const strings = {
       heading: 'Get in touch',
       description: 'Get in touch with Daven Thill, Product Owner based in Basel, Switzerland.',
       intro:
-        'Open to Product Owner roles and projects in Basel, Basel-Landschaft, and across Switzerland. Send a message below or reach out directly.',
+        'Open to full-time Product Owner roles as well as freelance and interim engagements in Basel, Basel-Landschaft, and across Switzerland. Send a message below or reach out directly.',
       form: {
         name: 'Name',
         email: 'Email',
@@ -194,7 +194,7 @@ export const strings = {
       faqHeading: 'Häufige Fragen',
       ctaHeading: 'Lassen Sie uns über Ihr Produkt sprechen',
       ctaText:
-        'Ansässig in Basel und offen für Product-Owner-Rollen und Projekte in Basel-Landschaft und der gesamten Schweiz.',
+        'Ansässig in Basel und offen für Festanstellungen als Product Owner sowie freiberufliche und befristete Mandate in Basel-Landschaft und der gesamten Schweiz.',
       ctaButton: 'Daven kontaktieren',
     },
     experience: {
@@ -240,7 +240,7 @@ export const strings = {
       heading: 'Kontakt aufnehmen',
       description: 'Nehmen Sie Kontakt mit Daven Thill auf, Product Owner mit Sitz in Basel.',
       intro:
-        'Offen für Product-Owner-Rollen und Projekte in Basel, Basel-Landschaft und der gesamten Schweiz. Senden Sie unten eine Nachricht oder melden Sie sich direkt.',
+        'Offen für Festanstellungen als Product Owner sowie freiberufliche und befristete Mandate in Basel, Basel-Landschaft und der gesamten Schweiz. Senden Sie unten eine Nachricht oder melden Sie sich direkt.',
       form: {
         name: 'Name',
         email: 'E-Mail',
