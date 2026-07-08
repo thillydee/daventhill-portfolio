@@ -42,6 +42,7 @@ const profileDe: Profile = {
         'Führte eine relevanzbasierte Sortierfunktion für die Produktliste ein, die auf einem Berechnungsmodell basiert, das Produktlebenszyklus-Phase und interne Geschäftsanforderungen wie Lagerverfügbarkeit berücksichtigt.',
         'Konzipierte und lancierte ein MVP-Feature inklusive unterstützendem Datenmanagement-Prozess, um marktspezifische Lagerverfügbarkeit auf der Website anzuzeigen, einschliesslich verfügbarer Konfigurationsvarianten.',
         'Baute ein interdisziplinäres Squad aus zwei Business Ownern, UX und IT auf und leitet es seit rund vier Jahren, wobei agile Arbeitsweisen (Scrum und Kanban) fest verankert wurden.',
+        'Verantwortet Aufbau und Koordination der Abnahmetests (User Acceptance Testing) auf Business-Seite, definiert Use Cases und Abnahmekriterien und hat mit dem Squad einen strukturierten Ansatz etabliert, der jedem Mitglied klare, rollenspezifische Testgrenzen gibt.',
         'Aktives Mitglied der squad-übergreifenden Agile Guild von endress.com, organisiert Offsites, All-Hands und Learning- und Growth-Sessions mit und leitet Squad Health Checks, um die Arbeitsweise über alle Squads hinweg kontinuierlich zu verbessern.',
         'Verwaltet SharePoint Online als Editor und administriert ganze Bereiche der M365-Umgebung des Unternehmens.',
       ],
@@ -164,6 +165,7 @@ const profileDe: Profile = {
       'Stakeholder-Management',
       'Moderation der Agile Guild',
       'Squad Health Checks',
+      'UAT-Konzeption & Koordination',
     ],
     dataAndAi: [
       'Metadaten-Management',

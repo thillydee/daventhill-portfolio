@@ -12,7 +12,7 @@ Der Begriff stammt aus dem "Spotify-Modell", in dem Squads typischerweise zu gr�
 
 ## Wie ich das bei Endress+Hauser anwende
 
-Seit rund vier Jahren baue und leite ich ein interdisziplinäres Squad aus zwei Business Ownern, UX und IT, das am Bereich Products von endress.com arbeitet. Das Squad verantwortet seine Ergebnisse end-to-end: vom Dokumentieren von Business-Anforderungen, User Stories und Abnahmekriterien über die Entwicklung bis zur Durchführung der Abnahmetests (User Acceptance Testing), die ich selbst leite, bevor etwas live geht. Wir arbeiten mit Scrum und Kanban, sodass sich Prioritäten schnell verschieben können, ohne die Disziplin eines definierten Backlogs zu verlieren.
+Seit rund vier Jahren baue und leite ich ein interdisziplinäres Squad aus zwei Business Ownern, UX und IT, das am Bereich Products von endress.com arbeitet. Das Squad verantwortet seine Ergebnisse end-to-end: vom Dokumentieren von Business-Anforderungen, User Stories und Abnahmekriterien über die Entwicklung bis zur Durchführung der [Abnahmetests (User Acceptance Testing)](/de/knowledge/user-acceptance-testing), die ich selbst leite, bevor etwas live geht. Wir arbeiten mit Scrum und Kanban, sodass sich Prioritäten schnell verschieben können, ohne die Disziplin eines definierten Backlogs zu verlieren.
 
 Diese Struktur hat es möglich gemacht, Dinge wie die KI-gestützte Cross-Selling-Engine, die PIM-Datenmigration, das relevanzbasierte Sortiermodell und das Feature für marktspezifische Lagerverfügbarkeit auszuliefern – jedes davon brauchte eine enge, kontinuierliche Zusammenarbeit zwischen Geschäftslogik, Daten, UX und Engineering, genau wofür ein Squad gemacht ist.
 

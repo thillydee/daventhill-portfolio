@@ -106,6 +106,7 @@ const profile: Profile = {
         'Introduced a relevance-based sorting feature for the product list, powered by a calculation model that factors in product lifecycle stage and internal business requirements such as stock availability.',
         'Designed and launched an MVP feature plus supporting data management process to show market-level stock availability on the website, including which configuration variants are available.',
         'Built and has led a cross-functional squad of two business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban).',
+        'Owns setting up and coordinating user acceptance testing on the business side, defining use cases and acceptance criteria, and has established a structured approach with the squad that gives each member clear, role-tailored testing boundaries.',
         'Active member of the cross-squad Agile Guild for endress.com, co-organizing offsites, All-Hands, and learning and growth sessions, and leading Squad Health Checks to continuously improve ways of working across all squads.',
         "Manages SharePoint Online as an editor, administering entire sections of the organization's M365 environment.",
       ],
@@ -228,6 +229,7 @@ const profile: Profile = {
       'Stakeholder management',
       'Agile Guild facilitation',
       'Squad Health Checks',
+      'UAT design & coordination',
     ],
     dataAndAi: [
       'Metadata management',

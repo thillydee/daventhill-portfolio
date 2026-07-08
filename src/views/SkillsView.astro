@@ -15,8 +15,18 @@ const prefix = locale === 'de' ? '/de' : '';
 
 const knowledgeLinks: Record<string, string> =
   locale === 'de'
-    ? { 'Squad- und Teamführung': 'squad', 'Moderation der Agile Guild': 'guild', 'Squad Health Checks': 'guild' }
-    : { 'Squad and team leadership': 'squad', 'Agile Guild facilitation': 'guild', 'Squad Health Checks': 'guild' };
+    ? {
+        'Squad- und Teamführung': 'squad',
+        'Moderation der Agile Guild': 'guild',
+        'Squad Health Checks': 'guild',
+        'UAT-Konzeption & Koordination': 'user-acceptance-testing',
+      }
+    : {
+        'Squad and team leadership': 'squad',
+        'Agile Guild facilitation': 'guild',
+        'Squad Health Checks': 'guild',
+        'UAT design & coordination': 'user-acceptance-testing',
+      };
 
 const skillGroups = [
   { label: strings.skills.groups.productAndAgile, items: skills.productAndAgile },
