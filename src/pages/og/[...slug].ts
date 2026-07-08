@@ -33,6 +33,10 @@ async function addLocalePages(locale: Locale) {
     title: strings.knowledge.title,
     description: strings.knowledge.description,
   };
+  pages[`${prefix}privacy`] = {
+    title: strings.privacy.title,
+    description: strings.privacy.description,
+  };
 
   for (const caseStudy of profile.caseStudies) {
     pages[`${prefix}case-studies/${caseStudy.slug}`] = {

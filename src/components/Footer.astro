@@ -34,6 +34,10 @@ const telHref = person.contact.phone.replace(/\s+/g, '');
         <a href={`${prefix}/contact`} class="hover:text-brand">{strings.breadcrumbs.contact}</a>
       </nav>
     </div>
-    <p class="mt-8 text-xs text-muted">© {year} {person.name}. {strings.footer.builtWith}</p>
+    <p class="mt-8 text-xs text-muted">
+      © {year} {person.name}. {strings.footer.builtWith}
+      {' '}·{' '}
+      <a href={`${prefix}/privacy`} class="hover:text-brand">{strings.breadcrumbs.privacy}</a>
+    </p>
   </div>
 </footer>

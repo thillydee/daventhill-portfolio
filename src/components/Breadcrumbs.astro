@@ -1,0 +1,28 @@
+---
+import type { Breadcrumb } from './PersonSchema.astro';
+
+export interface Props {
+  items: Breadcrumb[];
+}
+
+const { items } = Astro.props;
+---
+
+{items.length > 1 && (
+  <nav aria-label="Breadcrumb" class="border-b border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-3 sm:px-6">
+      <ol class="flex flex-wrap items-center gap-1.5 text-xs text-muted">
+        {items.map((item, index) => (
+          <li class="flex items-center gap-1.5">
+            {index > 0 && <span aria-hidden="true">/</span>}
+            {index === items.length - 1 ? (
+              <span class="text-ink-soft" aria-current="page">{item.name}</span>
+            ) : (
+              <a href={item.path} class="hover:text-brand">{item.name}</a>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
+  </nav>
+)}

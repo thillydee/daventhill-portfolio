@@ -9,6 +9,7 @@ import PersonSchema, {
 } from '../components/PersonSchema.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { htmlLang, type Locale } from '../i18n';
 
 export interface Props {
@@ -54,10 +55,26 @@ const {
   </head>
   <body class="flex min-h-screen flex-col bg-surface font-sans text-ink antialiased">
     <Header locale={locale} localizedPaths={localizedPaths} />
+    {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
     <main class="flex-1">
       <slot />
     </main>
     <Footer locale={locale} />
     <Analytics />
+    <script>
+      import { track } from '@vercel/analytics';
+
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const trackedEl = target.closest('[data-analytics-event]');
+        if (!(trackedEl instanceof HTMLElement)) return;
+
+        const eventName = trackedEl.dataset.analyticsEvent;
+        if (!eventName) return;
+
+        track(eventName, { locale: trackedEl.dataset.analyticsLocale ?? '' });
+      });
+    </script>
   </body>
 </html>

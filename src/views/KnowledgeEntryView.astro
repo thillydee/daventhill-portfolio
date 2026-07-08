@@ -27,6 +27,10 @@ const breadcrumbs = [
 const related = (entry.data.relatedCaseStudies ?? [])
   .map((slug) => caseStudies.find((cs) => cs.slug === slug))
   .filter((cs) => cs !== undefined);
+
+const publishedLabel = new Intl.DateTimeFormat(locale === 'de' ? 'de-CH' : 'en-CH', {
+  dateStyle: 'long',
+}).format(entry.data.publishDate);
 ---
 
 <BaseLayout
@@ -56,6 +60,10 @@ const related = (entry.data.relatedCaseStudies ?? [])
       {entry.data.type === 'faq' ? entry.data.question ?? entry.data.title : entry.data.title}
     </h1>
     <p class="mt-4 text-lg text-ink-soft">{entry.data.description}</p>
+    <p class="mt-4 text-xs uppercase tracking-wide text-muted">
+      {strings.knowledge.publishedLabel}{' '}
+      <time datetime={entry.data.publishDate.toISOString()}>{publishedLabel}</time>
+    </p>
 
     <div class="prose prose-slate mt-10 max-w-none prose-headings:font-semibold prose-headings:text-ink prose-p:leading-relaxed prose-p:text-ink-soft prose-a:text-brand">
       <Content />

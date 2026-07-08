@@ -92,7 +92,15 @@ const formStrings = strings.contact.form;
           >
             {formStrings.send}
           </button>
-          <p id="form-status" class="text-sm" role="status" aria-live="polite"></p>
+          <p
+            id="form-status"
+            class="text-sm"
+            role="status"
+            aria-live="polite"
+            data-sending={formStrings.sending}
+            data-success={formStrings.success}
+            data-error={formStrings.error}
+          ></p>
         </div>
       </form>
 
@@ -117,6 +125,8 @@ const formStrings = strings.contact.form;
         <a
           href={cvHref}
           download
+          data-analytics-event="cv_download"
+          data-analytics-locale={locale}
           class="mt-6 inline-flex items-center justify-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
         >
           {strings.nav.downloadCv}
@@ -126,16 +136,18 @@ const formStrings = strings.contact.form;
   </section>
 </BaseLayout>
 
-<script define:vars={{ formStrings }}>
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
-  const submitButton = form.querySelector('button[type="submit"]');
+<script>
+  import { track } from '@vercel/analytics';
+
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = document.getElementById('form-status') as HTMLParagraphElement;
+  const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     submitButton.disabled = true;
-    status.textContent = formStrings.sending;
+    status.textContent = status.dataset.sending ?? '';
     status.className = 'text-sm text-muted';
 
     const formData = new FormData(form);
@@ -153,10 +165,11 @@ const formStrings = strings.contact.form;
       }
 
       form.reset();
-      status.textContent = formStrings.success;
+      status.textContent = status.dataset.success ?? '';
       status.className = 'text-sm text-green-700';
+      track('contact_form_submit', { locale: document.documentElement.lang });
     } catch (error) {
-      status.textContent = formStrings.error;
+      status.textContent = status.dataset.error ?? '';
       status.className = 'text-sm text-red-700';
     } finally {
       submitButton.disabled = false;

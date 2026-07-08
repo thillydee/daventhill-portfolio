@@ -46,7 +46,13 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
             {item.label}
           </a>
         ))}
-        <a href={cvHref} download class="text-sm font-medium text-ink-soft hover:text-ink">
+        <a
+          href={cvHref}
+          download
+          data-analytics-event="cv_download"
+          data-analytics-locale={locale}
+          class="text-sm font-medium text-ink-soft hover:text-ink"
+        >
           {strings.nav.downloadCv}
         </a>
         <a
@@ -86,7 +92,13 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
           {item.label}
         </a>
       ))}
-      <a href={cvHref} download class="w-full py-2 text-sm font-medium text-ink-soft hover:text-ink">
+      <a
+        href={cvHref}
+        download
+        data-analytics-event="cv_download"
+        data-analytics-locale={locale}
+        class="w-full py-2 text-sm font-medium text-ink-soft hover:text-ink"
+      >
         {strings.nav.downloadCv}
       </a>
       <a href={switchHref} class="w-full py-2 text-sm font-medium text-ink-soft hover:text-ink">

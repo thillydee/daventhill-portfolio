@@ -25,6 +25,7 @@ export const strings = {
       skills: 'Skills',
       contact: 'Contact',
       knowledge: 'Knowledge',
+      privacy: 'Privacy',
     },
     home: {
       heroSuffix: 'in Basel',
@@ -115,6 +116,30 @@ export const strings = {
       faqHeading: 'FAQ',
       back: '← All knowledge',
       relatedCaseStudiesHeading: 'Related case studies',
+      publishedLabel: 'Published',
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      description: 'How this website handles your data: the contact form, analytics, and hosting.',
+      intro: 'This page explains what happens to your data when you use this website.',
+      sections: [
+        {
+          heading: 'Contact form',
+          body: 'If you use the contact form on this site, the name, email, company (if provided), and message you submit are sent directly to my email inbox via Resend, a transactional email service. This data is not stored in a database on this site — it exists only in the resulting email, which I use solely to reply to you.',
+        },
+        {
+          heading: 'Analytics',
+          body: 'This site uses Vercel Web Analytics, a cookieless analytics service. It collects aggregated, anonymized information such as page views, referrers, approximate location (country-level), and device type. It does not use cookies, does not track you across other websites, and cannot identify you personally.',
+        },
+        {
+          heading: 'Hosting',
+          body: 'This site is hosted on Vercel. As with any web host, standard server logs (such as IP address and browser type) may be processed by Vercel as part of normal hosting operations.',
+        },
+        {
+          heading: 'Your rights',
+          body: "If you have any questions about your data, or would like anything you've sent me deleted, just email me directly at daventhill@gmail.com.",
+        },
+      ],
     },
     faq: [
       {
@@ -154,6 +179,7 @@ export const strings = {
       skills: 'Skills',
       contact: 'Kontakt',
       knowledge: 'Wissen',
+      privacy: 'Datenschutz',
     },
     home: {
       heroSuffix: 'in Basel',
@@ -244,6 +270,30 @@ export const strings = {
       faqHeading: 'FAQ',
       back: '← Alle Wissensartikel',
       relatedCaseStudiesHeading: 'Verwandte Case Studies',
+      publishedLabel: 'Veröffentlicht am',
+    },
+    privacy: {
+      title: 'Datenschutzerklärung',
+      description: 'Wie diese Website mit Ihren Daten umgeht: Kontaktformular, Analyse und Hosting.',
+      intro: 'Diese Seite erklärt, was mit Ihren Daten passiert, wenn Sie diese Website nutzen.',
+      sections: [
+        {
+          heading: 'Kontaktformular',
+          body: 'Wenn Sie das Kontaktformular auf dieser Website nutzen, werden Name, E-Mail, Unternehmen (falls angegeben) und Nachricht direkt über Resend, einen transaktionalen E-Mail-Dienst, an mein E-Mail-Postfach gesendet. Diese Daten werden nicht in einer Datenbank auf dieser Website gespeichert – sie existieren nur in der resultierenden E-Mail, die ich ausschliesslich zur Beantwortung Ihrer Anfrage nutze.',
+        },
+        {
+          heading: 'Analyse',
+          body: 'Diese Website nutzt Vercel Web Analytics, einen cookie-losen Analysedienst. Er erfasst aggregierte, anonymisierte Informationen wie Seitenaufrufe, Referrer, ungefähren Standort (auf Länderebene) und Gerätetyp. Es werden keine Cookies verwendet, keine websiteübergreifende Verfolgung durchgeführt, und eine persönliche Identifizierung ist nicht möglich.',
+        },
+        {
+          heading: 'Hosting',
+          body: 'Diese Website wird auf Vercel gehostet. Wie bei jedem Webhosting können Standard-Server-Logs (z. B. IP-Adresse und Browsertyp) im Rahmen des normalen Hosting-Betriebs durch Vercel verarbeitet werden.',
+        },
+        {
+          heading: 'Ihre Rechte',
+          body: 'Bei Fragen zu Ihren Daten oder wenn Sie möchten, dass etwas, das Sie mir gesendet haben, gelöscht wird, schreiben Sie mir einfach direkt an daventhill@gmail.com.',
+        },
+      ],
     },
     faq: [
       {
