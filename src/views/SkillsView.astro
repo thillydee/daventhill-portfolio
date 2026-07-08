@@ -13,19 +13,21 @@ const localizedPaths = buildLocalizedPaths('/skills');
 const homePath = locale === 'de' ? '/de/' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 
-const knowledgeLinks: Record<string, string> =
+const skillLinks: Record<string, string> =
   locale === 'de'
     ? {
-        'Squad- und Teamführung': 'squad',
-        'Moderation der Agile Guild': 'guild',
-        'Squad Health Checks': 'guild',
-        'UAT-Konzeption & Koordination': 'user-acceptance-testing',
+        'Squad- und Teamführung': '/knowledge/squad',
+        'Moderation der Agile Guild': '/knowledge/guild',
+        'Squad Health Checks': '/knowledge/guild',
+        'UAT-Konzeption & Koordination': '/knowledge/user-acceptance-testing',
+        Elasticsearch: '/case-studies/relevance-sorting',
       }
     : {
-        'Squad and team leadership': 'squad',
-        'Agile Guild facilitation': 'guild',
-        'Squad Health Checks': 'guild',
-        'UAT design & coordination': 'user-acceptance-testing',
+        'Squad and team leadership': '/knowledge/squad',
+        'Agile Guild facilitation': '/knowledge/guild',
+        'Squad Health Checks': '/knowledge/guild',
+        'UAT design & coordination': '/knowledge/user-acceptance-testing',
+        Elasticsearch: '/case-studies/relevance-sorting',
       };
 
 const skillGroups = [
@@ -61,10 +63,10 @@ const breadcrumbs = [
           <h2 class="text-sm font-semibold uppercase tracking-wide text-brand">{group.label}</h2>
           <ul class="mt-4 flex flex-wrap gap-2">
             {group.items.map((item) => (
-              knowledgeLinks[item] ? (
+              skillLinks[item] ? (
                 <li>
                   <a
-                    href={`${prefix}/knowledge/${knowledgeLinks[item]}`}
+                    href={`${prefix}${skillLinks[item]}`}
                     class="rounded-full border border-brand/30 bg-brand-soft px-3 py-1 text-sm text-brand hover:border-brand"
                   >
                     {item}

@@ -39,7 +39,7 @@ const profileDe: Profile = {
       highlights: [
         'Initiierte und leitete ein KI-gestütztes Cross-Selling-Projekt, das die interne Cross-Selling-Logik durch ein Berechnungsmodell auf Basis von SAP-Verkaufsdaten ersetzte, um wirklich komplementäre Produktempfehlungen anzuzeigen.',
         'Verantwortet das Metadaten-Management auf Produktebene und leitete die Migration der Produktspezifikationsdaten von Censhare in ein neues PIM-System, wobei definiert wurde, wie Daten auf endress.com und durch KI-Tools strukturiert und genutzt werden.',
-        'Führte eine relevanzbasierte Sortierfunktion für die Produktliste ein, die auf einem Berechnungsmodell basiert, das Produktlebenszyklus-Phase und interne Geschäftsanforderungen wie Lagerverfügbarkeit berücksichtigt.',
+        'Erweiterte die Onsite-Suche (Elasticsearch) von endress.com um eine geschäftsspezifische Boost-Schicht über deren nativen Relevanzalgorithmus, die Produktlebenszyklus-Phase, Segmentierung, Lagerverfügbarkeit und Marktverfügbarkeit berücksichtigt, um die relevantesten Listings zuerst auszuspielen.',
         'Konzipierte und lancierte ein MVP-Feature inklusive unterstützendem Datenmanagement-Prozess, um marktspezifische Lagerverfügbarkeit auf der Website anzuzeigen, einschliesslich verfügbarer Konfigurationsvarianten.',
         'Baute ein interdisziplinäres Squad aus zwei Business Ownern, UX und IT auf und leitet es seit rund vier Jahren, wobei agile Arbeitsweisen (Scrum und Kanban) fest verankert wurden.',
         'Verantwortet Aufbau und Koordination der Abnahmetests (User Acceptance Testing) auf Business-Seite, definiert Use Cases und Abnahmekriterien und hat mit dem Squad einen strukturierten Ansatz etabliert, der jedem Mitglied klare, rollenspezifische Testgrenzen gibt.',
@@ -110,16 +110,16 @@ const profileDe: Profile = {
         'Eine sauberere, konsistentere Produktdatenbasis, die sowohl die aktuelle Website als auch die wachsende Zahl KI-gestützter Anwendungsfälle rund um Produktdaten unterstützt.',
     },
     {
-      title: 'Ein Relevanzmodell für Produktlisten, das echte Geschäftslogik widerspiegelt',
+      title: 'Elasticsearch-Relevanz mit echter Geschäftslogik verfeinert',
       slug: 'relevance-sorting',
       summary:
-        'Ablösung der statischen Sortierregeln für Produktlisten durch ein Berechnungsmodell, das Lebenszyklus-Phase und Lagerverfügbarkeit berücksichtigt.',
+        'Eine geschäftsspezifische Boost-Schicht über die Elasticsearch-gestützte Onsite-Suche von endress.com gelegt, statt deren Relevanz-Engine zu ersetzen.',
       problem:
-        'Eine generische oder statische Sortierreihenfolge für Produktlisten spiegelt nicht wider, was ein Produkt für einen Käufer im jeweiligen Moment tatsächlich relevant macht – etwa ob es neu eingeführt wird, ausläuft oder aktuell verfügbar ist.',
+        'Die Onsite-Suche von endress.com läuft auf Elasticsearch, dessen Relevanz-Scoring auf Textübereinstimmung ausgelegt ist und kein eingebautes Verständnis für die Geschäftssignale hat, die tatsächlich bestimmen, ob ein Listing für einen B2B-Käufer im jeweiligen Moment relevant ist: Lebenszyklus-Phase, Segmentierung, Lagerverfügbarkeit oder ob das Produkt im Markt des Kunden überhaupt verfügbar ist.',
       approach:
-        'Ich führte eine relevanzbasierte Sortierfunktion ein, die auf einem Berechnungsmodell basiert und die Produktlebenszyklus-Phase (neu, auslaufend usw.) zusammen mit internen Geschäftsanforderungen wie der Lagerverfügbarkeit berücksichtigt.',
+        'Statt die Relevanz-Engine von Elasticsearch zu ersetzen, initiierte und leitete ich die Konzeption einer Boost-Schicht darüber: ein Berechnungsmodell, das jedes Produkt nach Lebenszyklus-Phase (neu, aktiv, auslaufend), Segmentierung, Lagerverfügbarkeit und Marktverfügbarkeit bewertet und daraus Boosts und Abwertungen ableitet, die auf den nativen Relevanz-Score von Elasticsearch angewendet werden. Elasticsearch übernimmt weiterhin das, was es am besten kann – Matching und Ranking nach Suchintention –, während die Boost-Schicht den Geschäftskontext ergänzt, den es standardmässig nicht kennt.',
       outcome:
-        'Produktlisten, die die relevantesten Artikel zuerst anzeigen – basierend auf echten Produkt- und Geschäftssignalen statt einer fixen manuellen Reihenfolge.',
+        'Suchergebnisse und Produktlisten auf endress.com spiegeln nun sowohl wider, wonach ein Kunde sucht, als auch, was gerade tatsächlich relevant zum Kauf ist, ohne das zugrunde liegende Relevanzmodell von Elasticsearch zu verwerfen – eine Boost-Schicht, die weiter wachsen kann, sobald neue Geschäftssignale relevant werden.',
     },
     {
       title: 'Marktspezifische Lagertransparenz – bis auf Konfigurationsebene',
@@ -173,6 +173,7 @@ const profileDe: Profile = {
       'Datengetriebene Entscheidungsfindung',
       'KI- und ML-gestützte Produktempfehlungen',
       'SAP-Verkaufsdaten',
+      'Elasticsearch',
     ],
     ecommerce: ['B2B- und B2C-E-Commerce', 'Conversion-Optimierung', 'Customer-Journey-Design'],
     tools: [

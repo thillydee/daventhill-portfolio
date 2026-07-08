@@ -103,7 +103,7 @@ const profile: Profile = {
       highlights: [
         'Initiated and led an AI-powered cross-selling project, replacing internal cross-selling logic with a calculation model built on SAP sales order data to surface genuinely complementary product recommendations.',
         'Owns product-level metadata management and led the migration of product specification data from Censhare to a new PIM system, defining how data is structured and consumed on endress.com and by AI tools.',
-        'Introduced a relevance-based sorting feature for the product list, powered by a calculation model that factors in product lifecycle stage and internal business requirements such as stock availability.',
+        "Enhanced endress.com's onsite search (Elasticsearch) with a business-tuned boost layer on top of its native relevance algorithm, factoring in product lifecycle phase, segmentation, stock availability, and market availability to surface the most relevant listings first.",
         'Designed and launched an MVP feature plus supporting data management process to show market-level stock availability on the website, including which configuration variants are available.',
         'Built and has led a cross-functional squad of two business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban).',
         'Owns setting up and coordinating user acceptance testing on the business side, defining use cases and acceptance criteria, and has established a structured approach with the squad that gives each member clear, role-tailored testing boundaries.',
@@ -174,16 +174,16 @@ const profile: Profile = {
         'A cleaner, more consistent product data foundation that supports both the current website and the growing set of AI-driven use cases around product data.',
     },
     {
-      title: 'A relevance model for product listings that reflects real business logic',
+      title: 'Tuning Elasticsearch relevance with real business logic',
       slug: 'relevance-sorting',
       summary:
-        'Moving product list sorting away from static rules toward a calculation model that reflects lifecycle stage and stock availability.',
+        "Layering a business-tuned boost model on top of endress.com's Elasticsearch-powered onsite search, instead of replacing its relevance engine.",
       problem:
-        'A generic or static sort order for product listings does not reflect what actually makes a product relevant to a buyer at a given moment, such as whether it is newly launched, being phased out, or currently in stock.',
+        "endress.com's onsite search runs on Elasticsearch, whose relevance scoring is built around text-match quality and has no built-in concept of the business signals that actually determine whether a listing is relevant to a B2B buyer at a given moment: its lifecycle phase, its segmentation, whether it's in stock, or whether it's even available in the customer's market.",
       approach:
-        'I introduced a relevance-based sorting feature powered by a calculation model that factors in the product lifecycle stage (new, phase-out, and so on) alongside internal business requirements such as stock availability.',
+        "Rather than replacing Elasticsearch's relevance engine, I initiated and led the design of a boost layer on top of it: a calculation model that scores each product on lifecycle phase (new, active, phase-out), segmentation, stock availability, and market availability, and translates that into boosts and penalties applied on top of Elasticsearch's native relevance score. Elasticsearch still does what it's best at, matching and ranking by search intent, while the boost layer adds the business context it has no visibility into by default.",
       outcome:
-        'Product listings that surface the most relevant items first, based on real product and business signals rather than a fixed manual order.',
+        "Search results and product listings on endress.com now reflect both what a customer is looking for and what is actually relevant to buy right now, without discarding Elasticsearch's underlying relevance model, a boost layer that can keep absorbing new business signals as they become relevant to weight in.",
     },
     {
       title: 'Market-level stock visibility, down to the configuration',
@@ -237,6 +237,7 @@ const profile: Profile = {
       'Data-driven decision making',
       'AI and ML informed product recommendations',
       'SAP sales order data',
+      'Elasticsearch',
     ],
     ecommerce: ['B2B and B2C e-commerce', 'Conversion optimization', 'Customer journey design'],
     tools: [
