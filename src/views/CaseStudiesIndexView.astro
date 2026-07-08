@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getProfile, t, buildLocalizedPaths, type Locale } from '../i18n';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { caseStudies, person } = getProfile(locale);
+const strings = t(locale);
+const localizedPaths = buildLocalizedPaths('/case-studies');
+const homePath = locale === 'de' ? '/de/' : '/';
+const prefix = locale === 'de' ? '/de' : '';
+
+const breadcrumbs = [
+  { name: strings.breadcrumbs.home, path: homePath },
+  { name: strings.breadcrumbs.caseStudies, path: localizedPaths[locale] },
+];
+---
+
+<BaseLayout
+  title={strings.caseStudies.title}
+  description={strings.caseStudies.description}
+  path={localizedPaths[locale]}
+  ogImageSlug={locale === 'de' ? 'de/case-studies' : 'case-studies'}
+  locale={locale}
+  localizedPaths={localizedPaths}
+  breadcrumbs={breadcrumbs}
+>
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{person.location}</p>
+    <h1 class="mt-2 text-4xl font-bold tracking-tight text-ink sm:text-5xl">{strings.caseStudies.title}</h1>
+    <p class="mt-4 max-w-2xl text-base text-muted">
+      {strings.caseStudies.intro}
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2">
+      {caseStudies.map((caseStudy) => (
+        <a
+          href={`${prefix}/case-studies/${caseStudy.slug}`}
+          class="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-brand"
+        >
+          <h2 class="text-lg font-semibold text-ink group-hover:text-brand">{caseStudy.title}</h2>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{caseStudy.summary}</p>
+          <span class="mt-4 inline-block text-sm font-semibold text-brand">{strings.caseStudies.readCaseStudy}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

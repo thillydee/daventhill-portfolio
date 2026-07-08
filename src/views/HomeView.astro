@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getProfile, t, buildLocalizedPaths, type Locale } from '../i18n';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { person, experience, caseStudies } = getProfile(locale);
+const strings = t(locale);
+const currentRole = experience[0];
+const prefix = locale === 'de' ? '/de' : '';
+const localizedPaths = buildLocalizedPaths('/');
+---
+
+<BaseLayout
+  title={`${person.name} — ${person.currentTitle}`}
+  description={person.positioningLine}
+  path={localizedPaths[locale]}
+  ogImageSlug={locale === 'de' ? 'de' : 'index'}
+  locale={locale}
+  localizedPaths={localizedPaths}
+  faq={strings.faq}
+>
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">
+      {person.location}
+    </p>
+    <h1 class="mt-3 max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      {person.name} — {person.currentTitle} {strings.home.heroSuffix}
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-ink-soft">
+      {person.positioningLine}
+    </p>
+    <p class="mt-4 max-w-2xl text-base leading-relaxed text-muted">
+      {person.bioShort}
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href={`${prefix}/case-studies`}
+        class="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+      >
+        {strings.home.viewCaseStudies}
+      </a>
+      <a
+        href={`${prefix}/contact`}
+        class="inline-flex items-center justify-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+      >
+        {strings.home.getInTouch}
+      </a>
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">{strings.home.currentRoleEyebrow}</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">
+        {currentRole.title} at {currentRole.company}
+      </h2>
+      <p class="mt-2 text-sm text-muted">{currentRole.dates} · {currentRole.location}</p>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
+        {currentRole.summary}
+      </p>
+      <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+        {currentRole.highlights.slice(0, 4).map((highlight) => (
+          <li class="flex gap-3 rounded-lg border border-border bg-surface p-4 text-sm text-ink-soft">
+            <span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+            <span>{highlight}</span>
+          </li>
+        ))}
+      </ul>
+      <a href={`${prefix}/experience`} class="mt-6 inline-block text-sm font-semibold text-brand hover:text-brand-dark">
+        {strings.home.seeFullExperience}
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{strings.home.caseStudiesEyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{strings.home.caseStudiesHeading}</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      {caseStudies.map((caseStudy) => (
+        <a
+          href={`${prefix}/case-studies/${caseStudy.slug}`}
+          class="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-brand"
+        >
+          <h3 class="text-lg font-semibold text-ink group-hover:text-brand">
+            {caseStudy.title}
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{caseStudy.summary}</p>
+          <span class="mt-4 inline-block text-sm font-semibold text-brand">{strings.home.readCaseStudy}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">{strings.home.faqEyebrow}</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{strings.home.faqHeading}</h2>
+      <dl class="mt-8 space-y-6">
+        {strings.faq.map((item) => (
+          <div>
+            <dt class="text-base font-semibold text-ink">{item.question}</dt>
+            <dd class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{item.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 text-center sm:px-6">
+    <h2 class="text-2xl font-bold text-ink sm:text-3xl">{strings.home.ctaHeading}</h2>
+    <p class="mx-auto mt-3 max-w-xl text-base text-muted">
+      {strings.home.ctaText}
+    </p>
+    <a
+      href={`${prefix}/contact`}
+      class="mt-6 inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+    >
+      {strings.home.ctaButton}
+    </a>
+  </section>
+</BaseLayout>

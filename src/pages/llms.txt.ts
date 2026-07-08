@@ -1,37 +1,50 @@
 import type { APIRoute } from 'astro';
-import profile from '../data/profile';
+import { getProfile } from '../i18n';
 
 export const GET: APIRoute = ({ site }) => {
-  const { person, experience, caseStudies } = profile;
   const abs = (path: string) => new URL(path, site).toString();
 
-  const body = `# ${person.name}
+  const en = getProfile('en');
+  const de = getProfile('de');
 
-> ${person.positioningLine}
+  const body = `# ${en.person.name}
 
-${person.bioLong}
+> ${en.person.positioningLine}
 
-## Current role
+${en.person.bioLong}
 
-${experience[0].title} at ${experience[0].company} (${experience[0].dates}). ${experience[0].summary}
-
-## Pages
+## English
 
 - [Home](${abs('/')}): overview, positioning, and current role
 - [Experience](${abs('/experience')}): full reverse-chronological work history, education, and certifications
 - [Case Studies](${abs('/case-studies')}): data and AI driven product case studies
-${caseStudies
+${en.caseStudies
   .map((cs) => `  - [${cs.title}](${abs(`/case-studies/${cs.slug}`)}): ${cs.summary}`)
   .join('\n')}
 - [Skills](${abs('/skills')}): product, agile, data & AI skills, certifications, and languages
 - [Contact](${abs('/contact')}): contact form and direct contact details
 
+## Deutsch
+
+> ${de.person.positioningLine}
+
+${de.person.bioLong}
+
+- [Startseite](${abs('/de/')}): Positionierung und aktuelle Position
+- [Erfahrung](${abs('/de/experience')}): vollständiger Werdegang, Ausbildung und Zertifizierungen
+- [Case Studies](${abs('/de/case-studies')}): daten- und KI-getriebene Produkt-Case-Studies
+${de.caseStudies
+  .map((cs) => `  - [${cs.title}](${abs(`/de/case-studies/${cs.slug}`)}): ${cs.summary}`)
+  .join('\n')}
+- [Skills](${abs('/de/skills')}): Product-, Agile-, Daten- und KI-Skills, Zertifizierungen und Sprachen
+- [Kontakt](${abs('/de/contact')}): Kontaktformular und direkte Kontaktdaten
+
 ## Contact
 
-- Email: ${person.contact.email}
-- Phone: ${person.contact.phone}
-- LinkedIn: ${person.contact.linkedin}
-- Location: ${person.location}
+- Email: ${en.person.contact.email}
+- Phone: ${en.person.contact.phone}
+- LinkedIn: ${en.person.contact.linkedin}
+- Location: ${en.person.location}
 `;
 
   return new Response(body, {

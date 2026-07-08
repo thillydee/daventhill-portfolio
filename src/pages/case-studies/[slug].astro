@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyView from '../../views/CaseStudyView.astro';
 import profile from '../../data/profile';
 
 export function getStaticPaths() {
@@ -10,54 +10,6 @@ export function getStaticPaths() {
 }
 
 const { caseStudy } = Astro.props;
-
-const breadcrumbs = [
-  { name: 'Home', path: '/' },
-  { name: 'Case Studies', path: '/case-studies' },
-  { name: caseStudy.title, path: `/case-studies/${caseStudy.slug}` },
-];
 ---
 
-<BaseLayout
-  title={caseStudy.title}
-  description={caseStudy.summary}
-  path={`/case-studies/${caseStudy.slug}`}
-  ogImageSlug={`case-studies/${caseStudy.slug}`}
-  breadcrumbs={breadcrumbs}
->
-  <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <a href="/case-studies" class="text-sm font-semibold text-brand hover:text-brand-dark">
-      ← All case studies
-    </a>
-    <h1 class="mt-4 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{caseStudy.title}</h1>
-    <p class="mt-4 text-lg text-ink-soft">{caseStudy.summary}</p>
-
-    <div class="mt-10 space-y-10">
-      <div>
-        <h2 class="text-sm font-semibold uppercase tracking-wide text-brand">Problem</h2>
-        <p class="mt-3 text-base leading-relaxed text-ink-soft">{caseStudy.problem}</p>
-      </div>
-      <div>
-        <h2 class="text-sm font-semibold uppercase tracking-wide text-brand">Approach</h2>
-        <p class="mt-3 text-base leading-relaxed text-ink-soft">{caseStudy.approach}</p>
-      </div>
-      <div>
-        <h2 class="text-sm font-semibold uppercase tracking-wide text-brand">Outcome</h2>
-        <p class="mt-3 text-base leading-relaxed text-ink-soft">{caseStudy.outcome}</p>
-      </div>
-    </div>
-
-    <div class="mt-16 rounded-xl border border-border bg-surface-alt p-8 text-center">
-      <h2 class="text-xl font-semibold text-ink">Working on something similar?</h2>
-      <p class="mt-2 text-sm text-muted">
-        Let's talk about data and AI driven product decisions for your team.
-      </p>
-      <a
-        href="/contact"
-        class="mt-5 inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
-      >
-        Get in touch
-      </a>
-    </div>
-  </article>
-</BaseLayout>
+<CaseStudyView locale="en" caseStudy={caseStudy} />

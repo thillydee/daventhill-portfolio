@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t, buildLocalizedPaths, type Locale } from '../i18n';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const strings = t(locale);
+const homePath = locale === 'de' ? '/de/' : '/';
+const localizedPaths = buildLocalizedPaths('/404');
+---
+
+<BaseLayout
+  title={strings.notFound.title}
+  description={strings.notFound.title}
+  path={localizedPaths[locale]}
+  ogImageSlug="index"
+  locale={locale}
+  localizedPaths={localizedPaths}
+>
+  <section class="mx-auto flex max-w-5xl flex-col items-start px-4 py-24 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">404</p>
+    <h1 class="mt-2 text-4xl font-bold tracking-tight text-ink sm:text-5xl">{strings.notFound.title}</h1>
+    <p class="mt-4 max-w-xl text-base text-muted">
+      {strings.notFound.text}
+    </p>
+    <a
+      href={homePath}
+      class="mt-8 inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+    >
+      {strings.notFound.button}
+    </a>
+  </section>
+</BaseLayout>

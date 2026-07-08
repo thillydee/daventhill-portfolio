@@ -1,24 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import NotFoundView from '../views/NotFoundView.astro';
 ---
 
-<BaseLayout
-  title="Page not found"
-  description="This page could not be found."
-  path="/404"
-  ogImageSlug="index"
->
-  <section class="mx-auto flex max-w-5xl flex-col items-start px-4 py-24 sm:px-6">
-    <p class="text-sm font-semibold uppercase tracking-wide text-brand">404</p>
-    <h1 class="mt-2 text-4xl font-bold tracking-tight text-ink sm:text-5xl">Page not found</h1>
-    <p class="mt-4 max-w-xl text-base text-muted">
-      The page you're looking for doesn't exist or has moved.
-    </p>
-    <a
-      href="/"
-      class="mt-8 inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
-    >
-      Back to home
-    </a>
-  </section>
-</BaseLayout>
+<NotFoundView locale="en" />

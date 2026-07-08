@@ -1,0 +1,15 @@
+---
+import CaseStudyView from '../../../views/CaseStudyView.astro';
+import profileDe from '../../../data/profile.de';
+
+export function getStaticPaths() {
+  return profileDe.caseStudies.map((caseStudy) => ({
+    params: { slug: caseStudy.slug },
+    props: { caseStudy },
+  }));
+}
+
+const { caseStudy } = Astro.props;
+---
+
+<CaseStudyView locale="de" caseStudy={caseStudy} />

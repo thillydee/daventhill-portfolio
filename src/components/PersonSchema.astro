@@ -1,5 +1,5 @@
 ---
-import profile from '../data/profile';
+import { getProfile, htmlLang, type Locale } from '../i18n';
 
 export interface Breadcrumb {
   name: string;
@@ -12,11 +12,13 @@ export interface FaqItem {
 }
 
 export interface Props {
+  locale: Locale;
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
 }
 
-const { breadcrumbs, faq } = Astro.props;
+const { locale, breadcrumbs, faq } = Astro.props;
+const profile = getProfile(locale);
 const { person, experience } = profile;
 
 const personNode = {
@@ -26,6 +28,7 @@ const personNode = {
   jobTitle: person.currentTitle,
   description: person.bioShort,
   url: Astro.site,
+  inLanguage: htmlLang(locale),
   email: `mailto:${person.contact.email}`,
   telephone: person.contact.phone,
   address: {

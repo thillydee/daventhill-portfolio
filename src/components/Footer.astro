@@ -1,7 +1,14 @@
 ---
-import profile from '../data/profile';
+import { getProfile, t, type Locale } from '../i18n';
 
-const { person } = profile;
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { person } = getProfile(locale);
+const strings = t(locale);
+const prefix = locale === 'de' ? '/de' : '';
 const year = new Date().getFullYear();
 const telHref = person.contact.phone.replace(/\s+/g, '');
 ---
@@ -21,12 +28,12 @@ const telHref = person.contact.phone.replace(/\s+/g, '');
         </a>
       </div>
       <nav aria-label="Footer navigation" class="flex flex-col gap-1 text-sm text-ink-soft">
-        <a href="/experience" class="hover:text-brand">Experience</a>
-        <a href="/case-studies" class="hover:text-brand">Case Studies</a>
-        <a href="/skills" class="hover:text-brand">Skills</a>
-        <a href="/contact" class="hover:text-brand">Contact</a>
+        <a href={`${prefix}/experience`} class="hover:text-brand">{strings.nav.experience}</a>
+        <a href={`${prefix}/case-studies`} class="hover:text-brand">{strings.nav.caseStudies}</a>
+        <a href={`${prefix}/skills`} class="hover:text-brand">{strings.nav.skills}</a>
+        <a href={`${prefix}/contact`} class="hover:text-brand">{strings.breadcrumbs.contact}</a>
       </nav>
     </div>
-    <p class="mt-8 text-xs text-muted">© {year} {person.name}. Built with Astro.</p>
+    <p class="mt-8 text-xs text-muted">© {year} {person.name}. {strings.footer.builtWith}</p>
   </div>
 </footer>

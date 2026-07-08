@@ -1,35 +1,44 @@
 import { OGImageRoute } from 'astro-og-canvas';
-import profile from '../../data/profile';
+import { getProfile, t, type Locale } from '../../i18n';
 
-const pages: Record<string, { title: string; description: string }> = {
-  index: {
+const pages: Record<string, { title: string; description: string }> = {};
+
+function addLocalePages(locale: Locale) {
+  const profile = getProfile(locale);
+  const strings = t(locale);
+  const prefix = locale === 'de' ? 'de/' : '';
+
+  pages[`${prefix}index`] = {
     title: profile.person.name,
     description: profile.person.positioningLine,
-  },
-  experience: {
-    title: 'Experience',
-    description: `Product and digital project management experience of ${profile.person.name} in Basel, Switzerland.`,
-  },
-  'case-studies': {
-    title: 'Case Studies',
-    description: 'Data and AI driven product case studies from endress.com.',
-  },
-  skills: {
-    title: 'Skills',
-    description: 'Product, agile, data and AI skills for B2B e-commerce.',
-  },
-  contact: {
-    title: 'Contact',
-    description: `Get in touch with ${profile.person.name}, Product Owner in Basel.`,
-  },
-};
-
-for (const caseStudy of profile.caseStudies) {
-  pages[`case-studies/${caseStudy.slug}`] = {
-    title: caseStudy.title,
-    description: caseStudy.summary,
   };
+  pages[`${prefix}experience`] = {
+    title: strings.experience.title,
+    description: strings.experience.intro,
+  };
+  pages[`${prefix}case-studies`] = {
+    title: strings.caseStudies.title,
+    description: strings.caseStudies.description,
+  };
+  pages[`${prefix}skills`] = {
+    title: strings.skills.title,
+    description: strings.skills.description,
+  };
+  pages[`${prefix}contact`] = {
+    title: strings.contact.title,
+    description: strings.contact.description,
+  };
+
+  for (const caseStudy of profile.caseStudies) {
+    pages[`${prefix}case-studies/${caseStudy.slug}`] = {
+      title: caseStudy.title,
+      description: caseStudy.summary,
+    };
+  }
 }
+
+addLocalePages('en');
+addLocalePages('de');
 
 export const { getStaticPaths, GET } = await OGImageRoute({
   param: 'slug',
