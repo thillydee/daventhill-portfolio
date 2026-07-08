@@ -42,6 +42,7 @@ const profileDe: Profile = {
         'Führte eine relevanzbasierte Sortierfunktion für die Produktliste ein, die auf einem Berechnungsmodell basiert, das Produktlebenszyklus-Phase und interne Geschäftsanforderungen wie Lagerverfügbarkeit berücksichtigt.',
         'Konzipierte und lancierte ein MVP-Feature inklusive unterstützendem Datenmanagement-Prozess, um marktspezifische Lagerverfügbarkeit auf der Website anzuzeigen, einschliesslich verfügbarer Konfigurationsvarianten.',
         'Baute ein interdisziplinäres Squad aus zwei Business Ownern, UX und IT auf und leitet es seit rund vier Jahren, wobei agile Arbeitsweisen (Scrum und Kanban) fest verankert wurden.',
+        'Aktives Mitglied der squad-übergreifenden Agile Guild von endress.com, organisiert Offsites, All-Hands und Learning- und Growth-Sessions mit und leitet Squad Health Checks, um die Arbeitsweise über alle Squads hinweg kontinuierlich zu verbessern.',
         'Verwaltet SharePoint Online als Editor und administriert ganze Bereiche der M365-Umgebung des Unternehmens.',
       ],
     },
@@ -134,7 +135,7 @@ const profileDe: Profile = {
   ],
 
   leadershipApproach:
-    'Ich habe seit rund vier Jahren ein interdisziplinäres Squad aus Business Ownern, UX und IT aufgebaut und geleitet und dabei agile Arbeitsweisen (Scrum und Kanban) fest im Teamalltag verankert. Mein Ansatz für Product Ownership liegt an der Schnittstelle von Geschäftsstrategie, Daten und Technologie: Ich dokumentiere Business-Anforderungen, User Stories und Abnahmekriterien als solide Grundlage für die Entwicklung und plane sowie führe die Abnahmetests (User Acceptance Testing) selbst durch – bis zur finalen Freigabe vor dem Go-live.',
+    'Ich habe seit rund vier Jahren ein interdisziplinäres Squad aus Business Ownern, UX und IT aufgebaut und geleitet und dabei agile Arbeitsweisen (Scrum und Kanban) fest im Teamalltag verankert. Mein Ansatz für Product Ownership liegt an der Schnittstelle von Geschäftsstrategie, Daten und Technologie: Ich dokumentiere Business-Anforderungen, User Stories und Abnahmekriterien als solide Grundlage für die Entwicklung und plane sowie führe die Abnahmetests (User Acceptance Testing) selbst durch – bis zur finalen Freigabe vor dem Go-live. Über mein eigenes Squad hinaus bin ich aktives Mitglied der squad-übergreifenden Agile Guild von endress.com, wo ich Offsites, All-Hands und Learning- und Growth-Sessions mitorganisiere und Squad Health Checks leite, um das Niveau agiler Praxis in der gesamten Organisation zu heben.',
 
   education: [
     {
@@ -161,6 +162,8 @@ const profileDe: Profile = {
       'Squad- und Teamführung',
       'Roadmap- und Backlog-Management',
       'Stakeholder-Management',
+      'Moderation der Agile Guild',
+      'Squad Health Checks',
     ],
     dataAndAi: [
       'Metadaten-Management',

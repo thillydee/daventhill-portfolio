@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { t, buildLocalizedPaths, type Locale } from '../i18n';
 import type { CaseStudy } from '../data/profile';
@@ -14,6 +15,11 @@ const localizedPaths = buildLocalizedPaths(`/case-studies/${caseStudy.slug}`);
 const homePath = locale === 'de' ? '/de/' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 const caseStudiesPath = `${prefix}/case-studies`;
+
+const knowledgeEntries = await getCollection(locale === 'de' ? 'knowledgeDe' : 'knowledgeEn');
+const relatedKnowledge = knowledgeEntries.filter((entry) =>
+  entry.data.relatedCaseStudies?.includes(caseStudy.slug),
+);
 
 const breadcrumbs = [
   { name: strings.breadcrumbs.home, path: homePath },
@@ -52,6 +58,26 @@ const breadcrumbs = [
         <p class="mt-3 text-base leading-relaxed text-ink-soft">{caseStudy.outcome}</p>
       </div>
     </div>
+
+    {relatedKnowledge.length > 0 && (
+      <div class="mt-16">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-muted">
+          {strings.caseStudyDetail.relatedKnowledgeHeading}
+        </h2>
+        <ul class="mt-4 space-y-2">
+          {relatedKnowledge.map((entry) => (
+            <li>
+              <a
+                href={`${prefix}/knowledge/${entry.id}`}
+                class="text-sm font-semibold text-brand hover:text-brand-dark"
+              >
+                {entry.data.title} →
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
 
     <div class="mt-16 rounded-xl border border-border bg-surface-alt p-8 text-center">
       <h2 class="text-xl font-semibold text-ink">{strings.caseStudyDetail.ctaHeading}</h2>

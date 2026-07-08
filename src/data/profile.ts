@@ -106,6 +106,7 @@ const profile: Profile = {
         'Introduced a relevance-based sorting feature for the product list, powered by a calculation model that factors in product lifecycle stage and internal business requirements such as stock availability.',
         'Designed and launched an MVP feature plus supporting data management process to show market-level stock availability on the website, including which configuration variants are available.',
         'Built and has led a cross-functional squad of two business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban).',
+        'Active member of the cross-squad Agile Guild for endress.com, co-organizing offsites, All-Hands, and learning and growth sessions, and leading Squad Health Checks to continuously improve ways of working across all squads.',
         "Manages SharePoint Online as an editor, administering entire sections of the organization's M365 environment.",
       ],
     },
@@ -198,7 +199,7 @@ const profile: Profile = {
   ],
 
   leadershipApproach:
-    'I have built and led a cross-functional squad of business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban) into how the team operates day to day. My approach to product ownership sits at the intersection of business strategy, data, and technology: I document business requirements, user stories, and acceptance criteria as a firm foundation for development, and I plan and run user acceptance testing myself through to sign-off before anything goes live.',
+    'I have built and led a cross-functional squad of business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban) into how the team operates day to day. My approach to product ownership sits at the intersection of business strategy, data, and technology: I document business requirements, user stories, and acceptance criteria as a firm foundation for development, and I plan and run user acceptance testing myself through to sign-off before anything goes live. Beyond my own squad, I am an active member of endress.com\'s cross-squad Agile Guild, where I help organize offsites, All-Hands, and learning and growth sessions, and lead Squad Health Checks to raise the bar on agile practice across the wider organization.',
 
   education: [
     {
@@ -225,6 +226,8 @@ const profile: Profile = {
       'Squad and team leadership',
       'Roadmap and backlog management',
       'Stakeholder management',
+      'Agile Guild facilitation',
+      'Squad Health Checks',
     ],
     dataAndAi: [
       'Metadata management',

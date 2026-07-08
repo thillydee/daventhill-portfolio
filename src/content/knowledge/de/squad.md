@@ -18,4 +18,6 @@ Diese Struktur hat es möglich gemacht, Dinge wie die KI-gestützte Cross-Sellin
 
 ## Squad vs. Guild
 
-Während ein Squad ein festes Team mit gemeinsamer Lieferverantwortung ist, ist eine Guild lockerer organisiert: eine freiwillige, teamübergreifende Gemeinschaft rund um ein gemeinsames Interesse oder eine Disziplin, ohne direkte Berichtslinien oder Lieferverantwortung. Eine Guild dient dazu, Wissen zu verbreiten und die Praxis über Squads hinweg abzustimmen, die sonst isoliert arbeiten würden – zum Beispiel eine "Daten und KI"-Guild, die Personen verbindet, die datengetriebene Entscheidungsfindung in unterschiedlichen Produktteams anwenden, auch wenn sie in verschiedenen Squads sitzen.
+Während ein Squad ein festes Team mit gemeinsamer Lieferverantwortung ist, ist eine Guild lockerer organisiert: eine freiwillige, teamübergreifende Gemeinschaft rund um ein gemeinsames Interesse oder eine Disziplin, ohne direkte Berichtslinien oder Lieferverantwortung. Neben meinem Squad bin ich auch aktives Mitglied der squad-übergreifenden Agile Guild von endress.com – siehe [was eine Guild ist](/de/knowledge/guild) für die Anwendung im Alltag, inklusive der Squad Health Checks, die ich leite.
+
+Dies gehört auch zu meinem [Skillset](/de/skills) als Product Owner im Alltag.

@@ -18,4 +18,6 @@ This structure is what made it possible to ship things like the AI-powered cross
 
 ## Squad vs. Guild
 
-Where a squad is a standing team with shared delivery responsibility, a guild is looser: a voluntary, cross-team community around a shared interest or discipline, without direct reporting lines or delivery ownership. A guild exists to spread knowledge and align practice across squads that would otherwise work in isolation — for example, a "data and AI" guild connecting people applying data-driven decision-making across different product teams, even if they sit in different squads.
+Where a squad is a standing team with shared delivery responsibility, a guild is looser: a voluntary, cross-team community around a shared interest or discipline, without direct reporting lines or delivery ownership. Alongside my squad, I am also an active member of endress.com's cross-squad Agile Guild — see [what a guild is](/knowledge/guild) for how that works day to day, including the Squad Health Checks I lead.
+
+This is also part of my day-to-day [skill set](/skills) as a Product Owner.
