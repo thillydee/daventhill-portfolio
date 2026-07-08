@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t, buildLocalizedPaths, type Locale } from '../i18n';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const strings = t(locale);
+const localizedPaths = buildLocalizedPaths('/knowledge');
+const homePath = locale === 'de' ? '/de/' : '/';
+const prefix = locale === 'de' ? '/de' : '';
+
+const entries = await getCollection(locale === 'de' ? 'knowledgeDe' : 'knowledgeEn');
+const concepts = entries
+  .filter((e) => e.data.type === 'concept')
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+const faqs = entries
+  .filter((e) => e.data.type === 'faq')
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+
+const breadcrumbs = [
+  { name: strings.breadcrumbs.home, path: homePath },
+  { name: strings.breadcrumbs.knowledge, path: localizedPaths[locale] },
+];
+---
+
+<BaseLayout
+  title={strings.knowledge.title}
+  description={strings.knowledge.description}
+  path={localizedPaths[locale]}
+  ogImageSlug={locale === 'de' ? 'de/knowledge' : 'knowledge'}
+  locale={locale}
+  localizedPaths={localizedPaths}
+  breadcrumbs={breadcrumbs}
+>
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{strings.breadcrumbs.knowledge}</p>
+    <h1 class="mt-2 text-4xl font-bold tracking-tight text-ink sm:text-5xl">{strings.knowledge.title}</h1>
+    <p class="mt-4 max-w-2xl text-base text-muted">
+      {strings.knowledge.intro}
+    </p>
+
+    {concepts.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-muted">{strings.knowledge.conceptsHeading}</h2>
+        <div class="mt-4 grid gap-6 sm:grid-cols-2">
+          {concepts.map((entry) => (
+            <a
+              href={`${prefix}/knowledge/${entry.id}`}
+              class="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-brand"
+            >
+              <h3 class="text-lg font-semibold text-ink group-hover:text-brand">{entry.data.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">{entry.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {faqs.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-muted">{strings.knowledge.faqHeading}</h2>
+        <div class="mt-4 grid gap-6 sm:grid-cols-2">
+          {faqs.map((entry) => (
+            <a
+              href={`${prefix}/knowledge/${entry.id}`}
+              class="group rounded-xl border border-border bg-surface p-6 transition-colors hover:border-brand"
+            >
+              <h3 class="text-lg font-semibold text-ink group-hover:text-brand">{entry.data.question ?? entry.data.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">{entry.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </section>
+</BaseLayout>

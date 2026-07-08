@@ -11,6 +11,7 @@ export const strings = {
       experience: 'Experience',
       caseStudies: 'Case Studies',
       skills: 'Skills',
+      knowledge: 'Knowledge',
       talk: "Let's talk",
     },
     footer: {
@@ -22,6 +23,7 @@ export const strings = {
       caseStudies: 'Case Studies',
       skills: 'Skills',
       contact: 'Contact',
+      knowledge: 'Knowledge',
     },
     home: {
       heroSuffix: 'in Basel',
@@ -101,6 +103,17 @@ export const strings = {
       text: "The page you're looking for doesn't exist or has moved.",
       button: 'Back to home',
     },
+    knowledge: {
+      title: 'Knowledge',
+      description:
+        "Glossary explainers and FAQ answers from Daven Thill's practice as a Product Owner in Basel, covering concepts like squads, guilds, and product data.",
+      intro:
+        'Explainers and answers grounded in real product work, not generic definitions — glossary concepts and frequently asked questions, updated regularly.',
+      conceptsHeading: 'Concepts',
+      faqHeading: 'FAQ',
+      back: '← All knowledge',
+      relatedCaseStudiesHeading: 'Related case studies',
+    },
     faq: [
       {
         question: 'What does a Product Owner in Basel do?',
@@ -125,6 +138,7 @@ export const strings = {
       experience: 'Erfahrung',
       caseStudies: 'Case Studies',
       skills: 'Skills',
+      knowledge: 'Wissen',
       talk: 'Kontakt aufnehmen',
     },
     footer: {
@@ -136,6 +150,7 @@ export const strings = {
       caseStudies: 'Case Studies',
       skills: 'Skills',
       contact: 'Kontakt',
+      knowledge: 'Wissen',
     },
     home: {
       heroSuffix: 'in Basel',
@@ -214,6 +229,17 @@ export const strings = {
       title: 'Seite nicht gefunden',
       text: 'Die gesuchte Seite existiert nicht oder wurde verschoben.',
       button: 'Zurück zur Startseite',
+    },
+    knowledge: {
+      title: 'Wissen',
+      description:
+        'Glossar-Erklärungen und FAQ-Antworten aus der Praxis von Daven Thill als Product Owner in Basel, zu Konzepten wie Squads, Guilds und Produktdaten.',
+      intro:
+        'Erklärungen und Antworten aus echter Produktarbeit, keine generischen Definitionen – Glossar-Begriffe und häufig gestellte Fragen, regelmässig erweitert.',
+      conceptsHeading: 'Konzepte',
+      faqHeading: 'FAQ',
+      back: '← Alle Wissensartikel',
+      relatedCaseStudiesHeading: 'Verwandte Case Studies',
     },
     faq: [
       {

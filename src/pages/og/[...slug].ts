@@ -1,9 +1,10 @@
 import { OGImageRoute } from 'astro-og-canvas';
+import { getCollection } from 'astro:content';
 import { getProfile, t, type Locale } from '../../i18n';
 
 const pages: Record<string, { title: string; description: string }> = {};
 
-function addLocalePages(locale: Locale) {
+async function addLocalePages(locale: Locale) {
   const profile = getProfile(locale);
   const strings = t(locale);
   const prefix = locale === 'de' ? 'de/' : '';
@@ -28,6 +29,10 @@ function addLocalePages(locale: Locale) {
     title: strings.contact.title,
     description: strings.contact.description,
   };
+  pages[`${prefix}knowledge`] = {
+    title: strings.knowledge.title,
+    description: strings.knowledge.description,
+  };
 
   for (const caseStudy of profile.caseStudies) {
     pages[`${prefix}case-studies/${caseStudy.slug}`] = {
@@ -35,10 +40,18 @@ function addLocalePages(locale: Locale) {
       description: caseStudy.summary,
     };
   }
+
+  const knowledgeEntries = await getCollection(locale === 'de' ? 'knowledgeDe' : 'knowledgeEn');
+  for (const entry of knowledgeEntries) {
+    pages[`${prefix}knowledge/${entry.id}`] = {
+      title: entry.data.title,
+      description: entry.data.description,
+    };
+  }
 }
 
-addLocalePages('en');
-addLocalePages('de');
+await addLocalePages('en');
+await addLocalePages('de');
 
 export const { getStaticPaths, GET } = await OGImageRoute({
   param: 'slug',

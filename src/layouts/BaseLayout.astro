@@ -2,7 +2,11 @@
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 import SEO from '../components/SEO.astro';
-import PersonSchema, { type Breadcrumb, type FaqItem } from '../components/PersonSchema.astro';
+import PersonSchema, {
+  type Breadcrumb,
+  type FaqItem,
+  type DefinedTermInput,
+} from '../components/PersonSchema.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { htmlLang, type Locale } from '../i18n';
@@ -16,10 +20,20 @@ export interface Props {
   localizedPaths: Record<Locale, string>;
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
+  definedTerm?: DefinedTermInput;
 }
 
-const { title, description, path, ogImageSlug, locale, localizedPaths, breadcrumbs, faq } =
-  Astro.props;
+const {
+  title,
+  description,
+  path,
+  ogImageSlug,
+  locale,
+  localizedPaths,
+  breadcrumbs,
+  faq,
+  definedTerm,
+} = Astro.props;
 ---
 
 <html lang={htmlLang(locale)}>
@@ -36,7 +50,7 @@ const { title, description, path, ogImageSlug, locale, localizedPaths, breadcrum
       locale={locale}
       localizedPaths={localizedPaths}
     />
-    <PersonSchema locale={locale} breadcrumbs={breadcrumbs} faq={faq} />
+    <PersonSchema locale={locale} breadcrumbs={breadcrumbs} faq={faq} definedTerm={definedTerm} />
   </head>
   <body class="flex min-h-screen flex-col bg-surface font-sans text-ink antialiased">
     <Header locale={locale} localizedPaths={localizedPaths} />

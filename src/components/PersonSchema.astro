@@ -11,13 +11,19 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface DefinedTermInput {
+  name: string;
+  description: string;
+}
+
 export interface Props {
   locale: Locale;
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
+  definedTerm?: DefinedTermInput;
 }
 
-const { locale, breadcrumbs, faq } = Astro.props;
+const { locale, breadcrumbs, faq, definedTerm } = Astro.props;
 const profile = getProfile(locale);
 const { person, experience } = profile;
 
@@ -56,6 +62,15 @@ if (breadcrumbs && breadcrumbs.length > 0) {
       name: crumb.name,
       item: new URL(crumb.path, Astro.site).toString(),
     })),
+  });
+}
+
+if (definedTerm) {
+  graph.push({
+    '@type': 'DefinedTerm',
+    name: definedTerm.name,
+    description: definedTerm.description,
+    inDefinedTermSet: `${Astro.site}knowledge/`,
   });
 }
 

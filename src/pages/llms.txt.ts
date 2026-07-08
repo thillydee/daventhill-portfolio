@@ -1,11 +1,14 @@
 import type { APIRoute } from 'astro';
+import { getCollection } from 'astro:content';
 import { getProfile } from '../i18n';
 
-export const GET: APIRoute = ({ site }) => {
+export const GET: APIRoute = async ({ site }) => {
   const abs = (path: string) => new URL(path, site).toString();
 
   const en = getProfile('en');
   const de = getProfile('de');
+  const knowledgeEn = await getCollection('knowledgeEn');
+  const knowledgeDe = await getCollection('knowledgeDe');
 
   const body = `# ${en.person.name}
 
@@ -22,6 +25,10 @@ ${en.caseStudies
   .map((cs) => `  - [${cs.title}](${abs(`/case-studies/${cs.slug}`)}): ${cs.summary}`)
   .join('\n')}
 - [Skills](${abs('/skills')}): product, agile, data & AI skills, certifications, and languages
+- [Knowledge](${abs('/knowledge')}): glossary concepts and FAQ answers grounded in real product work
+${knowledgeEn
+  .map((entry) => `  - [${entry.data.title}](${abs(`/knowledge/${entry.id}`)}): ${entry.data.description}`)
+  .join('\n')}
 - [Contact](${abs('/contact')}): contact form and direct contact details
 
 ## Deutsch
@@ -37,6 +44,10 @@ ${de.caseStudies
   .map((cs) => `  - [${cs.title}](${abs(`/de/case-studies/${cs.slug}`)}): ${cs.summary}`)
   .join('\n')}
 - [Skills](${abs('/de/skills')}): Product-, Agile-, Daten- und KI-Skills, Zertifizierungen und Sprachen
+- [Wissen](${abs('/de/knowledge')}): Glossar-Konzepte und FAQ-Antworten aus echter Produktarbeit
+${knowledgeDe
+  .map((entry) => `  - [${entry.data.title}](${abs(`/de/knowledge/${entry.id}`)}): ${entry.data.description}`)
+  .join('\n')}
 - [Kontakt](${abs('/de/contact')}): Kontaktformular und direkte Kontaktdaten
 
 ## Contact
