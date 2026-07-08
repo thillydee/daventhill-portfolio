@@ -13,6 +13,7 @@ export const strings = {
       skills: 'Skills',
       knowledge: 'Knowledge',
       talk: "Let's talk",
+      downloadCv: 'Download CV',
     },
     footer: {
       builtWith: 'Built with Astro.',
@@ -141,6 +142,7 @@ export const strings = {
       skills: 'Skills',
       knowledge: 'Wissen',
       talk: 'Kontakt aufnehmen',
+      downloadCv: 'Lebenslauf herunterladen',
     },
     footer: {
       builtWith: 'Erstellt mit Astro.',
