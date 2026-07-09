@@ -35,3 +35,23 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+Append this block to the end of your existing `AGENTS.md` (the file your `CLAUDE.md` already points to). It makes every default Claude Code session in this repo aware of the multi-agent maintenance system, not just sessions where you explicitly run `/portfolio-review`.
+
+---
+
+## Continuous content/UX/SEO maintenance system
+
+This repo has a small multi-agent system for ongoing site improvement, coordinated by a PM/PO orchestrator:
+
+- `docs/vision.md` — mission, audience, voice, guardrails. Read this before making any content, structural, or SEO change of consequence.
+- `docs/workflow.md` — how the full review-and-ship loop works.
+- `docs/decision-log.md` — history of what's shipped and why.
+- `.claude/agents/content-strategist.md`, `.claude/agents/ux-ui-architect.md`, `.claude/agents/seo-aeo-specialist.md` — specialist subagents.
+- `.claude/commands/portfolio-review.md` — run `/portfolio-review` to trigger a full PM-led cycle.
+
+Guardrails that apply regardless of which agent or session is active:
+
+- Never touch `public/cv/*.pdf` directly, and never read/write anything under `~/Documents/cv-builder` (see the CV-sync section above — separate private repo with PII).
+- Never break EN/DE content or route parity.
+- Never merge to `master`/`main` without explicit sign-off from Daven — this site is a live job-search asset, and Vercel deploys `master`/`main` straight to production.
