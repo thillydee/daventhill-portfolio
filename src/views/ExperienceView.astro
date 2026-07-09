@@ -11,6 +11,32 @@ const { person, experience, education, certifications } = getProfile(locale);
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths('/experience');
 const homePath = locale === 'de' ? '/de/' : '/';
+const prefix = locale === 'de' ? '/de' : '';
+
+// Maps specific experience highlight bullets to the case study that covers them in
+// depth, keyed on the exact highlight text (see src/data/profile.ts / profile.de.ts).
+const highlightLinks: Record<string, string> =
+  locale === 'de'
+    ? {
+        'Initiierte und leitete ein KI-gestütztes Cross-Selling-Projekt, das die interne Cross-Selling-Logik durch ein Berechnungsmodell auf Basis von SAP-Verkaufsdaten ersetzte, um wirklich komplementäre Produktempfehlungen anzuzeigen.':
+          '/case-studies/ai-cross-selling',
+        'Verantwortet das Metadaten-Management auf Produktebene und leitete die Migration der Produktspezifikationsdaten von Censhare in ein neues PIM-System, wobei definiert wurde, wie Daten auf endress.com und durch KI-Tools strukturiert und genutzt werden.':
+          '/case-studies/metadata-pim-migration',
+        'Erweiterte die Onsite-Suche (Elasticsearch) von endress.com um eine geschäftsspezifische Boost-Schicht über deren nativen Relevanzalgorithmus, die Produktlebenszyklus-Phase, Segmentierung, Lagerverfügbarkeit und Marktverfügbarkeit berücksichtigt, um die relevantesten Listings zuerst auszuspielen.':
+          '/case-studies/relevance-sorting',
+        'Konzipierte und lancierte ein MVP-Feature inklusive unterstützendem Datenmanagement-Prozess, um marktspezifische Lagerverfügbarkeit auf der Website anzuzeigen, einschliesslich verfügbarer Konfigurationsvarianten.':
+          '/case-studies/in-stock-mvp',
+      }
+    : {
+        'Initiated and led an AI-powered cross-selling project, replacing internal cross-selling logic with a calculation model built on SAP sales order data to surface genuinely complementary product recommendations.':
+          '/case-studies/ai-cross-selling',
+        'Owns product-level metadata management and led the migration of product specification data from Censhare to a new PIM system, defining how data is structured and consumed on endress.com and by AI tools.':
+          '/case-studies/metadata-pim-migration',
+        "Enhanced endress.com's onsite search (Elasticsearch) with a business-tuned boost layer on top of its native relevance algorithm, factoring in product lifecycle phase, segmentation, stock availability, and market availability to surface the most relevant listings first.":
+          '/case-studies/relevance-sorting',
+        'Designed and launched an MVP feature plus supporting data management process to show market-level stock availability on the website, including which configuration variants are available.':
+          '/case-studies/in-stock-mvp',
+      };
 
 const description = `${strings.experience.intro} ${experience
   .map((e) => `${e.title} — ${e.company}`)
@@ -50,7 +76,20 @@ const breadcrumbs = [
             {role.highlights.map((highlight) => (
               <li class="flex gap-3 text-sm leading-relaxed text-ink-soft">
                 <span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-border"></span>
-                <span>{highlight}</span>
+                <span>
+                  {highlight}
+                  {highlightLinks[highlight] && (
+                    <>
+                      {' '}
+                      <a
+                        href={`${prefix}${highlightLinks[highlight]}`}
+                        class="font-semibold text-brand hover:text-brand-dark"
+                      >
+                        {strings.caseStudies.readCaseStudy}
+                      </a>
+                    </>
+                  )}
+                </span>
               </li>
             ))}
           </ul>

@@ -1,6 +1,6 @@
 ---
 title: "What is User Acceptance Testing (UAT)? How I run it with my squad"
-description: "How Daven Thill owns UAT on the business side, from use cases and acceptance criteria to a structured, role-tailored testing approach across the squad."
+description: "How I own UAT on the business side, from use cases and acceptance criteria to a structured, role-tailored testing approach across the squad."
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08

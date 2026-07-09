@@ -1,6 +1,6 @@
 ---
 title: "Product Owner vs. Project Manager: Was ist der Unterschied?"
-description: "Daven Thill erklärt den praktischen Unterschied zwischen Product Owner und Project Manager, basierend auf eigener Erfahrung in beiden Rollen."
+description: "Ich erkläre den praktischen Unterschied zwischen Product Owner und Project Manager, basierend auf eigener Erfahrung in beiden Rollen."
 type: faq
 question: "Was ist der Unterschied zwischen einem Product Owner und einem Project Manager?"
 publishDate: 2026-07-08

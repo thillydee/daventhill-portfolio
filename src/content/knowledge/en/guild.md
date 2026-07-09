@@ -1,6 +1,6 @@
 ---
 title: "What is a Guild? Cross-squad communities of practice explained"
-description: "How guilds work in agile product organizations, and how Daven Thill helps run the Agile Guild across all squads at endress.com."
+description: "How guilds work in agile product organizations, and how I help run the Agile Guild across all squads at endress.com."
 type: concept
 publishDate: 2026-07-08
 ---

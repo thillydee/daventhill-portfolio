@@ -18,7 +18,7 @@ export function htmlLang(locale: Locale): string {
 }
 
 export function ogLocale(locale: Locale): string {
-  return locale === 'de' ? 'de_CH' : 'en_CH';
+  return locale === 'de' ? 'de_DE' : 'en_US';
 }
 
 /**

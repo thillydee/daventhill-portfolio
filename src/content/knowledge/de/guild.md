@@ -1,6 +1,6 @@
 ---
 title: "Was ist eine Guild? Squad-übergreifende Communities of Practice erklärt"
-description: "Wie Guilds in agilen Produktorganisationen funktionieren und wie Daven Thill die Agile Guild squad-übergreifend bei endress.com mitgestaltet."
+description: "Wie Guilds in agilen Produktorganisationen funktionieren und wie ich die Agile Guild squad-übergreifend bei endress.com mitgestalte."
 type: concept
 publishDate: 2026-07-08
 ---

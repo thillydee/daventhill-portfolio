@@ -21,9 +21,10 @@ export interface Props {
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
+  publishDate?: Date;
 }
 
-const { locale, breadcrumbs, faq, definedTerm } = Astro.props;
+const { locale, breadcrumbs, faq, definedTerm, publishDate } = Astro.props;
 const profile = getProfile(locale);
 const { person, experience } = profile;
 
@@ -32,7 +33,7 @@ const personNode = {
   '@id': `${Astro.site}#person`,
   name: person.name,
   jobTitle: person.currentTitle,
-  description: person.bioShort,
+  description: person.bioShortSchema,
   url: Astro.site,
   inLanguage: htmlLang(locale),
   email: `mailto:${person.contact.email}`,
@@ -71,12 +72,16 @@ if (definedTerm) {
     name: definedTerm.name,
     description: definedTerm.description,
     inDefinedTermSet: `${Astro.site}knowledge/`,
+    author: { '@id': personNode['@id'] },
+    ...(publishDate ? { datePublished: publishDate.toISOString() } : {}),
   });
 }
 
 if (faq && faq.length > 0) {
   graph.push({
     '@type': 'FAQPage',
+    author: { '@id': personNode['@id'] },
+    ...(publishDate ? { datePublished: publishDate.toISOString() } : {}),
     mainEntity: faq.map((item) => ({
       '@type': 'Question',
       name: item.question,

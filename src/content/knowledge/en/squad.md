@@ -1,6 +1,6 @@
 ---
 title: "What is a Squad? How cross-functional squads work in product teams"
-description: "A short explainer on the squad model in agile product organizations, and how Daven Thill has built and led one at Endress+Hauser."
+description: "A short explainer on the squad model in agile product organizations, and how I've built and led one at Endress+Hauser."
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08

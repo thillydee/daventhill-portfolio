@@ -14,10 +14,14 @@ const strings = t(locale);
 const currentRole = experience[0];
 const prefix = locale === 'de' ? '/de' : '';
 const localizedPaths = buildLocalizedPaths('/');
+const pageTitle =
+  locale === 'de'
+    ? `${person.name} — ${person.currentTitle} in Basel, Schweiz`
+    : `${person.name} — ${person.currentTitle} in Basel, Switzerland`;
 ---
 
 <BaseLayout
-  title={`${person.name} — ${person.currentTitle}`}
+  title={pageTitle}
   description={person.positioningLine}
   path={localizedPaths[locale]}
   ogImageSlug={locale === 'de' ? 'de' : 'index'}
@@ -60,6 +64,7 @@ const localizedPaths = buildLocalizedPaths('/');
         alt={`${person.name}, ${person.currentTitle}`}
         width={224}
         height={224}
+        densities={[1, 2]}
         loading="eager"
         class="h-36 w-36 flex-none rounded-2xl object-cover shadow-lg sm:h-56 sm:w-56"
       />
@@ -88,6 +93,25 @@ const localizedPaths = buildLocalizedPaths('/');
         {strings.home.seeFullExperience}
       </a>
     </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{strings.home.leadershipEyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{strings.home.leadershipHeading}</h2>
+    <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
+      {person.leadershipSummary}
+    </p>
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+      {person.leadershipHighlights.map((highlight) => (
+        <li class="flex gap-3 rounded-lg border border-border bg-surface p-4 text-sm text-ink-soft">
+          <span class="mt-1 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+          <span>{highlight}</span>
+        </li>
+      ))}
+    </ul>
+    <a href={`${prefix}/skills#leadership`} class="mt-6 inline-block text-sm font-semibold text-brand hover:text-brand-dark">
+      {strings.home.leadershipLinkLabel}
+    </a>
   </section>
 
   <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
