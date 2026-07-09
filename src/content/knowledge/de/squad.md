@@ -1,6 +1,6 @@
 ---
 title: "Was ist ein Squad? Wie interdisziplinäre Squads in Produktteams funktionieren"
-description: "Eine kurze Erklärung des Squad-Modells in agilen Produktorganisationen und wie Daven Thill eines bei Endress+Hauser aufgebaut und geleitet hat."
+description: "Eine kurze Erklärung des Squad-Modells in agilen Produktorganisationen und wie ich eines bei Endress+Hauser aufgebaut und geleitet habe."
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08

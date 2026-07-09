@@ -21,6 +21,10 @@ const skillLinks: Record<string, string> =
         'Squad Health Checks': '/knowledge/guild',
         'UAT-Konzeption & Koordination': '/knowledge/user-acceptance-testing',
         Elasticsearch: '/case-studies/relevance-sorting',
+        'Metadaten-Management': '/case-studies/metadata-pim-migration',
+        'PIM (Product Information Management)': '/case-studies/metadata-pim-migration',
+        'KI- und ML-gestützte Produktempfehlungen': '/case-studies/ai-cross-selling',
+        'SAP-Verkaufsdaten': '/case-studies/ai-cross-selling',
       }
     : {
         'Squad and team leadership': '/knowledge/squad',
@@ -28,6 +32,10 @@ const skillLinks: Record<string, string> =
         'Squad Health Checks': '/knowledge/guild',
         'UAT design & coordination': '/knowledge/user-acceptance-testing',
         Elasticsearch: '/case-studies/relevance-sorting',
+        'Metadata management': '/case-studies/metadata-pim-migration',
+        'PIM (Product Information Management)': '/case-studies/metadata-pim-migration',
+        'AI and ML informed product recommendations': '/case-studies/ai-cross-selling',
+        'SAP sales order data': '/case-studies/ai-cross-selling',
       };
 
 const skillGroups = [
@@ -55,7 +63,19 @@ const breadcrumbs = [
   <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
     <p class="text-sm font-semibold uppercase tracking-wide text-brand">{person.location}</p>
     <h1 class="mt-2 text-4xl font-bold tracking-tight text-ink sm:text-5xl">{strings.skills.title}</h1>
-    <p class="mt-6 max-w-3xl text-base leading-relaxed text-ink-soft">{leadershipApproach}</p>
+
+    <div id="leadership" class="mt-6 max-w-3xl scroll-mt-24 rounded-xl border border-border bg-surface p-6">
+      <h2 class="text-2xl font-bold text-ink sm:text-3xl">{strings.skills.leadershipHeading}</h2>
+      <p class="mt-4 text-base leading-relaxed text-ink-soft">{leadershipApproach}</p>
+      <ul class="mt-4 space-y-2">
+        {person.leadershipHighlights.map((highlight) => (
+          <li class="flex gap-3 text-sm text-ink-soft">
+            <span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+            <span>{highlight}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
     <div class="mt-12 grid gap-8 sm:grid-cols-2">
       {skillGroups.map((group) => (

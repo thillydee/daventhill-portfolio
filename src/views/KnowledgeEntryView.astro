@@ -41,6 +41,7 @@ const publishedLabel = new Intl.DateTimeFormat(locale === 'de' ? 'de-CH' : 'en-C
   locale={locale}
   localizedPaths={localizedPaths}
   breadcrumbs={breadcrumbs}
+  publishDate={entry.data.publishDate}
   definedTerm={
     entry.data.type === 'concept'
       ? { name: entry.data.title, description: entry.data.description }

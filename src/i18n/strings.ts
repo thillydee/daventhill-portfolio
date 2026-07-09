@@ -7,6 +7,9 @@ export interface FaqItem {
 
 export const strings = {
   en: {
+    common: {
+      skipToContent: 'Skip to main content',
+    },
     nav: {
       experience: 'Experience',
       caseStudies: 'Case Studies',
@@ -33,6 +36,9 @@ export const strings = {
       getInTouch: 'Get in touch',
       currentRoleEyebrow: 'Current role',
       seeFullExperience: 'See full experience →',
+      leadershipEyebrow: 'Team leadership',
+      leadershipHeading: 'Not just backlog ownership — real team leadership',
+      leadershipLinkLabel: 'See how I lead →',
       caseStudiesEyebrow: 'Case studies',
       caseStudiesHeading: 'Data and AI driven product work',
       readCaseStudy: 'Read case study →',
@@ -73,6 +79,7 @@ export const strings = {
       title: 'Skills & approach',
       description:
         'Product, agile, data and AI skills of Daven Thill, a data-driven Product Owner based in Basel, Switzerland.',
+      leadershipHeading: 'How I lead',
       groups: {
         productAndAgile: 'Product & Agile',
         dataAndAi: 'Data & AI',
@@ -150,17 +157,20 @@ export const strings = {
       {
         question: 'Why work with Daven Thill?',
         answer:
-          'Daven Thill is a Product Owner based in Basel, Switzerland, with more than five years of experience leading data-driven digital products in B2B and industrial environments. He currently owns the Products section of endress.com at Endress+Hauser, where he leads a cross-functional squad and has shipped AI-powered features including a sales-data-driven cross-selling engine and a relevance-based product sorting model. He holds a Professional Scrum Product Owner (PSPO) certification and previously worked in product and project management roles at MediaMarkt Switzerland and Manor AG.',
+          "Because I bring both the technical and the people side of product ownership. I currently own the Products section of endress.com at Endress+Hauser, where I've built and led a cross-functional squad for around four years — running retrospectives, continuously adjusting our ways of working, and bridging a multi-national team — while also shipping AI-powered features like a sales-data-driven cross-selling engine and a relevance-based product sorting model. I'm a certified Professional Scrum Product Owner (PSPO) and previously worked in product and project management roles at MediaMarkt Switzerland and Manor AG.",
       },
       {
         question: 'Does Daven Thill work with AI-powered product features?',
         answer:
-          'Yes. At Endress+Hauser he has initiated and led AI and data driven features including a sales-data-based cross-selling engine, a relevance ranking model for product listings, and a PIM data migration designed with AI consumption in mind.',
+          "Yes. At Endress+Hauser I've initiated and led AI and data driven features including a sales-data-based cross-selling engine, a relevance ranking model for product listings, and a PIM data migration designed with AI consumption in mind.",
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'DE', full: 'Deutsch' },
   },
   de: {
+    common: {
+      skipToContent: 'Zum Hauptinhalt springen',
+    },
     nav: {
       experience: 'Erfahrung',
       caseStudies: 'Case Studies',
@@ -187,6 +197,9 @@ export const strings = {
       getInTouch: 'Kontakt aufnehmen',
       currentRoleEyebrow: 'Aktuelle Position',
       seeFullExperience: 'Gesamte Erfahrung ansehen →',
+      leadershipEyebrow: 'Teamführung',
+      leadershipHeading: 'Nicht nur Backlog-Verantwortung — echte Teamführung',
+      leadershipLinkLabel: 'Wie ich Teams führe →',
       caseStudiesEyebrow: 'Case Studies',
       caseStudiesHeading: 'Daten- und KI-getriebene Produktarbeit',
       readCaseStudy: 'Case Study lesen →',
@@ -227,6 +240,7 @@ export const strings = {
       title: 'Skills & Arbeitsweise',
       description:
         'Product-, Agile-, Daten- und KI-Skills von Daven Thill, einem datengetriebenen Product Owner mit Sitz in Basel.',
+      leadershipHeading: 'Wie ich führe',
       groups: {
         productAndAgile: 'Produkt & Agil',
         dataAndAi: 'Daten & KI',
@@ -304,12 +318,12 @@ export const strings = {
       {
         question: 'Warum mit Daven Thill zusammenarbeiten?',
         answer:
-          'Daven Thill ist Product Owner mit Sitz in Basel und verfügt über mehr als fünf Jahre Erfahrung in der Leitung datengetriebener digitaler Produkte im B2B- und Industrieumfeld. Aktuell verantwortet er den Bereich Products von endress.com bei Endress+Hauser, wo er ein interdisziplinäres Squad leitet und KI-gestützte Features realisiert hat, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine und ein relevanzbasiertes Sortiermodell für Produkte. Er ist zertifizierter Professional Scrum Product Owner (PSPO) und war zuvor in Product- und Projektmanagement-Rollen bei MediaMarkt Schweiz und der Manor AG tätig.',
+          'Weil ich sowohl die fachliche als auch die menschliche Seite von Product Ownership abdecke. Aktuell verantworte ich den Bereich Products von endress.com bei Endress+Hauser, wo ich seit rund vier Jahren ein interdisziplinäres Squad aufgebaut und geleitet habe – mit Retrospektiven, kontinuierlicher Anpassung unserer Arbeitsweise und der Verbindung eines multinationalen Teams – und gleichzeitig KI-gestützte Features wie eine auf Verkaufsdaten basierende Cross-Selling-Engine und ein relevanzbasiertes Sortiermodell realisiert habe. Ich bin zertifizierter Professional Scrum Product Owner (PSPO) und war zuvor in Product- und Projektmanagement-Rollen bei MediaMarkt Schweiz und der Manor AG tätig.',
       },
       {
         question: 'Arbeitet Daven Thill mit KI-gestützten Produkt-Features?',
         answer:
-          'Ja. Bei Endress+Hauser hat er KI- und datengetriebene Features initiiert und geleitet, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine, ein Relevanzmodell für Produktlisten und eine PIM-Datenmigration, die gezielt auch für die Nutzung durch KI konzipiert wurde.',
+          'Ja. Bei Endress+Hauser habe ich KI- und datengetriebene Features initiiert und geleitet, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine, ein Relevanzmodell für Produktlisten und eine PIM-Datenmigration, die gezielt auch für die Nutzung durch KI konzipiert wurde.',
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'EN', full: 'English' },

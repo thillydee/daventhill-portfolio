@@ -10,7 +10,7 @@ import PersonSchema, {
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import { htmlLang, type Locale } from '../i18n';
+import { htmlLang, t, type Locale } from '../i18n';
 
 export interface Props {
   title: string;
@@ -22,6 +22,7 @@ export interface Props {
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
+  publishDate?: Date;
 }
 
 const {
@@ -34,7 +35,10 @@ const {
   breadcrumbs,
   faq,
   definedTerm,
+  publishDate,
 } = Astro.props;
+
+const strings = t(locale);
 ---
 
 <html lang={htmlLang(locale)}>
@@ -51,12 +55,24 @@ const {
       locale={locale}
       localizedPaths={localizedPaths}
     />
-    <PersonSchema locale={locale} breadcrumbs={breadcrumbs} faq={faq} definedTerm={definedTerm} />
+    <PersonSchema
+      locale={locale}
+      breadcrumbs={breadcrumbs}
+      faq={faq}
+      definedTerm={definedTerm}
+      publishDate={publishDate}
+    />
   </head>
   <body class="flex min-h-screen flex-col bg-surface font-sans text-ink antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+    >
+      {strings.common.skipToContent}
+    </a>
     <Header locale={locale} localizedPaths={localizedPaths} />
     {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
-    <main class="flex-1">
+    <main id="main" class="flex-1">
       <slot />
     </main>
     <Footer locale={locale} />

@@ -15,6 +15,12 @@ export interface Person {
   targetSeoPhrases: string[];
   bioShort: string;
   bioLong: string;
+  /** Third-person version of bioShort, verbatim pre-rewrite text — for schema.org Person.description only. */
+  bioShortSchema: string;
+  /** Short first-person homepage summary of leadershipApproach. */
+  leadershipSummary: string;
+  /** Scannable bullets restating leadershipApproach for homepage/skills display. */
+  leadershipHighlights: string[];
 }
 
 export interface ExperienceEntry {
@@ -70,7 +76,7 @@ const profile: Profile = {
     name: 'Daven Thill',
     currentTitle: 'Product Owner',
     positioningLine:
-      'Product Owner in Basel focused on data-driven and AI-powered digital products',
+      'Product Owner in Basel, Switzerland, focused on data-driven and AI-powered B2B e-commerce products',
     location: 'Basel, Switzerland',
     contact: {
       email: 'daventhill@gmail.com',
@@ -87,11 +93,22 @@ const profile: Profile = {
       'Data-driven Product Owner Basel',
       'AI Product Owner Switzerland',
       'Digital Product Owner B2B Basel',
+      'B2B E-commerce Product Owner Switzerland',
     ],
     bioShort:
-      'Daven Thill is a Product Owner based in Basel, Switzerland, with more than five years of experience leading data-driven digital products in B2B and industrial environments. He currently owns the Products section of endress.com at Endress+Hauser, where he leads a cross-functional squad and has shipped AI-powered features including a sales-data-driven cross-selling engine and a relevance-based product sorting model. He holds a Professional Scrum Product Owner (PSPO) certification and previously worked in product and project management roles at MediaMarkt Switzerland and Manor AG.',
+      "I'm a Product Owner based in Basel, Switzerland, with more than five years of experience leading data-driven digital products in B2B and industrial environments. I currently own the Products section of endress.com at Endress+Hauser, where I lead a cross-functional squad and have shipped AI-powered features including a sales-data-driven cross-selling engine and a relevance-based product sorting model. I hold a Professional Scrum Product Owner (PSPO) certification and previously worked in product and project management roles at MediaMarkt Switzerland and Manor AG.",
     bioLong:
-      'Daven Thill is a Product Owner based in Basel, Switzerland, with more than five years of experience leading digital products end to end, from roadmap and backlog to hands-on delivery. He currently owns the Products section of endress.com at Endress+Hauser, a global leader in industrial process automation and measurement instrumentation, where he has built and led a cross-functional squad of business owners, UX, and IT for around four years. His recent work centers on data and AI driven product decisions: an AI-powered cross-selling engine built on SAP sales order data, a relevance ranking model for product listings that factors in product lifecycle and stock availability, and a metadata and PIM migration that defines how product data is structured and consumed, including by AI tools. He is a certified Professional Scrum Product Owner (PSPO) with additional training in Design Thinking, and holds a Bachelor of Science in Business Administration from FHNW. Before Endress+Hauser, he held product and project management roles at MediaMarkt Switzerland and Manor AG in Basel.',
+      "I'm a Product Owner based in Basel, Switzerland, with more than five years of experience leading digital products end to end, from roadmap and backlog to hands-on delivery. I currently own the Products section of endress.com at Endress+Hauser, a global leader in industrial process automation and measurement instrumentation, where I've built and led a cross-functional squad of business owners, UX, and IT for around four years. My recent work centers on data and AI driven product decisions: an AI-powered cross-selling engine built on SAP sales order data, a relevance ranking model for product listings that factors in product lifecycle and stock availability, and a metadata and PIM migration that defines how product data is structured and consumed, including by AI tools. I'm a certified Professional Scrum Product Owner (PSPO) with additional training in Design Thinking, and hold a Bachelor of Science in Business Administration from FHNW. Before Endress+Hauser, I held product and project management roles at MediaMarkt Switzerland and Manor AG.",
+    bioShortSchema:
+      'Daven Thill is a Product Owner based in Basel, Switzerland, with more than five years of experience leading data-driven digital products in B2B and industrial environments. He currently owns the Products section of endress.com at Endress+Hauser, where he leads a cross-functional squad and has shipped AI-powered features including a sales-data-driven cross-selling engine and a relevance-based product sorting model. He holds a Professional Scrum Product Owner (PSPO) certification and previously worked in product and project management roles at MediaMarkt Switzerland and Manor AG.',
+    leadershipSummary:
+      "For around four years, I've built and led a cross-functional squad of business owners, UX, and IT — embedding agile ways of working into how we operate day to day, not running ceremonies for their own sake. Beyond my own squad, I help raise the bar across all of endress.com's squads as an active member of the cross-squad Agile Guild.",
+    leadershipHighlights: [
+      'Run retrospectives and continuously reassess ways of working — agile ceremonies as a living practice, not a box to tick.',
+      'Bridge a multi-national, multi-background team so everyone pulls in the same direction.',
+      'Actively develop people — helping team members grow, not just assigning tickets.',
+      'Facilitate the cross-squad Agile Guild: co-organizing offsites and All-Hands, and leading Squad Health Checks to raise agile practice across every squad, not just my own.',
+    ],
   },
 
   experience: [

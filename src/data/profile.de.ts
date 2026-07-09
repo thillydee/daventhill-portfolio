@@ -5,7 +5,7 @@ const profileDe: Profile = {
     name: 'Daven Thill',
     currentTitle: 'Product Owner',
     positioningLine:
-      'Product Owner in Basel mit Fokus auf datengetriebene und KI-gestützte digitale Produkte',
+      'Product Owner in Basel, Schweiz, mit Fokus auf datengetriebene und KI-gestützte B2B-E-Commerce-Produkte',
     location: 'Basel, Schweiz',
     contact: {
       email: 'daventhill@gmail.com',
@@ -22,11 +22,22 @@ const profileDe: Profile = {
       'Datengetriebener Product Owner Basel',
       'KI Product Owner Schweiz',
       'Digitaler Product Owner B2B Basel',
+      'B2B-E-Commerce Product Owner Schweiz',
     ],
     bioShort:
-      'Daven Thill ist Product Owner mit Sitz in Basel und verfügt über mehr als fünf Jahre Erfahrung in der Leitung datengetriebener digitaler Produkte im B2B- und Industrieumfeld. Aktuell verantwortet er den Bereich Products von endress.com bei Endress+Hauser, wo er ein interdisziplinäres Squad leitet und KI-gestützte Features realisiert hat, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine und ein relevanzbasiertes Sortiermodell für Produkte. Er ist zertifizierter Professional Scrum Product Owner (PSPO) und war zuvor in Product- und Projektmanagement-Rollen bei MediaMarkt Schweiz und der Manor AG tätig.',
+      'Ich bin Product Owner mit Sitz in Basel und verfüge über mehr als fünf Jahre Erfahrung in der Leitung datengetriebener digitaler Produkte im B2B- und Industrieumfeld. Aktuell verantworte ich den Bereich Products von endress.com bei Endress+Hauser, wo ich ein interdisziplinäres Squad leite und KI-gestützte Features realisiert habe, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine und ein relevanzbasiertes Sortiermodell für Produkte. Ich bin zertifizierter Professional Scrum Product Owner (PSPO) und war zuvor in Product- und Projektmanagement-Rollen bei MediaMarkt Schweiz und der Manor AG tätig.',
     bioLong:
-      'Daven Thill ist Product Owner mit Sitz in Basel und bringt mehr als fünf Jahre Erfahrung in der End-to-End-Führung digitaler Produkte mit – von Roadmap und Backlog bis zur operativen Umsetzung. Aktuell verantwortet er den Bereich Products von endress.com bei Endress+Hauser, einem weltweit führenden Unternehmen für industrielle Prozessautomation und Messtechnik, wo er seit rund vier Jahren ein interdisziplinäres Squad aus Business Ownern, UX und IT aufgebaut und geführt hat. Sein aktueller Schwerpunkt liegt auf daten- und KI-getriebenen Produktentscheidungen: einer KI-gestützten Cross-Selling-Engine auf Basis von SAP-Verkaufsdaten, einem Relevanzmodell für Produktlisten, das Produktlebenszyklus und Lagerverfügbarkeit berücksichtigt, sowie einer Metadaten- und PIM-Migration, die definiert, wie Produktdaten strukturiert und genutzt werden – auch durch KI-Tools. Er ist zertifizierter Professional Scrum Product Owner (PSPO) mit zusätzlicher Ausbildung in Design Thinking und hält einen Bachelor of Science in Business Administration der FHNW. Vor Endress+Hauser war er in Product- und Projektmanagement-Rollen bei MediaMarkt Schweiz und der Manor AG in Basel tätig.',
+      'Ich bin Product Owner mit Sitz in Basel, Schweiz, und bringe mehr als fünf Jahre Erfahrung in der End-to-End-Führung digitaler Produkte mit – von Roadmap und Backlog bis zur operativen Umsetzung. Aktuell verantworte ich den Bereich Products von endress.com bei Endress+Hauser, einem weltweit führenden Unternehmen für industrielle Prozessautomation und Messtechnik, wo ich seit rund vier Jahren ein interdisziplinäres Squad aus Business Ownern, UX und IT aufgebaut und geleitet habe. Mein aktueller Schwerpunkt liegt auf daten- und KI-getriebenen Produktentscheidungen: einer KI-gestützten Cross-Selling-Engine auf Basis von SAP-Verkaufsdaten, einem Relevanzmodell für Produktlisten, das Produktlebenszyklus und Lagerverfügbarkeit berücksichtigt, sowie einer Metadaten- und PIM-Migration, die definiert, wie Produktdaten strukturiert und genutzt werden – auch durch KI-Tools. Ich bin zertifizierter Professional Scrum Product Owner (PSPO) mit zusätzlicher Ausbildung in Design Thinking und halte einen Bachelor of Science in Business Administration der FHNW. Vor Endress+Hauser war ich in Product- und Projektmanagement-Rollen bei MediaMarkt Schweiz und der Manor AG in Basel tätig.',
+    bioShortSchema:
+      'Daven Thill ist Product Owner mit Sitz in Basel und verfügt über mehr als fünf Jahre Erfahrung in der Leitung datengetriebener digitaler Produkte im B2B- und Industrieumfeld. Aktuell verantwortet er den Bereich Products von endress.com bei Endress+Hauser, wo er ein interdisziplinäres Squad leitet und KI-gestützte Features realisiert hat, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine und ein relevanzbasiertes Sortiermodell für Produkte. Er ist zertifizierter Professional Scrum Product Owner (PSPO) und war zuvor in Product- und Projektmanagement-Rollen bei MediaMarkt Schweiz und der Manor AG tätig.',
+    leadershipSummary:
+      'Seit rund vier Jahren baue und leite ich ein interdisziplinäres Squad aus Business Ownern, UX und IT — und verankere agile Arbeitsweisen im Teamalltag, statt Zeremonien nur pro forma durchzuführen. Über mein eigenes Squad hinaus hebe ich als aktives Mitglied der squad-übergreifenden Agile Guild das Niveau über alle Squads von endress.com hinweg.',
+    leadershipHighlights: [
+      'Führe Retrospektiven durch und passe unsere Arbeitsweise kontinuierlich an — agile Zeremonien als gelebte Praxis, nicht als Pflichtübung.',
+      'Verbinde ein multinationales, fachlich diverses Team, damit alle an einem Strang ziehen.',
+      'Fördere aktiv die Weiterentwicklung einzelner Teammitglieder — statt nur Tickets zuzuweisen.',
+      'Moderiere die squad-übergreifende Agile Guild: Mitorganisation von Offsites und All-Hands, Leitung von Squad Health Checks zur Verbesserung der agilen Praxis über alle Squads hinweg.',
+    ],
   },
 
   experience: [

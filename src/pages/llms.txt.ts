@@ -16,6 +16,8 @@ export const GET: APIRoute = async ({ site }) => {
 
 ${en.person.bioLong}
 
+Structures product data explicitly for AI-tool consumption, not just human browsing: led the migration of product specification data to a new PIM (Product Information Management) system at Endress+Hauser, defining how that data is structured and consumed both by endress.com and by AI tools. See the [PIM migration case study](${abs('/case-studies/metadata-pim-migration')}).
+
 ## English
 
 - [Home](${abs('/')}): overview, positioning, and current role
@@ -36,6 +38,8 @@ ${knowledgeEn
 > ${de.person.positioningLine}
 
 ${de.person.bioLong}
+
+Strukturiert Produktdaten gezielt für die Nutzung durch KI-Tools, nicht nur für menschliches Browsing: leitete die Migration der Produktspezifikationsdaten in ein neues PIM-System (Product Information Management) bei Endress+Hauser und definierte, wie diese Daten sowohl von endress.com als auch von KI-Tools strukturiert und genutzt werden. Siehe die [PIM-Migrations-Case-Study](${abs('/de/case-studies/metadata-pim-migration')}).
 
 - [Startseite](${abs('/de/')}): Positionierung und aktuelle Position
 - [Erfahrung](${abs('/de/experience')}): vollständiger Werdegang, Ausbildung und Zertifizierungen
