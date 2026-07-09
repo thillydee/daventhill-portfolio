@@ -56,6 +56,6 @@ Every 2 weeks.
 
 ## Current state / recent context
 
-Team leadership (retrospectives, ways-of-working, multi-national team bridging, people growth) is a priority to surface more strongly — `profile.ts` already has a `leadershipApproach` field with strong material here, but it's worth checking during the first review cycle whether it's actually visible/prominent on the live site (e.g. does it get its own section/page, or is it buried) versus just sitting in the data file.
+Team leadership visibility was addressed in the 2026-07-09 cycle (see `decision-log.md`): homepage now has a dedicated "Team leadership" section and `/skills` has a headed leadership card, both sourced from `leadershipApproach`. Next cycle: case-study dates and the custom-domain question were explicitly deferred.
 
 *(Update this section yourself as things change — e.g. active interviews, a new shipped project at Endress+Hauser worth a case study, a role change.)*
