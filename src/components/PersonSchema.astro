@@ -22,9 +22,10 @@ export interface Props {
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
   publishDate?: Date;
+  asProfilePage?: boolean;
 }
 
-const { locale, breadcrumbs, faq, definedTerm, publishDate } = Astro.props;
+const { locale, breadcrumbs, faq, definedTerm, publishDate, asProfilePage } = Astro.props;
 const profile = getProfile(locale);
 const { person, experience } = profile;
 
@@ -53,6 +54,16 @@ const personNode = {
 };
 
 const graph: Record<string, unknown>[] = [personNode];
+
+if (asProfilePage) {
+  graph.push({
+    '@type': 'ProfilePage',
+    '@id': `${Astro.site}#profilepage`,
+    name: `${person.name} — ${person.currentTitle}`,
+    inLanguage: htmlLang(locale),
+    mainEntity: { '@id': personNode['@id'] },
+  });
+}
 
 if (breadcrumbs && breadcrumbs.length > 0) {
   graph.push({

@@ -23,6 +23,7 @@ export interface Props {
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
   publishDate?: Date;
+  asProfilePage?: boolean;
 }
 
 const {
@@ -36,6 +37,7 @@ const {
   faq,
   definedTerm,
   publishDate,
+  asProfilePage,
 } = Astro.props;
 
 const strings = t(locale);
@@ -61,6 +63,7 @@ const strings = t(locale);
       faq={faq}
       definedTerm={definedTerm}
       publishDate={publishDate}
+      asProfilePage={asProfilePage}
     />
   </head>
   <body class="flex min-h-screen flex-col bg-surface font-sans text-ink antialiased">
