@@ -6,6 +6,7 @@ const knowledgeSchema = z.object({
   description: z.string(),
   type: z.enum(['faq', 'concept']),
   question: z.string().optional(),
+  faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
   relatedCaseStudies: z.array(z.string()).optional(),
   publishDate: z.coerce.date(),
 });
