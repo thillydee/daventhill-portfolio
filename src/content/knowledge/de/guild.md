@@ -3,6 +3,13 @@ title: "Was ist eine Guild? Squad-übergreifende Communities of Practice erklär
 description: "Wie Guilds in agilen Produktorganisationen funktionieren und wie ich die Agile Guild squad-übergreifend bei endress.com mitgestalte."
 type: concept
 publishDate: 2026-07-08
+faqs:
+  - question: "Was ist eine Guild in agilen Organisationen?"
+    answer: "Eine freiwillige, teamübergreifende Community rund um ein gemeinsames Interesse, eine Disziplin oder eine Praxis – nicht rund um die Lieferung eines bestimmten Produkts. Im Unterschied zu einem Squad hat sie keine Lieferverantwortung und keine direkte Berichtslinie."
+  - question: "Was unterscheidet eine Guild von einem Squad?"
+    answer: "Ein Squad verantwortet ein Produktergebnis im Tagesgeschäft mit Lieferverantwortung; eine Guild verantwortet die Gesundheit einer Praxis oder Disziplin über alle Squads hinweg, ohne eigene Lieferverantwortung. Dieselbe Person ist oft Teil von beidem gleichzeitig."
+  - question: "Was macht eine Guild im Alltag konkret?"
+    answer: "In der Praxis ist eine Guild ein freiwilliger Austausch gleichgesinnter Personen – etwa eine Agile Guild, eine UX Guild oder eine Data Guild –, die sich eine eigene Mission setzen und gemeinsam daran arbeiten, um mit diesem gemeinsamen Fokus die Arbeitsweise über alle Squads hinweg zu verbessern, nicht nur die eines einzelnen Squads."
 ---
 
 Eine "Guild" ist eine freiwillige, teamübergreifende Community rund um ein gemeinsames Interesse, eine Disziplin oder eine Praxis – nicht rund um die Lieferung eines bestimmten Produkts. Während ein [Squad](/de/knowledge/squad) ein festes Team mit gemeinsamer Lieferverantwortung für einen Produktbereich ist, hat eine Guild keine Lieferverantwortung und keine direkte Berichtslinie – sie existiert allein, um Wissen zu verbreiten, die Praxis abzustimmen und das Niveau über Squads hinweg anzuheben, die sonst isoliert arbeiten würden.

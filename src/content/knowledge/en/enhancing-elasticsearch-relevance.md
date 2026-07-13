@@ -4,6 +4,13 @@ description: "A practical explainer on layering business-driven boosting on top 
 type: concept
 relatedCaseStudies: ["relevance-sorting"]
 publishDate: 2026-07-08
+faqs:
+  - question: "How do you add business logic to Elasticsearch relevance?"
+    answer: "Boost, don't replace: leave native BM25 text-relevance scoring untouched and layer a business-defined boost function on top via a function_score query, keeping search quality and business priority separately tunable."
+  - question: "What signals are worth boosting in Elasticsearch search results?"
+    answer: "Signals a generic search engine can't know on its own: lifecycle stage, audience or use-case segmentation, real stock and market availability, and — used carefully — business priority or margin."
+  - question: "Does boosting relevance replace Elasticsearch's default scoring?"
+    answer: "No — it sits on top of it. Elasticsearch computes its normal text-relevance score as usual, and business-defined functions adjust that score afterward, so native search quality isn't lost."
 ---
 
 Elasticsearch's default relevance scoring (built on BM25, a refinement of TF-IDF) is genuinely good at one thing: ranking results by how well they match a search query's text. What it has no concept of is business context — whether a matched product is actually the one worth buying right now.

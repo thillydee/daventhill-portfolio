@@ -4,6 +4,13 @@ description: "Wie ich UAT auf Business-Seite verantworte – von Use Cases und A
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08
+faqs:
+  - question: "Was ist User Acceptance Testing (UAT)?"
+    answer: "Die letzte Prüfung vor dem Go-live: die Validierung aus Sicht des tatsächlichen Business, dass das Gebaute wirklich den realen Use Case löst – nicht nur, dass der Code funktioniert."
+  - question: "Wer sollte UAT durchführen – das Business oder QA?"
+    answer: "QA prüft, ob der Code wie spezifiziert funktioniert; UAT prüft, ob das Gebaute tatsächlich den realen Business-Use-Case löst. UAT sollte vom Business verantwortet und durchgeführt werden, nicht als zusätzlicher QA-Durchgang behandelt werden."
+  - question: "Wann sollte UAT geplant werden – vor oder nach der Entwicklung?"
+    answer: "Vorher. Abnahmekriterien sollten zusammen mit Business-Anforderungen und User Stories dokumentiert werden, bevor die Entwicklung beginnt, sodass definiert ist, was als \"abgenommen\" gilt, statt es am fertigen Feature zu improvisieren."
 ---
 
 User Acceptance Testing (UAT) ist die letzte Prüfung vor dem Go-live: die Validierung aus Sicht des tatsächlichen Business, dass das Gebaute wirklich das tut, wofür es gedacht war – nicht nur, dass der Code funktioniert, sondern dass der reale Use Case gelöst wird. Es ist eine Verantwortung auf Business-Seite, getrennt von der technischen QA, und lässt sich leicht schlecht umsetzen: zu spät, zu vage, oder mit den falschen Personen, die die falschen Dinge testen.

@@ -34,12 +34,15 @@ const publishedLabel = new Intl.DateTimeFormat(locale === 'de' ? 'de-CH' : 'en-C
 }).format(entry.data.publishDate);
 
 const embeddedFaqs = entry.data.faqs;
-const faqItems: FaqItem[] | undefined =
+const primaryFaq: FaqItem | undefined =
   entry.data.type === 'faq' && entry.data.question
-    ? [{ question: entry.data.question, answer: entry.data.description }]
-    : embeddedFaqs && embeddedFaqs.length > 0
-      ? embeddedFaqs
-      : undefined;
+    ? { question: entry.data.question, answer: entry.data.description }
+    : undefined;
+const faqItems: FaqItem[] | undefined = primaryFaq
+  ? [primaryFaq, ...(embeddedFaqs ?? [])]
+  : embeddedFaqs && embeddedFaqs.length > 0
+    ? embeddedFaqs
+    : undefined;
 ---
 
 <BaseLayout
