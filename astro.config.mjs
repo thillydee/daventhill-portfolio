@@ -7,7 +7,7 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://daventhill-portfolio.vercel.app',
+  site: 'https://daventhill.ch',
 
   i18n: {
     defaultLocale: 'en',
