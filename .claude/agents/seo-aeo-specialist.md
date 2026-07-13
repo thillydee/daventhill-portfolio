@@ -38,6 +38,7 @@ Make the site rank well in traditional search AND be accurately, favorably cited
 - Don't change URLs/routes yourself — that's ux-ui-architect's territory; if a URL change would help SEO, propose it as a flag for the PM to sequence.
 - Don't fabricate structured-data claims (job titles, dates, employers) — pull only from `src/data/profile.ts`/`profile.de.ts` as source of truth.
 - Never touch `public/cv/*.pdf` or anything under `~/Documents/cv-builder`.
+- **Every knowledge article must carry `FAQPage` structured data: exactly 3 FAQ Q&A pairs, in both EN and DE.** The mechanism already exists — a `faqs:` array in the knowledge content schema (`src/content.config.ts`) flows through `KnowledgeEntryView.astro` into `PersonSchema.astro`, which emits real `FAQPage`/`Question`/`Answer` JSON-LD and renders a matching `<dl>` block (see `src/content/knowledge/en/squad-offsites.md` for the reference implementation). Audit every knowledge article each cycle for: the field present, exactly 3 entries, and no orphaned prose-only "FAQ" sections that look like Q&A but carry no schema. Flag gaps to content-strategist (they own picking the 3 most rankable questions and writing the answers) rather than drafting the Q&A copy yourself. `type: faq` articles already contribute one Q&A via their own `question`/`description`; treat whether they need 2 more via `faqs:` to reach 3 as an open question for the PM, not a unilateral call.
 
 # Output
 
