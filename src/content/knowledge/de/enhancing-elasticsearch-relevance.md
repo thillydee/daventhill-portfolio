@@ -4,6 +4,13 @@ description: "Eine praxisnahe Erklärung, wie man geschäftsgetriebenes Boosting
 type: concept
 relatedCaseStudies: ["relevance-sorting"]
 publishDate: 2026-07-08
+faqs:
+  - question: "Wie fügt man Elasticsearch-Relevanz Geschäftslogik hinzu?"
+    answer: "Das zuverlässige Muster ist Boosten statt Ersetzen: die native BM25-Textrelevanzbewertung von Elasticsearch unverändert lassen und eine geschäftsdefinierte Boost-Funktion darüberlegen, meist über eine function_score-Query, sodass Suchqualität und Geschäftspriorität getrennte, unabhängig einstellbare Anliegen bleiben."
+  - question: "Welche Signale eignen sich fürs Boosting in Elasticsearch-Suchergebnissen?"
+    answer: "Signale, die eine generische Suchmaschine von sich aus nicht kennt: Lebenszyklus-Phase, Zielgruppen- oder Anwendungsfall-Segmentierung, reale Lager- und Marktverfügbarkeit sowie – mit Bedacht eingesetzt – geschäftliche Priorität oder Marge."
+  - question: "Ersetzt das Boosten die Standard-Relevanzbewertung von Elasticsearch?"
+    answer: "Nein – es sollte darüberliegen, nicht sie ersetzen. Elasticsearch berechnet seinen normalen Text-Relevanz-Score wie gewohnt, und geschäftsdefinierte Funktionen passen diesen Score danach an, sodass die native Suchqualität erhalten bleibt."
 ---
 
 Die Standard-Relevanzbewertung von Elasticsearch (basierend auf BM25, einer Weiterentwicklung von TF-IDF) ist wirklich gut in einer Sache: Ergebnisse danach zu ranken, wie gut sie zum Text einer Suchanfrage passen. Was sie nicht kennt, ist Geschäftskontext – ob ein gefundenes Produkt gerade tatsächlich das ist, das es wert ist, gekauft zu werden.

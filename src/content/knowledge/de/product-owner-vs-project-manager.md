@@ -4,6 +4,11 @@ description: "Ich erkläre den praktischen Unterschied zwischen Product Owner un
 type: faq
 question: "Was ist der Unterschied zwischen einem Product Owner und einem Project Manager?"
 publishDate: 2026-07-08
+faqs:
+  - question: "Kann dieselbe Person Product Owner und Project Manager zugleich sein?"
+    answer: "In der Praxis überschneiden sich die beiden Rollen oft, besonders im industriellen B2B-Umfeld – ein Product Owner braucht weiterhin die Koordinationsfähigkeiten eines Project Managers, wenn ein Squad von anderen Teams oder externen Systemen abhängt. Der Unterschied liegt in der Verantwortung: Ein Product Owner verantwortet Ergebnis und Roadmap, nicht nur den Abschluss eines Projekts."
+  - question: "Ist ein Product Owner eine Art Project Manager?"
+    answer: "Nein. Ein Project Manager verantwortet die termin-, budget- und umfanggerechte Lieferung eines definierten Arbeitspakets. Ein Product Owner verantwortet das Ergebnis eines Produkts über die Zeit – entscheidet, was gebaut wird und warum – eine andere, fortlaufende Verantwortung statt einer Variante der Projektlieferung."
 ---
 
 Ein Project Manager ist typischerweise dafür verantwortlich, ein definiertes Arbeitspaket termin-, budget- und umfanggerecht zu liefern – die Rolle des "wie bringen wir dieses konkrete Projekt zum Abschluss". Ein Product Owner verantwortet dagegen ein Produktergebnis über die Zeit: entscheidet, was gebaut wird und warum, verantwortet Roadmap und Backlog und ist für den Wert verantwortlich, den das Produkt liefert – nicht nur für den Abschluss eines einzelnen Projekts.

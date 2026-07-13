@@ -4,6 +4,13 @@ description: "A short explainer on the squad model in agile product organization
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08
+faqs:
+  - question: "What is a squad in agile product management?"
+    answer: "A squad is a small, cross-functional, largely autonomous team built around a product area rather than a single discipline — combining the people who define, design, and build a product in one team with a shared goal, instead of handing work off between separate departments."
+  - question: "What's the difference between a squad and a traditional team?"
+    answer: "A traditional team is usually organized by discipline and receives work handed off from elsewhere; a squad is organized around a product outcome and owns that outcome end to end, from requirements through to shipping and testing."
+  - question: "Where does the term \"squad\" come from?"
+    answer: "It comes from the \"Spotify model,\" where squads are grouped into wider tribes, with chapters connecting people in the same discipline across squads and guilds as cross-tribe communities of interest. Most companies that use the term adapt it to their own structure."
 ---
 
 A "squad" is a small, cross-functional, largely autonomous team built around a product area rather than around a single discipline. Instead of separating business, design, and engineering into departments that hand work off to each other, a squad puts the people who define, design, and build a product together in one team with a shared goal.

@@ -3,6 +3,13 @@ title: "What is a Guild? Cross-squad communities of practice explained"
 description: "How guilds work in agile product organizations, and how I help run the Agile Guild across all squads at endress.com."
 type: concept
 publishDate: 2026-07-08
+faqs:
+  - question: "What is a guild in agile organizations?"
+    answer: "A voluntary, cross-team community built around a shared interest, discipline, or practice — not around delivering a specific product. Unlike a squad, it has no delivery ownership and no direct reporting line."
+  - question: "What's the difference between a guild and a squad?"
+    answer: "A squad owns a product outcome day to day with delivery accountability; a guild owns the health of a practice or discipline across every squad, with no delivery responsibility of its own. The same person is often part of both at once."
+  - question: "What does a guild actually do day to day?"
+    answer: "In practice a guild is a voluntary exchange between like-minded people — for example an Agile Guild, a UX Guild, or a Data Guild — who define their own mission and work toward it together, using that shared focus to raise the way of work across every squad rather than just one."
 ---
 
 A "guild" is a voluntary, cross-team community built around a shared interest, discipline, or practice rather than around the delivery of a specific product. Where a [squad](/knowledge/squad) is a standing team with shared delivery responsibility for a product area, a guild has no delivery ownership and no direct reporting line — it exists purely to spread knowledge, align practice, and raise the bar across squads that would otherwise work in isolation.

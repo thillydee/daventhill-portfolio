@@ -4,6 +4,13 @@ description: "Eine kurze Erklärung des Squad-Modells in agilen Produktorganisat
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08
+faqs:
+  - question: "Was ist ein Squad im agilen Produktmanagement?"
+    answer: "Ein Squad ist ein kleines, interdisziplinäres, weitgehend autonomes Team, das rund um einen Produktbereich aufgebaut ist statt rund um eine einzelne Disziplin – es bringt die Personen, die ein Produkt definieren, gestalten und bauen, in einem Team mit gemeinsamem Ziel zusammen, statt Arbeit zwischen getrennten Abteilungen zu übergeben."
+  - question: "Was unterscheidet ein Squad von einem klassischen Team?"
+    answer: "Ein klassisches Team ist meist nach Disziplin organisiert und erhält Arbeit von anderswo übergeben; ein Squad ist rund um ein Produktergebnis organisiert und verantwortet dieses Ergebnis end-to-end, von den Anforderungen bis zur Auslieferung und zum Testen."
+  - question: "Woher stammt der Begriff \"Squad\"?"
+    answer: "Er stammt aus dem \"Spotify-Modell\", in dem Squads zu grösseren Tribes gruppiert werden, Chapters Personen derselben Disziplin squad-übergreifend verbinden und Guilds tribe-übergreifende Interessengemeinschaften bilden. Die meisten Unternehmen, die den Begriff übernehmen, passen ihn an die eigene Struktur an."
 ---
 
 Ein "Squad" ist ein kleines, interdisziplinäres, weitgehend autonomes Team, das rund um einen Produktbereich aufgebaut ist statt rund um eine einzelne Disziplin. Statt Business, Design und Engineering in getrennte Abteilungen aufzuteilen, die sich Arbeit gegenseitig übergeben, bringt ein Squad die Personen, die ein Produkt definieren, gestalten und bauen, in einem Team mit gemeinsamem Ziel zusammen.
