@@ -16,6 +16,14 @@ Template:
 
 ---
 
+## 2026-07-13 — Standing FAQ structured-data rule + backfill across all knowledge articles
+
+- **Changed:** Added a standing rule to `content-strategist.md` and `seo-aeo-specialist.md`: every knowledge article carries exactly 3 FAQ Q&A pairs, in EN and DE, via a `faqs:` frontmatter field emitting real `FAQPage`/`Question`/`Answer` JSON-LD (not prose "## FAQ" sections). Backfilled this across all 5 pre-existing knowledge articles (`squad`, `guild`, `user-acceptance-testing`, `enhancing-elasticsearch-relevance`, `product-owner-vs-project-manager`); `squad-offsites` was already compliant. Extended `KnowledgeEntryView.astro` so `type: faq` articles merge their primary question with `faqs:` extras for JSON-LD while only rendering the extras visibly (avoiding duplicating the page title/description).
+- **Why:** Prompted by Daven asking whether the squad-offsites FAQ block was actually structured for AI citability — it wasn't (plain prose, no schema). Fixed the mechanism there first, then codified it as a standing rule so it applies automatically in future `/portfolio-review` cycles, then backfilled existing articles so the whole knowledge base is consistent now rather than only new content going forward.
+- **Agents involved:** none (drafted directly in the main session)
+- **PR:** https://github.com/thillydee/daventhill-portfolio/pull/4, https://github.com/thillydee/daventhill-portfolio/pull/5
+- **Merged:** 2026-07-13
+
 ## 2026-07-13 — Squad offsites knowledge article (EN/DE)
 
 - **Changed:** Added a new knowledge base article, `squad-offsites` (EN+DE), explaining why my squad runs quarterly offsites — personal growth, strategy, hackathon-style ideation, and team spirit, run in Kanban rather than fixed sprints. Includes an FAQ block with self-contained Q&A pairs aimed at AI-answer-engine citability, in addition to the standard `DefinedTerm` JSON-LD the site generates for `type: concept` entries. Internally links to the existing `squad` and `guild` articles.
