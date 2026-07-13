@@ -1,6 +1,7 @@
 ---
 import { render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import type { FaqItem } from '../components/PersonSchema.astro';
 import { getProfile, t, buildLocalizedPaths, type Locale } from '../i18n';
 
 export interface Props {
@@ -31,6 +32,14 @@ const related = (entry.data.relatedCaseStudies ?? [])
 const publishedLabel = new Intl.DateTimeFormat(locale === 'de' ? 'de-CH' : 'en-CH', {
   dateStyle: 'long',
 }).format(entry.data.publishDate);
+
+const embeddedFaqs = entry.data.faqs;
+const faqItems: FaqItem[] | undefined =
+  entry.data.type === 'faq' && entry.data.question
+    ? [{ question: entry.data.question, answer: entry.data.description }]
+    : embeddedFaqs && embeddedFaqs.length > 0
+      ? embeddedFaqs
+      : undefined;
 ---
 
 <BaseLayout
@@ -47,11 +56,7 @@ const publishedLabel = new Intl.DateTimeFormat(locale === 'de' ? 'de-CH' : 'en-C
       ? { name: entry.data.title, description: entry.data.description }
       : undefined
   }
-  faq={
-    entry.data.type === 'faq' && entry.data.question
-      ? [{ question: entry.data.question, answer: entry.data.description }]
-      : undefined
-  }
+  faq={faqItems}
 >
   <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
     <a href={knowledgePath} class="text-sm font-semibold text-brand hover:text-brand-dark">
@@ -69,6 +74,22 @@ const publishedLabel = new Intl.DateTimeFormat(locale === 'de' ? 'de-CH' : 'en-C
     <div class="prose prose-slate mt-10 max-w-none prose-headings:font-semibold prose-headings:text-ink prose-p:leading-relaxed prose-p:text-ink-soft prose-a:text-brand">
       <Content />
     </div>
+
+    {embeddedFaqs && embeddedFaqs.length > 0 && (
+      <div class="mt-12">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-muted">
+          {strings.knowledge.faqSectionHeading}
+        </h2>
+        <dl class="mt-4 space-y-6">
+          {embeddedFaqs.map((item) => (
+            <div>
+              <dt class="text-base font-semibold text-ink">{item.question}</dt>
+              <dd class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    )}
 
     {related.length > 0 && (
       <div class="mt-16 rounded-xl border border-border bg-surface-alt p-8">

@@ -3,6 +3,13 @@ title: "Was ist ein Squad Offsite? Warum interdisziplinäre Teams sie jedes Quar
 description: "Eine kurze Erklärung, warum interdisziplinäre Squads vierteljährliche Offsites durchführen – als bewusste Zeit für Skill-Wachstum, strategisches Denken, Hackathon-artige Ideenfindung und Teamgeist ausserhalb des Sprint-Rhythmus."
 type: concept
 publishDate: 2026-07-13
+faqs:
+  - question: "Warum führen Produkt-Squads Offsites durch?"
+    answer: "Um bewusst Raum für persönliches Wachstum, strategisches Denken und Hackathon-artige Ideenfindung zu schaffen, den ein reguläres Backlog strukturell nicht bieten kann – und um den Teamgeist ausserhalb der gewohnten Meeting-Routine zu stärken."
+  - question: "Wie oft sollte ein Squad ein Offsite durchführen?"
+    answer: "Vierteljährlich funktioniert gut: häufig genug, um Momentum bei längerfristigen Themen zu halten, ohne der laufenden Lieferung den Fokus zu nehmen, und planbar genug, dass grosse, unscharfe Ideen bewusst für \"das nächste Offsite\" zurückgestellt werden können, statt ins reguläre Backlog gepresst zu werden."
+  - question: "Was unterscheidet ein Squad Offsite von einem gewöhnlichen Workshop oder Teammeeting?"
+    answer: "Ein Workshop zielt meist auf ein einzelnes Ergebnis in wenigen Stunden ab; ein Squad Offsite ist ein ganzer Tag, der bewusst mehrere Ziele kombiniert – Wachstum, Strategie, schnelles Prototyping und Teambuilding –, die sonst um dieselbe begrenzte Backlog-Zeit konkurrieren würden."
 ---
 
 Ein Squad Offsite ist ein ganzer Tag ausserhalb der laufenden Lieferarbeit, der Problemen und Ideen gewidmet ist, die zu gross – oder zu unausgereift – für das reguläre Backlog sind. Richtig gemacht ist er weniger ein "Team-Ausflug" als ein funktionierender Inkubator: persönliches Wachstum, strategisches Denken und schnelles Prototyping, komprimiert auf einen einzigen, energiegeladenen Tag, mit Teambuilding als festem Bestandteil statt als Nachgedanken.
@@ -27,14 +34,3 @@ Der naheliegende Einwand sind die Opportunitätskosten – ein ganzes Squad, das
 ## Wie ich es mit meinem Squad umsetze
 
 Ich leite seit rund vier Jahren ein interdisziplinäres [Squad](/de/knowledge/squad) bei Endress+Hauser, das nach Kanban statt in festen Sprints arbeitet, und das vierteljährliche Offsite ist der Ort, an dem wir die Arbeit erledigen, die der laufende Lieferfluss strukturell nicht tragen kann. Es ist derselbe Gedanke, der hinter den Squad Health Checks steht, die ich mit der squad-übergreifenden [Agile Guild](/de/knowledge/guild) durchführe: Manches zur Ausrichtung und Gesundheit eines Teams zeigt sich erst, wenn man bewusst aus dem Liefermodus heraustritt, um hinzusehen. Das Offsite ist eine bewusste Ergänzung zum Squad selbst – das Squad verantwortet die tägliche Lieferung; das Offsite investiert in das, was Lieferung allein nicht hervorbringt.
-
-## FAQ
-
-**Warum führen Produkt-Squads Offsites durch?**
-Um bewusst Raum für persönliches Wachstum, strategisches Denken und Hackathon-artige Ideenfindung zu schaffen, den ein reguläres Backlog strukturell nicht bieten kann – und um den Teamgeist ausserhalb der gewohnten Meeting-Routine zu stärken.
-
-**Wie oft sollte ein Squad ein Offsite durchführen?**
-Vierteljährlich funktioniert gut: häufig genug, um Momentum bei längerfristigen Themen zu halten, ohne der laufenden Lieferung den Fokus zu nehmen, und planbar genug, dass grosse, unscharfe Ideen bewusst für "das nächste Offsite" zurückgestellt werden können, statt ins reguläre Backlog gepresst zu werden.
-
-**Was unterscheidet ein Squad Offsite von einem gewöhnlichen Workshop oder Teammeeting?**
-Ein Workshop zielt meist auf ein einzelnes Ergebnis in wenigen Stunden ab; ein Squad Offsite ist ein ganzer Tag, der bewusst mehrere Ziele kombiniert – Wachstum, Strategie, schnelles Prototyping und Teambuilding –, die sonst um dieselbe begrenzte Backlog-Zeit konkurrieren würden.
