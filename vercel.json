@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "daventhill-portfolio.vercel.app" }],
+      "destination": "https://daventhill.ch/:path*",
+      "permanent": true
+    }
+  ]
+}
