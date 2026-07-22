@@ -9,7 +9,6 @@ const profileDe: Profile = {
     location: 'Basel, Schweiz',
     contact: {
       email: 'daventhill@gmail.com',
-      phone: '+41 79 586 90 72',
       linkedin: 'https://linkedin.com/in/daventhill',
       github: 'https://github.com/thillydee',
     },

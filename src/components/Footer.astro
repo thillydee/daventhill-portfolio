@@ -10,7 +10,6 @@ const { person } = getProfile(locale);
 const strings = t(locale);
 const prefix = locale === 'de' ? '/de' : '';
 const year = new Date().getFullYear();
-const telHref = person.contact.phone.replace(/\s+/g, '');
 ---
 
 <footer class="border-t border-border bg-surface-alt">
@@ -22,7 +21,6 @@ const telHref = person.contact.phone.replace(/\s+/g, '');
       </div>
       <div class="flex flex-col gap-1 text-sm text-ink-soft">
         <a href={`mailto:${person.contact.email}`} class="hover:text-brand">{person.contact.email}</a>
-        <a href={`tel:${telHref}`} class="hover:text-brand">{person.contact.phone}</a>
         <a href={person.contact.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-brand">
           LinkedIn
         </a>

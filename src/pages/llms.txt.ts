@@ -57,7 +57,6 @@ ${knowledgeDe
 ## Contact
 
 - Email: ${en.person.contact.email}
-- Phone: ${en.person.contact.phone}
 - LinkedIn: ${en.person.contact.linkedin}
 - Location: ${en.person.location}
 `;

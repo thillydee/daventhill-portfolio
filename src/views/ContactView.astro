@@ -11,7 +11,6 @@ const { person } = getProfile(locale);
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths('/contact');
 const homePath = locale === 'de' ? '/de/' : '/';
-const telHref = person.contact.phone.replace(/\s+/g, '');
 const cvHref = locale === 'de' ? '/cv/Daven-Thill-CV-DE.pdf' : '/cv/Daven-Thill-CV-EN.pdf';
 
 const breadcrumbs = [
@@ -111,9 +110,6 @@ const formStrings = strings.contact.form;
             <a href={`mailto:${person.contact.email}`} class="hover:text-brand">
               {person.contact.email}
             </a>
-          </li>
-          <li>
-            <a href={`tel:${telHref}`} class="hover:text-brand">{person.contact.phone}</a>
           </li>
           <li>
             <a href={person.contact.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-brand">
