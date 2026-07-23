@@ -16,6 +16,15 @@ Template:
 
 ---
 
+## 2026-07-23 — First GSC-driven SEO/content cycle: PIM cluster, snippet fixes, Switzerland mentions
+
+- **Changed:** Shortened the `metadata-pim-migration` (DE) case study's title/meta to fit within SERP truncation budgets, lead with the compound query phrase ("PIM-Datenmigration"), and surface "Censhare" (previously buried mid-paragraph). Worked "search relevance tuning" — the export's highest-impression query — into the `relevance-sorting` (EN) title/meta. Replaced the bare "Knowledge" EN index title with "Product Ownership Knowledge Base". Added a new EN/DE knowledge article, "What is a PIM? Why AI-ready product data starts with clean structure" (companion explainer to the PIM case study, same pattern as the existing relevance-tuning article). Added "in Switzerland"/"in der Schweiz" to `squad`, `guild`, `squad-offsites` (EN+DE, 6 files).
+- **Why:** Daven's first real Google Search Console export (10 days, ~91 impressions, 6 clicks) showed the PIM-migration topic as the strongest signal on the site (largest query cluster, best-ranking page) but with a truncated snippet losing the AI/KI differentiator, and no companion explainer article unlike the relevance-tuning topic. Serves vision.md's SEO/AEO goals directly — turning real search-behavior data into targeted fixes rather than guessing.
+- **Deferred to next cycle:** case-study `CreativeWork`/`Article` schema (still blocked on case-study dates, open since 2026-07-09); another GSC-driven review once more data accumulates (Daven didn't set a specific cadence — worth asking next cycle).
+- **Agents involved:** content-strategist, seo-aeo-specialist (both run as general-purpose agents carrying the project's `.claude/agents/*.md` persona files directly, since the custom subagent types aren't registered as invokable types in this harness — worth revisiting how `/portfolio-review` invokes them going forward)
+- **PR:** https://github.com/thillydee/daventhill-portfolio/pull/7
+- **Merged:** 2026-07-23
+
 ## 2026-07-13 — Standing FAQ structured-data rule + backfill across all knowledge articles
 
 - **Changed:** Added a standing rule to `content-strategist.md` and `seo-aeo-specialist.md`: every knowledge article carries exactly 3 FAQ Q&A pairs, in EN and DE, via a `faqs:` frontmatter field emitting real `FAQPage`/`Question`/`Answer` JSON-LD (not prose "## FAQ" sections). Backfilled this across all 5 pre-existing knowledge articles (`squad`, `guild`, `user-acceptance-testing`, `enhancing-elasticsearch-relevance`, `product-owner-vs-project-manager`); `squad-offsites` was already compliant. Extended `KnowledgeEntryView.astro` so `type: faq` articles merge their primary question with `faqs:` extras for JSON-LD while only rendering the extras visibly (avoiding duplicating the page title/description).
