@@ -204,7 +204,7 @@ const profileDe: Profile = {
     { language: 'Englisch', level: 'Muttersprache' },
     { language: 'Französisch', level: 'Verhandlungssicher' },
     { language: 'Luxemburgisch', level: 'Konversationssicher' },
-    { language: 'Schweizerdeutsch', level: 'Konversationssicher' },
+    { language: 'Schweizerdeutsch', level: 'Muttersprache' },
   ],
 };
 

@@ -274,7 +274,7 @@ const profile: Profile = {
     { language: 'English', level: 'Native' },
     { language: 'French', level: 'Business fluent' },
     { language: 'Luxembourgish', level: 'Conversational' },
-    { language: 'Swiss German', level: 'Conversational' },
+    { language: 'Swiss German', level: 'Native' },
   ],
 };
 
