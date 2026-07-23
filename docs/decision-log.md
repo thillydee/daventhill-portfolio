@@ -16,6 +16,17 @@ Template:
 
 ---
 
+## 2026-07-23 — UX/IA/a11y cycle: footer KB link, homepage KB teaser, accessible mobile nav, text-first hero
+
+- **Changed:** (F1) Added the missing Knowledge link to the footer nav — it was in the header but not the footer (`Footer.astro`, shared component). (F2) Replaced the CSS checkbox-hack mobile-nav toggle with a real `<button aria-expanded aria-controls>` + minimal inline vanilla JS, giving proper disclosure semantics for screen readers while keeping the identical visual design (`Header.astro`). (F3) Added a homepage Knowledge Base teaser section between Case Studies and FAQ, surfacing 3 articles (`pim-ai-ready-product-data`, `enhancing-elasticsearch-relevance`, `squad`) via the case-study card pattern, with new first-person EN/DE strings (`HomeView.astro`, `strings.ts`) — the 7-article KB previously had zero homepage presence. (F5) Hero now stacks text-first on mobile (dropped `flex-col-reverse`) so name/H1/positioning leads before the photo.
+- **Why:** UX-scoped `/portfolio-review`. Audit found the site structurally strong (exact EN/DE parity, AA contrast, ~4KB JS, no CLS) with two real IA gaps — the KB was invisible on the homepage despite the recent content investment (serves vision.md's AEO goal + "site-as-proof" bar), and the footer nav was inconsistent with the header. F2 upgrades a11y correctness; F5 leads with the value proposition on mobile per hero best practice.
+- **Verified:** live browser check both locales (F2 toggle flips aria-expanded, F3 renders correct per-locale articles, F1 footer shows Wissen/Knowledge); build clean. Note: true mobile viewport (<1492px) couldn't be rendered by the browser tooling — F5/mobile-nav feel left to Daven's on-device check.
+- **Skipped/deferred:** F4 (font preload — marginal LCP gain). Still deferred: case-study dates → `CreativeWork`/`Article` schema (open since 2026-07-09), custom-domain decision.
+- **Heads-up for future cycles:** F3 hard-references 3 KB slugs on the homepage; renaming/removing any silently drops its card (no build error). Keep those slugs stable or update `HomeView.astro`.
+- **Agents involved:** ux-ui-architect (audit + F1/F2/F3/F5 code), content-strategist (F3 EN/DE copy + strings)
+- **PR:** https://github.com/thillydee/daventhill-portfolio/pull/8
+- **Merged:** 2026-07-23
+
 ## 2026-07-23 — First GSC-driven SEO/content cycle: PIM cluster, snippet fixes, Switzerland mentions
 
 - **Changed:** Shortened the `metadata-pim-migration` (DE) case study's title/meta to fit within SERP truncation budgets, lead with the compound query phrase ("PIM-Datenmigration"), and surface "Censhare" (previously buried mid-paragraph). Worked "search relevance tuning" — the export's highest-impression query — into the `relevance-sorting` (EN) title/meta. Replaced the bare "Knowledge" EN index title with "Product Ownership Knowledge Base". Added a new EN/DE knowledge article, "What is a PIM? Why AI-ready product data starts with clean structure" (companion explainer to the PIM case study, same pattern as the existing relevance-tuning article). Added "in Switzerland"/"in der Schweiz" to `squad`, `guild`, `squad-offsites` (EN+DE, 6 files).
