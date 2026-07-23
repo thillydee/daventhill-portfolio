@@ -33,8 +33,6 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
 
 <header class="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
   <div class="mx-auto max-w-5xl px-4 sm:px-6">
-    <input type="checkbox" id="nav-toggle" class="peer sr-only" />
-
     <div class="flex items-center justify-between py-4">
       <a href={homeHref} class="text-lg font-semibold tracking-tight text-ink">
         Daven Thill
@@ -70,9 +68,12 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
         </a>
       </nav>
 
-      <label
-        for="nav-toggle"
-        class="cursor-pointer rounded-md p-2 text-ink peer-focus-visible:ring-2 peer-focus-visible:ring-brand md:hidden"
+      <button
+        type="button"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        class="cursor-pointer rounded-md p-2 text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand md:hidden"
         aria-label="Toggle navigation menu"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -80,12 +81,13 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
           <line x1="4" y1="12" x2="20" y2="12"></line>
           <line x1="4" y1="17" x2="20" y2="17"></line>
         </svg>
-      </label>
+      </button>
     </div>
 
     <nav
+      id="mobile-nav"
       aria-label="Mobile navigation"
-      class="hidden flex-col items-start gap-1 border-t border-border py-4 peer-checked:flex md:hidden"
+      class="hidden flex-col items-start gap-1 border-t border-border py-4 md:hidden"
     >
       {navItems.map((item) => (
         <a href={item.href} class:list={['w-full py-2 text-sm font-medium', linkClass(item.href)]}>
@@ -113,3 +115,15 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
     </nav>
   </div>
 </header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const panel = document.getElementById('mobile-nav');
+
+  toggle?.addEventListener('click', () => {
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isExpanded));
+    panel?.classList.toggle('hidden', isExpanded);
+    panel?.classList.toggle('flex', !isExpanded);
+  });
+</script>
