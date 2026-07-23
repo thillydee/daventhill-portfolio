@@ -1,6 +1,6 @@
 ---
 title: "What is a Guild? Cross-squad communities of practice explained"
-description: "How guilds work in agile product organizations, and how I help run the Agile Guild across all squads at endress.com."
+description: "How guilds work in agile product organizations, and how I help run the Agile Guild across all squads at endress.com in Switzerland."
 type: concept
 publishDate: 2026-07-08
 faqs:
@@ -18,7 +18,7 @@ The concept comes out of the same "Spotify model" that popularized squads, tribe
 
 ## How I contribute to the Agile Guild at endress.com
 
-Alongside leading my own squad, I am an active member of the Agile Guild for endress.com — a cross-squad group focused on the continuous improvement of how every squad on endress.com works, not just my own. Concretely, that means:
+Alongside leading my own squad, I am an active member of the Agile Guild for endress.com in Switzerland — a cross-squad group focused on the continuous improvement of how every squad on endress.com works, not just my own. Concretely, that means:
 
 - Co-organizing and moderating offsites and All-Hands sessions that bring squads together across the wider organization.
 - Running learning and growth sessions to constantly upskill squad members in agile practice.

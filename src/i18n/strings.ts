@@ -114,7 +114,7 @@ export const strings = {
       button: 'Back to home',
     },
     knowledge: {
-      title: 'Knowledge',
+      title: 'Product Ownership Knowledge Base',
       description:
         "Glossary explainers and FAQ answers from Daven Thill's practice as a Product Owner in Basel, covering concepts like squads, guilds, and product data.",
       intro:
