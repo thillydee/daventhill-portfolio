@@ -1,6 +1,6 @@
 ---
 title: "What is a Squad? How cross-functional squads work in product teams"
-description: "A short explainer on the squad model in agile product organizations, and how I've built and led one at Endress+Hauser."
+description: "A short explainer on the squad model in agile product organizations, and how I've built and led one at Endress+Hauser in Switzerland."
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08
@@ -19,7 +19,7 @@ The term comes out of the "Spotify model," where squads are typically grouped in
 
 ## How I apply this at Endress+Hauser
 
-For around four years I have built and led a cross-functional squad of two business owners, UX, and IT working on the Products section of endress.com. The squad owns its outcomes end to end: from writing business requirements, user stories, and acceptance criteria, through development, to running [user acceptance testing](/knowledge/user-acceptance-testing) myself before anything ships. We work in Scrum and Kanban, so priorities can move fast without losing the discipline of a defined backlog.
+For around four years I have built and led a cross-functional squad of two business owners, UX, and IT working on the Products section of endress.com, at Endress+Hauser in Switzerland. The squad owns its outcomes end to end: from writing business requirements, user stories, and acceptance criteria, through development, to running [user acceptance testing](/knowledge/user-acceptance-testing) myself before anything ships. We work in Scrum and Kanban, so priorities can move fast without losing the discipline of a defined backlog.
 
 This structure is what made it possible to ship things like the AI-powered cross-selling engine, the PIM data migration, the relevance-based sorting model, and the market-level stock availability feature — each of those needed tight, continuous collaboration between business logic, data, UX, and engineering, which is exactly what a squad is built for.
 

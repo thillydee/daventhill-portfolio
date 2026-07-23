@@ -1,6 +1,6 @@
 ---
 title: "Was ist eine Guild? Squad-übergreifende Communities of Practice erklärt"
-description: "Wie Guilds in agilen Produktorganisationen funktionieren und wie ich die Agile Guild squad-übergreifend bei endress.com mitgestalte."
+description: "Wie Guilds in agilen Produktorganisationen funktionieren und wie ich die Agile Guild squad-übergreifend bei endress.com in der Schweiz mitgestalte."
 type: concept
 publishDate: 2026-07-08
 faqs:
@@ -18,7 +18,7 @@ Der Begriff stammt aus demselben "Spotify-Modell", das auch Squads, Tribes und C
 
 ## Wie ich zur Agile Guild bei endress.com beitrage
 
-Neben der Leitung meines eigenen Squads bin ich aktives Mitglied der Agile Guild für endress.com – einer squad-übergreifenden Gruppe, die sich auf die kontinuierliche Verbesserung der Arbeitsweise aller Squads von endress.com konzentriert, nicht nur meines eigenen. Konkret bedeutet das:
+Neben der Leitung meines eigenen Squads bin ich aktives Mitglied der Agile Guild für endress.com in der Schweiz – einer squad-übergreifenden Gruppe, die sich auf die kontinuierliche Verbesserung der Arbeitsweise aller Squads von endress.com konzentriert, nicht nur meines eigenen. Konkret bedeutet das:
 
 - Mitorganisation und Moderation von Offsites und All-Hands-Sessions, die Squads über die gesamte Organisation hinweg zusammenbringen.
 - Durchführung von Learning- und Growth-Sessions, um Squad-Mitglieder kontinuierlich in agiler Praxis weiterzubilden.

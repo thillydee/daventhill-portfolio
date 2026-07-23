@@ -109,10 +109,10 @@ const profileDe: Profile = {
         'Das Ergebnis ist eine Cross-Selling-Engine, die auf tatsächlichen Nachfragemustern statt internen Annahmen basiert und Produktkombinationen zeigt, die widerspiegeln, wie Kunden in der industriellen Prozessautomation ihre Bestellungen tatsächlich zusammenstellen.',
     },
     {
-      title: 'Migration der Produktdaten in ein modernes PIM – mit Blick auf die Nutzung durch KI',
+      title: 'PIM-Datenmigration & KI-Struktur: Censhare abgelöst',
       slug: 'metadata-pim-migration',
       summary:
-        'Leitung einer vollständigen Datenmigration von einem veralteten DAM in ein PIM-System sowie Definition, wie Produktdaten sowohl für die Website als auch für KI-Tools strukturiert werden sollen.',
+        'Wie ich die Produktdatenmigration von Censhare in ein modernes PIM leitete – Datenstruktur für Website und KI-Tools von Anfang an mitgedacht.',
       problem:
         'Produktspezifikationsdaten lagen in Censhare, einem veralteten System, das nicht für die flexible, strukturierte Datennutzung ausgelegt war, die sowohl eine moderne E-Commerce-Site als auch KI-gestützte Tools benötigen.',
       approach:

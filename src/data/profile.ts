@@ -191,10 +191,10 @@ const profile: Profile = {
         'A cleaner, more consistent product data foundation that supports both the current website and the growing set of AI-driven use cases around product data.',
     },
     {
-      title: 'Tuning Elasticsearch relevance with real business logic',
+      title: 'Search Relevance Tuning: Elasticsearch + Business Logic',
       slug: 'relevance-sorting',
       summary:
-        "Layering a business-tuned boost model on top of endress.com's Elasticsearch-powered onsite search, instead of replacing its relevance engine.",
+        "How I tuned search relevance on endress.com: a business-logic boost layer on top of Elasticsearch, without replacing its relevance engine.",
       problem:
         "endress.com's onsite search runs on Elasticsearch, whose relevance scoring is built around text-match quality and has no built-in concept of the business signals that actually determine whether a listing is relevant to a B2B buyer at a given moment: its lifecycle phase, its segmentation, whether it's in stock, or whether it's even available in the customer's market.",
       approach:
