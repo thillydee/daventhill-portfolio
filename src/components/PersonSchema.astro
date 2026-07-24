@@ -16,16 +16,25 @@ export interface DefinedTermInput {
   description: string;
 }
 
+export interface CreativeWorkInput {
+  name: string;
+  description: string;
+  path: string;
+  datePublished: Date;
+}
+
 export interface Props {
   locale: Locale;
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
+  creativeWork?: CreativeWorkInput;
   publishDate?: Date;
   asProfilePage?: boolean;
 }
 
-const { locale, breadcrumbs, faq, definedTerm, publishDate, asProfilePage } = Astro.props;
+const { locale, breadcrumbs, faq, definedTerm, creativeWork, publishDate, asProfilePage } =
+  Astro.props;
 const profile = getProfile(locale);
 const { person, experience } = profile;
 
@@ -84,6 +93,19 @@ if (definedTerm) {
     inDefinedTermSet: `${Astro.site}knowledge/`,
     author: { '@id': personNode['@id'] },
     ...(publishDate ? { datePublished: publishDate.toISOString() } : {}),
+  });
+}
+
+if (creativeWork) {
+  graph.push({
+    '@type': 'CreativeWork',
+    '@id': `${new URL(creativeWork.path, Astro.site).toString()}#creativework`,
+    name: creativeWork.name,
+    description: creativeWork.description,
+    url: new URL(creativeWork.path, Astro.site).toString(),
+    inLanguage: htmlLang(locale),
+    author: { '@id': personNode['@id'] },
+    datePublished: creativeWork.datePublished.toISOString(),
   });
 }
 
