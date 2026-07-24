@@ -38,6 +38,9 @@ export interface CaseStudy {
   problem: string;
   approach: string;
   outcome: string;
+  // Approximate publish date, mirroring the knowledge-base baseline. Used for
+  // CreativeWork JSON-LD `datePublished`; refine per-study later if needed.
+  publishDate: Date;
 }
 
 export interface EducationEntry {
@@ -177,6 +180,7 @@ const profile: Profile = {
         'I initiated and led a project to rebuild this logic around real purchasing behavior. Working with SAP sales order data, I drove the development of a calculation model that identifies which products are actually bought together, then used that to power the recommendations shown on the product pages.',
       outcome:
         'The result is a cross-selling engine grounded in actual demand patterns rather than internal assumptions, surfacing product pairings that reflect how customers in industrial process automation actually build out their orders.',
+      publishDate: new Date('2026-07-08'),
     },
     {
       title: 'Migrating product data to a modern PIM, with AI consumption in mind',
@@ -189,6 +193,7 @@ const profile: Profile = {
         'I own product-level metadata management and led the migration of this data to a new PIM (Product Information Management) system, defining the interfaces and data structures involved. Part of the work was explicitly designing how the data would be consumed, not only by endress.com itself, but by AI tools that increasingly need clean, structured product data to work with.',
       outcome:
         'A cleaner, more consistent product data foundation that supports both the current website and the growing set of AI-driven use cases around product data.',
+      publishDate: new Date('2026-07-08'),
     },
     {
       title: 'Search Relevance Tuning: Elasticsearch + Business Logic',
@@ -201,6 +206,7 @@ const profile: Profile = {
         "Rather than replacing Elasticsearch's relevance engine, I initiated and led the design of a boost layer on top of it: a calculation model that scores each product on lifecycle phase (new, active, phase-out), segmentation, stock availability, and market availability, and translates that into boosts and penalties applied on top of Elasticsearch's native relevance score. Elasticsearch still does what it's best at, matching and ranking by search intent, while the boost layer adds the business context it has no visibility into by default.",
       outcome:
         "Search results and product listings on endress.com now reflect both what a customer is looking for and what is actually relevant to buy right now, without discarding Elasticsearch's underlying relevance model, a boost layer that can keep absorbing new business signals as they become relevant to weight in.",
+      publishDate: new Date('2026-07-08'),
     },
     {
       title: 'Market-level stock visibility, down to the configuration',
@@ -213,6 +219,7 @@ const profile: Profile = {
         'I designed and launched an MVP feature together with the supporting data management process required to power it, surfacing market-level stock availability directly on the product pages, including which configuration variants are available.',
       outcome:
         'Customers can see stock and configuration availability up front, which shortens the path from browsing to purchase.',
+      publishDate: new Date('2026-07-08'),
     },
   ],
 

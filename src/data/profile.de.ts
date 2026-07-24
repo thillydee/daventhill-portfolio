@@ -107,6 +107,7 @@ const profileDe: Profile = {
         'Ich initiierte und leitete ein Projekt, um diese Logik auf Basis des tatsächlichen Kaufverhaltens neu aufzubauen. Mit SAP-Verkaufsdaten trieb ich die Entwicklung eines Berechnungsmodells voran, das identifiziert, welche Produkte tatsächlich zusammen gekauft werden, und nutzte dies, um die auf den Produktseiten angezeigten Empfehlungen zu steuern.',
       outcome:
         'Das Ergebnis ist eine Cross-Selling-Engine, die auf tatsächlichen Nachfragemustern statt internen Annahmen basiert und Produktkombinationen zeigt, die widerspiegeln, wie Kunden in der industriellen Prozessautomation ihre Bestellungen tatsächlich zusammenstellen.',
+      publishDate: new Date('2026-07-08'),
     },
     {
       title: 'PIM-Datenmigration & KI-Struktur: Censhare abgelöst',
@@ -119,6 +120,7 @@ const profileDe: Profile = {
         'Ich verantworte das Metadaten-Management auf Produktebene und leitete die Migration dieser Daten in ein neues PIM-System (Product Information Management), inklusive Definition der beteiligten Schnittstellen und Datenstrukturen. Ein Teil der Arbeit bestand darin, gezielt zu gestalten, wie die Daten genutzt werden – nicht nur von endress.com selbst, sondern auch von KI-Tools, die zunehmend saubere, strukturierte Produktdaten benötigen.',
       outcome:
         'Eine sauberere, konsistentere Produktdatenbasis, die sowohl die aktuelle Website als auch die wachsende Zahl KI-gestützter Anwendungsfälle rund um Produktdaten unterstützt.',
+      publishDate: new Date('2026-07-08'),
     },
     {
       title: 'Elasticsearch-Relevanz mit echter Geschäftslogik verfeinert',
@@ -131,6 +133,7 @@ const profileDe: Profile = {
         'Statt die Relevanz-Engine von Elasticsearch zu ersetzen, initiierte und leitete ich die Konzeption einer Boost-Schicht darüber: ein Berechnungsmodell, das jedes Produkt nach Lebenszyklus-Phase (neu, aktiv, auslaufend), Segmentierung, Lagerverfügbarkeit und Marktverfügbarkeit bewertet und daraus Boosts und Abwertungen ableitet, die auf den nativen Relevanz-Score von Elasticsearch angewendet werden. Elasticsearch übernimmt weiterhin das, was es am besten kann – Matching und Ranking nach Suchintention –, während die Boost-Schicht den Geschäftskontext ergänzt, den es standardmässig nicht kennt.',
       outcome:
         'Suchergebnisse und Produktlisten auf endress.com spiegeln nun sowohl wider, wonach ein Kunde sucht, als auch, was gerade tatsächlich relevant zum Kauf ist, ohne das zugrunde liegende Relevanzmodell von Elasticsearch zu verwerfen – eine Boost-Schicht, die weiter wachsen kann, sobald neue Geschäftssignale relevant werden.',
+      publishDate: new Date('2026-07-08'),
     },
     {
       title: 'Marktspezifische Lagertransparenz – bis auf Konfigurationsebene',
@@ -143,6 +146,7 @@ const profileDe: Profile = {
         'Ich konzipierte und lancierte ein MVP-Feature zusammen mit dem dafür nötigen Datenmanagement-Prozess, um marktspezifische Lagerverfügbarkeit direkt auf den Produktseiten anzuzeigen, einschliesslich der verfügbaren Konfigurationsvarianten.',
       outcome:
         'Kunden sehen Lager- und Konfigurationsverfügbarkeit direkt auf einen Blick, was den Weg vom Stöbern zum Kauf verkürzt.',
+      publishDate: new Date('2026-07-08'),
     },
   ],
 

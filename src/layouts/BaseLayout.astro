@@ -6,6 +6,7 @@ import PersonSchema, {
   type Breadcrumb,
   type FaqItem,
   type DefinedTermInput,
+  type CreativeWorkInput,
 } from '../components/PersonSchema.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -22,6 +23,7 @@ export interface Props {
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
+  creativeWork?: CreativeWorkInput;
   publishDate?: Date;
   asProfilePage?: boolean;
 }
@@ -36,6 +38,7 @@ const {
   breadcrumbs,
   faq,
   definedTerm,
+  creativeWork,
   publishDate,
   asProfilePage,
 } = Astro.props;
@@ -62,6 +65,7 @@ const strings = t(locale);
       breadcrumbs={breadcrumbs}
       faq={faq}
       definedTerm={definedTerm}
+      creativeWork={creativeWork}
       publishDate={publishDate}
       asProfilePage={asProfilePage}
     />
