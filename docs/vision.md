@@ -56,6 +56,6 @@ Every 2 weeks.
 
 ## Current state / recent context
 
-Team leadership visibility was addressed in the 2026-07-09 cycle (see `decision-log.md`): homepage now has a dedicated "Team leadership" section and `/skills` has a headed leadership card, both sourced from `leadershipApproach`. Next cycle: case-study dates and the custom-domain question were explicitly deferred.
+Team leadership visibility was addressed in the 2026-07-09 cycle (see `decision-log.md`): homepage now has a dedicated "Team leadership" section and `/skills` has a headed leadership card, both sourced from `leadershipApproach`. Case-study dates were added in the 2026-07-24 cycle (approximate baseline dates + `CreativeWork` schema; real per-study dates still refinable). The custom-domain question is **closed**: the site is live on `https://daventhill.ch` — don't re-raise it.
 
 *(Update this section yourself as things change — e.g. active interviews, a new shipped project at Endress+Hauser worth a case study, a role change.)*

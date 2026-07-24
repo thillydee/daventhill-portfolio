@@ -16,6 +16,16 @@ Template:
 
 ---
 
+## 2026-07-24 — Case-study publish dates + CreativeWork schema; custom-domain question closed
+
+- **Changed:** Added a required `publishDate` field to the `CaseStudy` type and set it to `2026-07-08` (the knowledge-base baseline date) on all 4 case studies in both `profile.ts` and `profile.de.ts` — approximate/refinable per Daven. Wired each date into a minimal `CreativeWork` JSON-LD node (`name`, `description`, `url`, `inLanguage`, `author`→`#person`, `datePublished`) emitted on case-study pages via a new `creativeWork` prop threaded `CaseStudyView` → `BaseLayout` → `PersonSchema`. No visible on-page date (avoids a case study reading as "work done in July 2026") and no `Article`/`dateModified` upgrade yet — both left as deliberate future refinements.
+- **Why:** Unblocks the case-study structured-data item deferred since 2026-07-09 (was blocked on dates existing). Daven gave the go-ahead to add approximate dates now and refine later. Serves vision.md's SEO/AEO goals (case studies now carry `datePublished` + author attribution for AI answer engines).
+- **Custom-domain question: RESOLVED.** The site is live on the custom domain `https://daventhill.ch` (verified: HTTP 200, canonical + `Astro.site` both point to `daventhill.ch`). This question had been carried as "deferred" since 2026-07-09 — it is now closed and should not be re-raised in future cycles.
+- **Still open / future refinement:** real per-study case-study dates (all four share the baseline for now); optional visible on-page date; optional `Article` schema upgrade with `dateModified`.
+- **Agents involved:** none (implemented directly in the main session)
+- **PR:** https://github.com/thillydee/daventhill-portfolio/pull/9
+- **Merged:** 2026-07-24
+
 ## 2026-07-23 — UX/IA/a11y cycle: footer KB link, homepage KB teaser, accessible mobile nav, text-first hero
 
 - **Changed:** (F1) Added the missing Knowledge link to the footer nav — it was in the header but not the footer (`Footer.astro`, shared component). (F2) Replaced the CSS checkbox-hack mobile-nav toggle with a real `<button aria-expanded aria-controls>` + minimal inline vanilla JS, giving proper disclosure semantics for screen readers while keeping the identical visual design (`Header.astro`). (F3) Added a homepage Knowledge Base teaser section between Case Studies and FAQ, surfacing 3 articles (`pim-ai-ready-product-data`, `enhancing-elasticsearch-relevance`, `squad`) via the case-study card pattern, with new first-person EN/DE strings (`HomeView.astro`, `strings.ts`) — the 7-article KB previously had zero homepage presence. (F5) Hero now stacks text-first on mobile (dropped `flex-col-reverse`) so name/H1/positioning leads before the photo.
