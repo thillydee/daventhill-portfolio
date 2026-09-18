@@ -7,7 +7,7 @@ export interface Props {
   path: string;
   ogImageSlug: string;
   locale: Locale;
-  localizedPaths: Record<Locale, string>;
+  localizedPaths?: Record<Locale, string>;
   type?: 'website' | 'article';
 }
 
@@ -18,17 +18,21 @@ const siteName = 'Daven Thill — Product Owner Basel';
 const fullTitle = title.includes('Daven Thill') ? title : `${title} | Daven Thill`;
 const canonicalURL = new URL(path, Astro.site);
 const ogImageURL = new URL(`/og/${ogImageSlug}.png`, Astro.site);
-const enURL = new URL(localizedPaths.en, Astro.site);
-const deURL = new URL(localizedPaths.de, Astro.site);
+const enURL = localizedPaths ? new URL(localizedPaths.en, Astro.site) : undefined;
+const deURL = localizedPaths ? new URL(localizedPaths.de, Astro.site) : undefined;
 ---
 
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
 
-<link rel="alternate" hreflang="en" href={enURL} />
-<link rel="alternate" hreflang="de" href={deURL} />
-<link rel="alternate" hreflang="x-default" href={enURL} />
+{enURL && deURL && (
+  <>
+    <link rel="alternate" hreflang="en" href={enURL} />
+    <link rel="alternate" hreflang="de" href={deURL} />
+    <link rel="alternate" hreflang="x-default" href={enURL} />
+  </>
+)}
 
 <meta property="og:site_name" content={siteName} />
 <meta property="og:title" content={fullTitle} />
@@ -37,7 +41,9 @@ const deURL = new URL(localizedPaths.de, Astro.site);
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:image" content={ogImageURL} />
 <meta property="og:locale" content={ogLocale(locale)} />
-<meta property="og:locale:alternate" content={ogLocale(locale === 'en' ? 'de' : 'en')} />
+{localizedPaths && (
+  <meta property="og:locale:alternate" content={ogLocale(locale === 'en' ? 'de' : 'en')} />
+)}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />

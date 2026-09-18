@@ -57,6 +57,11 @@ async function addLocalePages(locale: Locale) {
 await addLocalePages('en');
 await addLocalePages('de');
 
+pages['webdesign'] = {
+  title: 'Webdesign für KMU in Basel',
+  description: 'Websites für lokale Betriebe in Basel: klare Pakete, transparente Preise.',
+};
+
 export const { getStaticPaths, GET } = await OGImageRoute({
   param: 'slug',
   pages,

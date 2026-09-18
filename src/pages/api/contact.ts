@@ -19,6 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
   const company = typeof body.company === 'string' ? body.company.trim() : '';
   const message = typeof body.message === 'string' ? body.message.trim() : '';
   const honeypot = typeof body.website === 'string' ? body.website.trim() : '';
+  const source = typeof body.source === 'string' ? body.source.trim() : 'portfolio';
 
   // Honeypot field: bots fill every input, real users never see it. Pretend success.
   if (honeypot) {
@@ -40,7 +41,10 @@ export const POST: APIRoute = async ({ request }) => {
     from: 'Portfolio Contact <onboarding@resend.dev>',
     to: TO_EMAIL,
     replyTo: email,
-    subject: `New portfolio contact from ${name}`,
+    subject:
+      source === 'webdesign'
+        ? `Neue Webdesign-Anfrage von ${name}`
+        : `New portfolio contact from ${name}`,
     text: [
       `Name: ${name}`,
       `Email: ${email}`,
