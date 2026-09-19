@@ -3,7 +3,7 @@ import { t, type Locale } from '../i18n';
 
 export interface Props {
   locale: Locale;
-  localizedPaths?: Record<Locale, string>;
+  localizedPaths: Record<Locale, string>;
 }
 
 const { locale, localizedPaths } = Astro.props;
@@ -27,8 +27,9 @@ const linkClass = (href: string) =>
 
 const otherLocale: Locale = locale === 'en' ? 'de' : 'en';
 const switchLabel = strings.langSwitch.label;
-const switchHref = localizedPaths?.[otherLocale];
+const switchHref = localizedPaths[otherLocale];
 const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wechseln';
+const webdesignHref = locale === 'de' ? '/de/webdesign' : '/webdesign';
 ---
 
 <header class="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
@@ -53,23 +54,19 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
         >
           {strings.nav.downloadCv}
         </a>
-        {locale === 'de' && (
-          <a
-            href="/webdesign"
-            class="border-l border-border pl-4 text-xs text-muted hover:text-ink"
-          >
-            Webdesign-Angebot
-          </a>
-        )}
-        {switchHref && (
-          <a
-            href={switchHref}
-            class="text-sm font-medium text-ink-soft hover:text-ink"
-            aria-label={switchAriaLabel}
-          >
-            {switchLabel}
-          </a>
-        )}
+        <a
+          href={webdesignHref}
+          class="border-l border-border pl-4 text-xs text-muted hover:text-ink"
+        >
+          {strings.nav.webdesign}
+        </a>
+        <a
+          href={switchHref}
+          class="text-sm font-medium text-ink-soft hover:text-ink"
+          aria-label={switchAriaLabel}
+        >
+          {switchLabel}
+        </a>
         <a
           href={contactHref}
           class="inline-flex items-center justify-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
@@ -113,16 +110,12 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
       >
         {strings.nav.downloadCv}
       </a>
-      {locale === 'de' && (
-        <a href="/webdesign" class="w-full py-2 text-sm text-muted hover:text-ink">
-          Webdesign-Angebot
-        </a>
-      )}
-      {switchHref && (
-        <a href={switchHref} class="w-full py-2 text-sm font-medium text-ink-soft hover:text-ink">
-          {switchLabel} — {strings.langSwitch.full}
-        </a>
-      )}
+      <a href={webdesignHref} class="w-full py-2 text-sm text-muted hover:text-ink">
+        {strings.nav.webdesign}
+      </a>
+      <a href={switchHref} class="w-full py-2 text-sm font-medium text-ink-soft hover:text-ink">
+        {switchLabel} — {strings.langSwitch.full}
+      </a>
       <a
         href={contactHref}
         class="mt-2 inline-flex w-full items-center justify-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"

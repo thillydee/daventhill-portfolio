@@ -1,181 +1,110 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildLocalizedPaths, type Locale } from '../i18n';
+import { getWebDesign } from '../data/webdesign';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const content = getWebDesign(locale);
+const localizedPaths = buildLocalizedPaths('/webdesign');
+const homePath = locale === 'de' ? '/de/' : '/';
 
 const breadcrumbs = [
-  { name: 'Startseite', path: '/de/' },
-  { name: 'Webdesign', path: '/webdesign' },
-];
-
-const packages = [
-  {
-    name: 'Sichtbar',
-    price: '1’200',
-    priceSchema: '1200',
-    duration: 'ca. 2 Wochen',
-    intro:
-      'Kein Neubau — Ihre bestehende Seite wird endlich sichtbar. Für viele Betriebe ist das der grössere Hebel als eine neue Website, und der schnellste Weg zu mehr Anfragen.',
-    items: [
-      'Google-Unternehmensprofil aufsetzen und optimieren',
-      'Adresse, Öffnungszeiten und Kontaktdaten überall konsistent (NAP)',
-      'Structured Data / LocalBusiness-Schema, damit Google Sie versteht',
-      'Heading-Struktur und URLs Ihrer bestehenden Seite korrigiert',
-      'Impressum und Datenschutzerklärung (revDSG-konform)',
-    ],
-  },
-  {
-    name: 'Neuer Auftritt',
-    price: 'ab CHF 2’800',
-    priceSchema: '2800',
-    duration: 'ca. 4 bis 6 Wochen',
-    intro:
-      'Ein kompletter Neubau, auf Astro — dem gleichen technischen Fundament, mit dem ich auch diese Seite gebaut habe: schnell, sauber strukturiert, für Google lesbar.',
-    items: [
-      'Fünf bis sieben Seiten, für Ihren Betrieb gebaut — nicht aus einem Baukasten mit hundert anderen Websites',
-      'Alles aus Paket 1 inklusive',
-      'Buchungs- oder Kontakt-Möglichkeit an mehreren Stellen der Seite, nicht nur oben',
-      'Bildoptimierung, Ladezeit und mobile Darstellung',
-      'Basis-SEO und eine saubere Seitenstruktur',
-    ],
-  },
-  {
-    name: 'Komplett',
-    price: 'ab CHF 4’200',
-    priceSchema: '4200',
-    duration: 'wie Paket 2, plus Zeit für Texte und Bildkonzept',
-    intro:
-      'Alles aus Paket 2, plus was einen Betrieb mit Laufkundschaft oder Termingeschäft wirklich weiterbringt:',
-    items: [
-      'Zweisprachig Deutsch/Englisch',
-      'Texte von Grund auf für Ihren Betrieb geschrieben, nicht generisch',
-      'Bildkonzept: Ich koordiniere ein Shooting oder bereite Ihr bestehendes Bildmaterial auf',
-      'Eine einfache Möglichkeit, Google-Bewertungen zu sammeln — zum Beispiel eine QR-Karte am Empfang, die direkt zur Bewertung führt',
-      'Drei Monate Betreuung nach dem Livegang inklusive',
-    ],
-  },
-];
-
-const ablaufSteps = [
-  {
-    title: 'Erstgespräch',
-    text: '30 Minuten, unverbindlich, per Video-Call oder vor Ort in Basel. Wir klären, was Sie brauchen und welches Paket passt.',
-  },
-  {
-    title: 'Angebot',
-    text: 'Sie erhalten innerhalb weniger Tage ein klares Angebot mit Fixpreis oder Preisrahmen, je nach Paket.',
-  },
-  {
-    title: 'Umsetzung',
-    text: 'Konzept, Texte, Design und Aufbau. Je nach Paket zwei bis sechs Wochen; Sie sehen den Fortschritt laufend, nicht erst am Schluss.',
-  },
-  {
-    title: 'Review',
-    text: 'Sie prüfen die fertige Seite, wir passen an, was noch nicht stimmt.',
-  },
-  {
-    title: 'Livegang',
-    text: 'Die Seite geht online. Mit Betreuungsabo übernehme ich Hosting, Updates und kleine Änderungen direkt weiter.',
-  },
-];
-
-const faqs = [
-  {
-    question: 'Kann ich selbst Inhalte ändern?',
-    answer:
-      'Nach dem Livegang können Sie mir kleine Änderungen jederzeit schicken — neuer Preis, neue Öffnungszeiten, neues Bild — und ich setze sie um, meist noch am nächsten Tag. Das ist Teil der Betreuung (CHF 45/Monat oder CHF 480/Jahr). Wenn Sie grössere Inhalte lieber selbst pflegen möchten, besprechen wir das im Erstgespräch.',
-  },
-  {
-    question: 'Was kostet der Betrieb?',
-    answer:
-      'Die Betreuung kostet CHF 45 im Monat oder CHF 480 im Jahr und deckt Hosting, Domain, Updates, Backups und kleine Inhaltsänderungen ab. Ohne Betreuungsabo übernehmen Sie Hosting und Domain selbst — dazu berate ich Sie gerne, wenn Sie das bevorzugen.',
-  },
-  {
-    question: 'Wie lange dauert es?',
-    answer:
-      'Bei Paket 1 ("Sichtbar") rund zwei Wochen. Bei einem Neubau (Paket 2 oder 3) rechnen Sie mit vier bis sechs Wochen, je nach Umfang und wie schnell Inhalte und Feedback von Ihrer Seite kommen.',
-  },
-  {
-    question: 'Was, wenn ich schon eine Wix-Seite habe?',
-    answer:
-      'Kein Problem — Paket 1 ("Sichtbar") baut nichts neu, sondern macht Ihre bestehende Seite, egal ob Wix, Squarespace oder etwas anderes, für Google sichtbar und behebt die häufigsten technischen Lücken. Ein Neubau lohnt sich erst, wenn die bestehende Seite selbst das Problem ist — das sage ich Ihnen ehrlich im Erstgespräch.',
-  },
+  { name: content.breadcrumb.home, path: homePath },
+  { name: content.breadcrumb.self, path: localizedPaths[locale] },
 ];
 
 const service = {
-  name: 'Webdesign für KMU',
-  description:
-    'Websites für lokale Betriebe in Basel und Umgebung: Google-Unternehmensprofil, Neubau oder kompletter zweisprachiger Auftritt, mit klaren Paketen und transparenten Preisen.',
-  areaServed: 'Nordwestschweiz',
-  offers: packages.map((pkg) => ({ name: pkg.name, price: pkg.priceSchema })),
+  name: content.service.name,
+  description: content.service.description,
+  areaServed: content.service.areaServed,
+  offers: [
+    { name: content.workshop.name, price: content.workshop.priceSchema },
+    ...content.packages.map((pkg) => ({ name: pkg.name, price: pkg.priceSchema })),
+  ],
 };
 ---
 
 <BaseLayout
-  title="Webdesign für KMU in Basel"
-  description="Websites für lokale Betriebe in Basel: klare Pakete, transparente Preise, gebaut von einem Product Owner."
-  path="/webdesign"
-  ogImageSlug="webdesign"
-  locale="de"
+  title={content.meta.title}
+  description={content.meta.description}
+  path={localizedPaths[locale]}
+  ogImageSlug={locale === 'de' ? 'de/webdesign' : 'webdesign'}
+  locale={locale}
+  localizedPaths={localizedPaths}
   breadcrumbs={breadcrumbs}
-  faq={faqs}
+  faq={content.faq.items}
   service={service}
 >
   <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
     <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-      Eine Website ist ein Produkt. Kein Bild.
+      {content.hero.headline}
     </h1>
-    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
-      Ich bin Product Owner in Basel und baue hauptberuflich digitale Produkte, die Kunden
-      tatsächlich nutzen. Nebenbei baue ich Websites für lokale Betriebe in Basel und
-      Umgebung — nach den gleichen Prinzipien: schnell, mobil, auffindbar, und so gebaut, dass
-      jemand darauf tatsächlich anruft oder bucht.
-    </p>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">{content.hero.sub}</p>
     <div class="mt-8 flex flex-wrap gap-4">
       <a
         href="#kontakt"
         class="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
       >
-        Unverbindlich anfragen
+        {content.hero.ctaPrimary}
       </a>
       <a
-        href="#pakete"
+        href="#angebot"
         class="inline-flex items-center justify-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
       >
-        Pakete ansehen
+        {content.hero.ctaSecondary}
       </a>
     </div>
   </section>
 
-  <section id="warum" class="scroll-mt-24 border-t border-border bg-surface-alt">
+  <section id="philosophie" class="scroll-mt-24 border-t border-border bg-surface-alt">
     <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-      <h2 class="text-2xl font-bold text-ink sm:text-3xl">Warum die meisten KMU-Websites keine Anfragen bringen</h2>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
-        Die meisten Websites von lokalen Betrieben bringen keine Anfragen — nicht weil der
-        Betrieb schlecht ist, sondern weil die Website die eigentliche Arbeit nicht macht. Wenn
-        eine Seite auf dem Handy langsam lädt oder sich nicht sauber bedienen lässt, ist der
-        Besuch in Sekunden wieder weg, bevor er überhaupt gelesen hat, was Sie anbieten. Und
-        wenn Google Ihren Betrieb bei einer lokalen Suche gar nicht zuverlässig anzeigt, spielt
-        die Website ihre Rolle nie — sie wird schlicht nicht gefunden.
-      </p>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
-        Ehrlich gesagt: Für viele lokale Betriebe ist nicht die Website der grösste Hebel,
-        sondern das Google-Unternehmensprofil. Beide greifen aber ineinander — eine gute Website
-        ohne korrektes Google-Profil wird nicht gefunden, ein gutes Google-Profil ohne brauchbare
-        Website verliert die Anfrage, sobald jemand draufklickt. Ich sage Ihnen offen, wo bei
-        Ihnen tatsächlich der grössere Hebel liegt, statt Ihnen alles zu verkaufen, was ich
-        anbiete.
-      </p>
+      <h2 class="max-w-3xl text-2xl font-bold text-ink sm:text-3xl">{content.philosophy.heading}</h2>
+      {content.philosophy.body.map((para) => (
+        <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">{para}</p>
+      ))}
     </div>
   </section>
 
-  <section id="pakete" class="scroll-mt-24 mx-auto max-w-5xl px-4 py-16 sm:px-6">
-    <p class="text-sm font-semibold uppercase tracking-wide text-brand">Leistungspakete</p>
-    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">Drei Stufen, klare Preise. Kein Angebot nach Bauchgefühl.</h2>
+  <section id="angebot" class="scroll-mt-24 mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.offer.eyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.offer.heading}</h2>
+    <p class="mt-4 max-w-2xl text-base text-muted">{content.offer.intro}</p>
 
-    <div class="mt-8 grid gap-6 sm:grid-cols-3">
-      {packages.map((pkg) => (
-        <div class="rounded-xl border border-border bg-surface p-6">
+    <div class="mt-8 rounded-xl border border-dashed border-border bg-surface-alt p-6">
+      <h3 class="text-lg font-semibold text-ink">{content.freeCheck.title}</h3>
+      <p class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.freeCheck.text}</p>
+      <a href="#kontakt" class="mt-4 inline-block text-sm font-semibold text-brand hover:text-brand-dark">
+        {content.freeCheck.cta} &rarr;
+      </a>
+    </div>
+
+    <div class="mt-6 rounded-xl border border-border bg-surface p-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="text-lg font-semibold text-ink">{content.workshop.name}</h3>
+        <p class="text-lg font-bold text-ink">{content.workshop.price}</p>
+      </div>
+      <p class="mt-1 text-sm font-medium text-brand">{content.workshop.tagline}</p>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.workshop.intro}</p>
+      <ul class="mt-4 space-y-2">
+        {content.workshop.items.map((item) => (
+          <li class="flex gap-3 text-sm text-ink-soft">
+            <span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-6 grid gap-6 sm:grid-cols-3">
+      {content.packages.map((pkg) => (
+        <div class="flex flex-col rounded-xl border border-border bg-surface p-6">
           <h3 class="text-lg font-semibold text-ink">{pkg.name}</h3>
           <p class="mt-1 text-2xl font-bold text-ink">{pkg.price}</p>
+          <p class="mt-1 text-sm font-medium text-brand">{pkg.tagline}</p>
           <p class="mt-3 text-sm leading-relaxed text-ink-soft">{pkg.intro}</p>
           <ul class="mt-4 space-y-2">
             {pkg.items.map((item) => (
@@ -185,66 +114,49 @@ const service = {
               </li>
             ))}
           </ul>
-          <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-muted">Dauer: {pkg.duration}</p>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-muted">{pkg.duration}</p>
         </div>
       ))}
     </div>
 
     <div class="mt-6 rounded-xl border border-border bg-surface-alt p-6">
-      <h3 class="text-lg font-semibold text-ink">Betreuung · CHF 45/Monat oder CHF 480/Jahr</h3>
-      <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">
-        Hosting, Domain, Updates, Backups und kleine Inhaltsänderungen: Sie schicken mir den
-        neuen Preis oder die neuen Öffnungszeiten, am nächsten Tag steht's auf der Seite. Sie
-        müssen nichts selbst einrichten oder technisch verstehen — genau dafür gibt es die
-        Betreuung.
-      </p>
-      <div class="mt-4 grid gap-3 sm:grid-cols-2">
-        <div class="rounded-lg border border-border bg-surface p-4 text-sm text-ink-soft">CHF 45 / Monat</div>
-        <div class="rounded-lg border border-border bg-surface p-4 text-sm text-ink-soft">CHF 480 / Jahr</div>
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="text-lg font-semibold text-ink">{content.care.name}</h3>
+        <p class="text-base font-semibold text-ink">{content.care.price}</p>
       </div>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.care.intro}</p>
     </div>
 
     <p class="mt-6 max-w-3xl text-sm leading-relaxed text-muted">
-      <strong class="text-ink-soft">Grössere Projekte:</strong> Für einen Umfang wie
-      ava-beauty.ch — zweisprachig, mehrere Leistungs-Unterseiten, Portfolio, eigene
-      Bildvorschau pro Seite für Social Media — rechnen Sie mit CHF 6’500 bis 9’000. Kein
-      Standardpaket, sondern eine Offerte nach einem Erstgespräch.
+      <strong class="text-ink-soft">{content.larger.label}:</strong> {content.larger.text}
     </p>
 
     <ul class="mt-4 space-y-1 text-sm text-muted">
-      <li>Zweite Sprache: +25–30 % des Grundpakets</li>
-      <li>Texte von Grund auf, pro Seite: CHF 250–400</li>
-      <li>Google-Unternehmensprofil separat, ohne Website-Paket: CHF 400</li>
+      {content.addons.items.map((item) => <li>{item}</li>)}
     </ul>
   </section>
 
   <section id="referenz" class="scroll-mt-24 border-t border-border bg-surface-alt">
     <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-      <p class="text-sm font-semibold uppercase tracking-wide text-brand">Referenzprojekt</p>
-      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">ava-beauty.ch — Website für Sandra, Hair &amp; Make-up Artist in Basel</h2>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">
-        Zweisprachig Deutsch/Englisch, gebaut auf Astro, mit fünf eigenen Leistungsseiten,
-        Portfolio, Über-mich- und Kontaktseite. Jede Seite hat eine eigene Bildvorschau für
-        Social Media, alle Bilder sind für schnelles Laden optimiert, und die Texte sind in
-        beiden Sprachen auf Sandras Betrieb zugeschnitten — nicht übersetzt, sondern für jede
-        Sprache neu formuliert.
-      </p>
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.reference.eyebrow}</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.reference.heading}</h2>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">{content.reference.body}</p>
       <a
         href="https://ava-beauty.ch"
         target="_blank"
         rel="noopener noreferrer"
         class="mt-6 inline-flex items-center justify-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
       >
-        ava-beauty.ch ansehen →
+        {content.reference.cta}
       </a>
     </div>
   </section>
 
   <section id="ablauf" class="scroll-mt-24 mx-auto max-w-5xl px-4 py-16 sm:px-6">
-    <p class="text-sm font-semibold uppercase tracking-wide text-brand">Ablauf</p>
-    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">Von Erstgespräch bis Livegang</h2>
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.ablauf.eyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.ablauf.heading}</h2>
     <ol class="mt-8 space-y-6">
-      {ablaufSteps.map((step, index) => (
+      {content.ablauf.steps.map((step, index) => (
         <li class="flex gap-4">
           <span class="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand text-sm font-semibold text-white">
             {index + 1}
@@ -260,10 +172,10 @@ const service = {
 
   <section id="faq" class="scroll-mt-24 border-t border-border bg-surface-alt">
     <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-      <p class="text-sm font-semibold uppercase tracking-wide text-brand">FAQ</p>
-      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">Häufige Fragen</h2>
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.faq.eyebrow}</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.faq.heading}</h2>
       <dl class="mt-8 space-y-6">
-        {faqs.map((item) => (
+        {content.faq.items.map((item) => (
           <div>
             <dt class="text-base font-semibold text-ink">{item.question}</dt>
             <dd class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{item.answer}</dd>
@@ -274,17 +186,14 @@ const service = {
   </section>
 
   <section id="kontakt" class="scroll-mt-24 mx-auto max-w-5xl px-4 py-16 sm:px-6">
-    <p class="text-sm font-semibold uppercase tracking-wide text-brand">Kontakt</p>
-    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">Erzählen Sie mir von Ihrem Betrieb</h2>
-    <p class="mt-4 max-w-2xl text-base text-muted">
-      Erzählen Sie mir kurz von Ihrem Betrieb — ich melde mich innerhalb von 1–2 Werktagen mit
-      einer ehrlichen Einschätzung, was bei Ihnen den grössten Unterschied machen würde.
-    </p>
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.contact.eyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.contact.heading}</h2>
+    <p class="mt-4 max-w-2xl text-base text-muted">{content.contact.intro}</p>
 
     <form id="webdesign-contact-form" class="mt-8 max-w-xl" novalidate>
       <div class="grid gap-5">
         <div>
-          <label for="wd-name" class="text-sm font-semibold text-ink">Name</label>
+          <label for="wd-name" class="text-sm font-semibold text-ink">{content.contact.form.name}</label>
           <input
             type="text"
             id="wd-name"
@@ -294,7 +203,7 @@ const service = {
           />
         </div>
         <div>
-          <label for="wd-email" class="text-sm font-semibold text-ink">E-Mail</label>
+          <label for="wd-email" class="text-sm font-semibold text-ink">{content.contact.form.email}</label>
           <input
             type="email"
             id="wd-email"
@@ -305,18 +214,18 @@ const service = {
         </div>
         <div>
           <label for="wd-company" class="text-sm font-semibold text-ink">
-            Art des Betriebs <span class="font-normal text-muted">optional</span>
+            {content.contact.form.business} <span class="font-normal text-muted">{content.contact.form.optional}</span>
           </label>
           <input
             type="text"
             id="wd-company"
             name="company"
-            placeholder="z. B. Coiffeur, Handwerksbetrieb, Praxis"
+            placeholder={content.contact.form.businessPlaceholder}
             class="mt-1.5 w-full rounded-md border border-border bg-surface px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
           />
         </div>
         <div>
-          <label for="wd-message" class="text-sm font-semibold text-ink">Nachricht</label>
+          <label for="wd-message" class="text-sm font-semibold text-ink">{content.contact.form.message}</label>
           <textarea
             id="wd-message"
             name="message"
@@ -334,16 +243,16 @@ const service = {
           type="submit"
           class="inline-flex w-fit items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Anfrage senden
+          {content.contact.form.submit}
         </button>
         <p
           id="wd-form-status"
           class="text-sm"
           role="status"
           aria-live="polite"
-          data-sending="Wird gesendet..."
-          data-success="Danke! Ich melde mich innerhalb von 1–2 Werktagen."
-          data-error="Da ist etwas schiefgelaufen. Schreiben Sie mir direkt an daventhill@gmail.com."
+          data-sending={content.contact.status.sending}
+          data-success={content.contact.status.success}
+          data-error={content.contact.status.error}
         ></p>
       </div>
     </form>
@@ -381,7 +290,7 @@ const service = {
       form.reset();
       status.textContent = status.dataset.success ?? '';
       status.className = 'text-sm text-green-700';
-      track('webdesign_contact_form_submit');
+      track('webdesign_contact_form_submit', { locale: document.documentElement.lang });
     } catch (error) {
       status.textContent = status.dataset.error ?? '';
       status.className = 'text-sm text-red-700';

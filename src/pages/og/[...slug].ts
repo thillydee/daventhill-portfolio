@@ -1,6 +1,7 @@
 import { OGImageRoute } from 'astro-og-canvas';
 import { getCollection } from 'astro:content';
 import { getProfile, t, type Locale } from '../../i18n';
+import webdesign from '../../data/webdesign';
 
 const pages: Record<string, { title: string; description: string }> = {};
 
@@ -58,8 +59,12 @@ await addLocalePages('en');
 await addLocalePages('de');
 
 pages['webdesign'] = {
-  title: 'Webdesign für KMU in Basel',
-  description: 'Websites für lokale Betriebe in Basel: klare Pakete, transparente Preise.',
+  title: webdesign.en.meta.title,
+  description: webdesign.en.meta.description,
+};
+pages['de/webdesign'] = {
+  title: webdesign.de.meta.title,
+  description: webdesign.de.meta.description,
 };
 
 export const { getStaticPaths, GET } = await OGImageRoute({
