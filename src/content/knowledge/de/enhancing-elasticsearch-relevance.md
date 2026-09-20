@@ -32,4 +32,4 @@ In der Praxis sind es meist Signale, die eine generische Suchmaschine von sich a
 
 Eine Boost-Schicht, die einmal hartcodiert und nie wieder angefasst wird, veraltet genauso schnell wie eine manuelle Sortierreihenfolge. Der Ansatz, der sich in meiner Erfahrung bewährt hat: die Gewichtungslogik in einem klar verantworteten Berechnungsmodell halten statt über Queries verstreut, es einfach machen, ein neues Signal hinzuzufügen, ohne bestehende zu beeinflussen, und jede Änderung daran wie eine Produktänderung behandeln – mit Hypothese, Vorher-Nachher-Vergleich und Freigabe vor dem Go-live. Dabei nutze ich denselben [strukturierten, rollenspezifischen UAT-Ansatz](/de/knowledge/user-acceptance-testing), den mein Squad für alles andere anwendet, was wir ausliefern.
 
-Dies ist das Modell hinter [der Boost-Schicht, die ich für die Onsite-Suche von endress.com gebaut habe](/de/case-studies/relevance-sorting).
+Dies ist das Modell hinter [der Boost-Schicht, die ich für eine B2B-Produktsuche gebaut habe](/de/case-studies/relevance-sorting).

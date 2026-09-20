@@ -63,9 +63,9 @@ export const strings = {
     caseStudies: {
       title: 'Case Studies',
       description:
-        "Data and AI driven product case studies from Daven Thill's work on endress.com, covering cross-selling, PIM data, relevance sorting, and stock availability.",
+        "Data and AI driven product case studies by Daven Thill, covering cross-selling, PIM data, relevance sorting, and stock availability.",
       intro:
-        "A closer look at data- and AI-driven product decisions from Daven Thill's work leading the Products section of endress.com.",
+        "A closer look at data- and AI-driven product decisions I've led as a Product Owner.",
       readCaseStudy: 'Read case study →',
     },
     caseStudyDetail: {
@@ -228,9 +228,9 @@ export const strings = {
     caseStudies: {
       title: 'Case Studies',
       description:
-        'Daten- und KI-getriebene Produkt-Case-Studies aus der Arbeit von Daven Thill auf endress.com, zu Cross-Selling, PIM-Daten, Relevanz-Sortierung und Lagerverfügbarkeit.',
+        'Daten- und KI-getriebene Produkt-Case-Studies von Daven Thill, zu Cross-Selling, PIM-Daten, Relevanz-Sortierung und Lagerverfügbarkeit.',
       intro:
-        'Ein genauerer Blick auf daten- und KI-getriebene Produktentscheidungen aus Daven Thills Arbeit als Verantwortlicher des Bereichs Products von endress.com.',
+        'Ein genauerer Blick auf daten- und KI-getriebene Produktentscheidungen, die ich als Product Owner verantwortet habe.',
       readCaseStudy: 'Case Study lesen →',
     },
     caseStudyDetail: {

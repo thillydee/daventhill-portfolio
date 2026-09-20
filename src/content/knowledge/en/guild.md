@@ -1,6 +1,6 @@
 ---
 title: "What is a Guild? Cross-squad communities of practice explained"
-description: "How guilds work in agile product organizations, and how I help run the Agile Guild across all squads at endress.com in Switzerland."
+description: "How guilds work in agile product organizations, and how I help run an Agile Guild across squads to raise the bar on how teams work."
 type: concept
 publishDate: 2026-07-08
 faqs:
@@ -16,9 +16,9 @@ A "guild" is a voluntary, cross-team community built around a shared interest, d
 
 The concept comes out of the same "Spotify model" that popularized squads, tribes, and chapters. In practice, most organizations that adopt the terminology shape guilds around whatever cross-cutting concern actually needs continuous attention — accessibility, data and AI, or, in my case, the way agile teams work day to day.
 
-## How I contribute to the Agile Guild at endress.com
+## How I contribute to an Agile Guild
 
-Alongside leading my own squad, I am an active member of the Agile Guild for endress.com in Switzerland — a cross-squad group focused on the continuous improvement of how every squad on endress.com works, not just my own. Concretely, that means:
+Alongside leading my own squad, I am an active member of a cross-squad Agile Guild — a group focused on the continuous improvement of how every squad works, not just my own. Concretely, that means:
 
 - Co-organizing and moderating offsites and All-Hands sessions that bring squads together across the wider organization.
 - Running learning and growth sessions to constantly upskill squad members in agile practice.
@@ -26,6 +26,6 @@ Alongside leading my own squad, I am an active member of the Agile Guild for end
 
 ## Guild vs. Squad
 
-A squad owns outcomes for a specific product area, day to day, with a backlog and delivery accountability — see [what a squad is](/knowledge/squad) for how I apply that on the Products section of endress.com. A guild owns none of that; instead it owns the health of the *practice* itself across every squad, which is why the same person can, and often should, be part of both.
+A squad owns outcomes for a specific product area, day to day, with a backlog and delivery accountability — see [what a squad is](/knowledge/squad) for how I apply that day to day. A guild owns none of that; instead it owns the health of the *practice* itself across every squad, which is why the same person can, and often should, be part of both.
 
 This is also part of my day-to-day [skill set](/skills) as a Product Owner.

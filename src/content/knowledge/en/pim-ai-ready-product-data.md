@@ -19,10 +19,10 @@ A PIM (Product Information Management) system is purpose-built for managing stru
 
 Structured, consistent product data isn't just easier for a website to render — it's also what AI tools need to work with product information at all. An AI-driven search, recommendation, or answer-engine feature can only reason well about a product if the underlying data is clean and consistently structured; a legacy system built around loosely-structured files can't reliably support that, no matter how good the AI layer on top is.
 
-## What I did at Endress+Hauser
+## How I approached this in practice
 
-I own product-level metadata management for the Products section of endress.com and led the migration of our product specification data off Censhare — a legacy DAM not designed for the flexible, structured data consumption a modern e-commerce site or AI tooling needs — to a new PIM system. That meant defining the data structures and interfaces involved, not just moving records over: deciding upfront what a clean, well-structured product record looks like for every consumer of that data, from the website itself to the AI tools that increasingly need to work with product data directly.
+I own product-level metadata management for a large B2B product catalog and led the migration of our product specification data off a legacy DAM — not designed for the flexible, structured data consumption a modern e-commerce site or AI tooling needs — to a new PIM system. That meant defining the data structures and interfaces involved, not just moving records over: deciding upfront what a clean, well-structured product record looks like for every consumer of that data, from the website itself to the AI tools that increasingly need to work with product data directly.
 
 The result is a product data foundation that's future-proof in a concrete sense: it doesn't need to be re-architected every time a new AI-driven use case shows up, because the underlying structure was already designed with that kind of consumption in mind, not just for rendering a webpage.
 
-This is the migration behind [the PIM case study on endress.com's product data](/case-studies/metadata-pim-migration), and the same discipline behind it is what stands behind [how I run UAT](/knowledge/user-acceptance-testing) and [how my squad](/knowledge/squad) ships everything else.
+This is the migration behind [the PIM case study](/case-studies/metadata-pim-migration), and the same discipline behind it is what stands behind [how I run UAT](/knowledge/user-acceptance-testing) and [how my squad](/knowledge/squad) ships everything else.

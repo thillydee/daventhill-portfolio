@@ -99,11 +99,11 @@ const profile: Profile = {
     bioShort:
       "I'm a Product Owner based in Basel, Switzerland, with more than five years of experience leading data-driven digital products in B2B and industrial environments. I currently own the Products section of endress.com at Endress+Hauser, where I lead a cross-functional squad and have shipped AI-powered features including a sales-data-driven cross-selling engine and a relevance-based product sorting model. I hold a Professional Scrum Product Owner (PSPO) certification and previously worked in product and project management roles at MediaMarkt Switzerland and Manor AG.",
     bioLong:
-      "I'm a Product Owner based in Basel, Switzerland, with more than five years of experience leading digital products end to end, from roadmap and backlog to hands-on delivery. I currently own the Products section of endress.com at Endress+Hauser, a global leader in industrial process automation and measurement instrumentation, where I've built and led a cross-functional squad of business owners, UX, and IT for around four years. My recent work centers on data and AI driven product decisions: an AI-powered cross-selling engine built on SAP sales order data, a relevance ranking model for product listings that factors in product lifecycle and stock availability, and a metadata and PIM migration that defines how product data is structured and consumed, including by AI tools. I'm a certified Professional Scrum Product Owner (PSPO) with additional training in Design Thinking, and hold a Bachelor of Science in Business Administration from FHNW. Before Endress+Hauser, I held product and project management roles at MediaMarkt Switzerland and Manor AG.",
+      "I'm a Product Owner based in Basel, Switzerland, with more than five years of experience leading digital products end to end, from roadmap and backlog to hands-on delivery. I currently own the Products section of endress.com at Endress+Hauser, a global leader in industrial process automation and measurement instrumentation, where I've built and led a cross-functional squad of business owners, UX, and IT for around four years. My recent work centers on data and AI driven product decisions: an AI-powered cross-selling engine built on real sales data, a relevance ranking model for product listings, and a metadata and PIM migration that defines how product data is structured and consumed, including by AI tools. I'm a certified Professional Scrum Product Owner (PSPO) with additional training in Design Thinking, and hold a Bachelor of Science in Business Administration from FHNW. Before Endress+Hauser, I held product and project management roles at MediaMarkt Switzerland and Manor AG.",
     bioShortSchema:
       'Daven Thill is a Product Owner based in Basel, Switzerland, with more than five years of experience leading data-driven digital products in B2B and industrial environments. He currently owns the Products section of endress.com at Endress+Hauser, where he leads a cross-functional squad and has shipped AI-powered features including a sales-data-driven cross-selling engine and a relevance-based product sorting model. He holds a Professional Scrum Product Owner (PSPO) certification and previously worked in product and project management roles at MediaMarkt Switzerland and Manor AG.',
     leadershipSummary:
-      "For around four years, I've built and led a cross-functional squad of business owners, UX, and IT — embedding agile ways of working into how we operate day to day, not running ceremonies for their own sake. Beyond my own squad, I help raise the bar across all of endress.com's squads as an active member of the cross-squad Agile Guild.",
+      "For around four years, I've built and led a cross-functional squad of business owners, UX, and IT — embedding agile ways of working into how we operate day to day, not running ceremonies for their own sake. Beyond my own squad, I help raise the bar across the wider organization's squads as an active member of a cross-squad Agile Guild.",
     leadershipHighlights: [
       'Run retrospectives and continuously reassess ways of working — agile ceremonies as a living practice, not a box to tick.',
       'Bridge a multi-national, multi-background team so everyone pulls in the same direction.',
@@ -121,11 +121,11 @@ const profile: Profile = {
       summary:
         'Owns the Products section of endress.com, leading a cross-functional squad and driving data and AI powered improvements to the B2B e-commerce experience.',
       highlights: [
-        'Initiated and led an AI-powered cross-selling project, replacing internal cross-selling logic with a calculation model built on SAP sales order data to surface genuinely complementary product recommendations.',
-        'Owns product-level metadata management and led the migration of product specification data from Censhare to a new PIM system, defining how data is structured and consumed on endress.com and by AI tools.',
-        "Enhanced endress.com's onsite search (Elasticsearch) with a business-tuned boost layer on top of its native relevance algorithm, factoring in product lifecycle phase, segmentation, stock availability, and market availability to surface the most relevant listings first.",
+        'Initiated and led an AI-powered cross-selling project, replacing manually curated cross-selling logic with a calculation model grounded in real sales data to surface genuinely complementary product recommendations.',
+        'Owns product-level metadata management and led the migration of product specification data from a legacy DAM to a new PIM system, defining how data is structured and consumed on endress.com and by AI tools.',
+        "Enhanced endress.com's onsite search (Elasticsearch) with a business-tuned boost layer on top of its native relevance algorithm, factoring in business signals like availability and product lifecycle to surface the most relevant listings first.",
         'Designed and launched an MVP feature plus supporting data management process to show market-level stock availability on the website, including which configuration variants are available.',
-        'Built and has led a cross-functional squad of two business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban).',
+        'Built and has led a cross-functional squad of business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban).',
         'Owns setting up and coordinating user acceptance testing on the business side, defining use cases and acceptance criteria, and has established a structured approach with the squad that gives each member clear, role-tailored testing boundaries.',
         'Active member of the cross-squad Agile Guild for endress.com, co-organizing offsites, All-Hands, and learning and growth sessions, and leading Squad Health Checks to continuously improve ways of working across all squads.',
         "Manages SharePoint Online as an editor, administering entire sections of the organization's M365 environment.",
@@ -151,7 +151,7 @@ const profile: Profile = {
       dates: 'April 2021 to March 2022',
       summary: 'Owned site search and recommendation engines for the Swiss webshop.',
       highlights: [
-        'Product Owner for site search (FACT-Finder) and recommendation engines (Prudsys and Swogo).',
+        'Product Owner for site search and recommendation engines on the Swiss webshop.',
         'Coordinated front and back end teams using Scrum, including release and test management for webshop development.',
       ],
     },
@@ -175,11 +175,11 @@ const profile: Profile = {
       summary:
         'Replacing manually curated cross-selling logic with a data model that recommends genuinely complementary products.',
       problem:
-        'The existing cross-selling logic on endress.com was defined internally rather than grounded in how customers actually buy, which meant the product recommendations shown alongside a main product were not always genuinely complementary.',
+        'Cross-selling recommendations are only as good as the logic behind them. When that logic is curated by hand rather than grounded in how customers actually buy, the products shown alongside a main product are not always genuinely complementary.',
       approach:
-        'I initiated and led a project to rebuild this logic around real purchasing behavior. Working with SAP sales order data, I drove the development of a calculation model that identifies which products are actually bought together, then used that to power the recommendations shown on the product pages.',
+        'I initiated and led a project to rebuild this logic around real purchasing behavior. Working from real sales data, I drove the development of a calculation model that surfaces genuinely complementary products, then used it to power the recommendations shown on the product pages.',
       outcome:
-        'The result is a cross-selling engine grounded in actual demand patterns rather than internal assumptions, surfacing product pairings that reflect how customers in industrial process automation actually build out their orders.',
+        'The result is a cross-selling engine grounded in actual demand patterns rather than internal assumptions — surfacing product pairings that reflect how B2B customers in industrial settings actually build out their orders.',
       publishDate: new Date('2026-07-08'),
     },
     {
@@ -188,9 +188,9 @@ const profile: Profile = {
       summary:
         'Leading a full data migration from a legacy DAM to a PIM system, and defining how product data should be structured for both the website and AI tools.',
       problem:
-        'Product specification data lived in Censhare, a legacy system not designed for the flexible, structured data consumption that a modern e-commerce site and AI-driven tools both need.',
+        'Product specification data lived in a legacy DAM (Digital Asset Management) system, not designed for the flexible, structured data consumption that a modern e-commerce site and AI-driven tools both need.',
       approach:
-        'I own product-level metadata management and led the migration of this data to a new PIM (Product Information Management) system, defining the interfaces and data structures involved. Part of the work was explicitly designing how the data would be consumed, not only by endress.com itself, but by AI tools that increasingly need clean, structured product data to work with.',
+        'I own product-level metadata management and led the migration of this data to a new PIM (Product Information Management) system, defining the interfaces and data structures involved. Part of the work was explicitly designing how the data would be consumed — not only by the website itself, but by AI tools that increasingly need clean, structured product data to work with.',
       outcome:
         'A cleaner, more consistent product data foundation that supports both the current website and the growing set of AI-driven use cases around product data.',
       publishDate: new Date('2026-07-08'),
@@ -199,13 +199,13 @@ const profile: Profile = {
       title: 'Search Relevance Tuning: Elasticsearch + Business Logic',
       slug: 'relevance-sorting',
       summary:
-        "How I tuned search relevance on endress.com: a business-logic boost layer on top of Elasticsearch, without replacing its relevance engine.",
+        "How I tuned search relevance: a business-logic boost layer on top of Elasticsearch, without replacing its relevance engine.",
       problem:
-        "endress.com's onsite search runs on Elasticsearch, whose relevance scoring is built around text-match quality and has no built-in concept of the business signals that actually determine whether a listing is relevant to a B2B buyer at a given moment: its lifecycle phase, its segmentation, whether it's in stock, or whether it's even available in the customer's market.",
+        "Onsite search often runs on Elasticsearch, whose relevance scoring is built around text-match quality and has no built-in concept of the business context that actually determines whether a listing is worth surfacing to a B2B buyer at a given moment — things like whether a product is still current and whether it's even available in the customer's market.",
       approach:
-        "Rather than replacing Elasticsearch's relevance engine, I initiated and led the design of a boost layer on top of it: a calculation model that scores each product on lifecycle phase (new, active, phase-out), segmentation, stock availability, and market availability, and translates that into boosts and penalties applied on top of Elasticsearch's native relevance score. Elasticsearch still does what it's best at, matching and ranking by search intent, while the boost layer adds the business context it has no visibility into by default.",
+        "Rather than replacing Elasticsearch's relevance engine, I initiated and led the design of a boost layer on top of it: a calculation model that scores each product on business signals — availability and product lifecycle among them — and translates that into boosts and penalties applied on top of Elasticsearch's native relevance score. Elasticsearch still does what it's best at, matching and ranking by search intent, while the boost layer adds the business context it has no visibility into by default.",
       outcome:
-        "Search results and product listings on endress.com now reflect both what a customer is looking for and what is actually relevant to buy right now, without discarding Elasticsearch's underlying relevance model, a boost layer that can keep absorbing new business signals as they become relevant to weight in.",
+        "Search results and product listings now reflect both what a customer is looking for and what is actually relevant to buy right now, without discarding Elasticsearch's underlying relevance model — a boost layer that can keep absorbing new business signals as they become relevant to weight in.",
       publishDate: new Date('2026-07-08'),
     },
     {
@@ -214,7 +214,7 @@ const profile: Profile = {
       summary:
         'An MVP feature and supporting data process that shows customers, per market, whether a product and its specific configuration are in stock.',
       problem:
-        'Customers browsing endress.com had no way to see, at a glance, whether a product they were interested in was actually available in their market, let alone in the specific configuration they needed.',
+        'Customers browsing a large B2B catalog often have no way to see, at a glance, whether a product they are interested in is actually available in their market, let alone in the specific configuration they need.',
       approach:
         'I designed and launched an MVP feature together with the supporting data management process required to power it, surfacing market-level stock availability directly on the product pages, including which configuration variants are available.',
       outcome:
@@ -224,7 +224,7 @@ const profile: Profile = {
   ],
 
   leadershipApproach:
-    'I have built and led a cross-functional squad of business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban) into how the team operates day to day. My approach to product ownership sits at the intersection of business strategy, data, and technology: I document business requirements, user stories, and acceptance criteria as a firm foundation for development, and I plan and run user acceptance testing myself through to sign-off before anything goes live. Beyond my own squad, I am an active member of endress.com\'s cross-squad Agile Guild, where I help organize offsites, All-Hands, and learning and growth sessions, and lead Squad Health Checks to raise the bar on agile practice across the wider organization.',
+    'I have built and led a cross-functional squad of business owners, UX, and IT for around four years, embedding agile ways of working (Scrum and Kanban) into how the team operates day to day. My approach to product ownership sits at the intersection of business strategy, data, and technology: I document business requirements, user stories, and acceptance criteria as a firm foundation for development, and I plan and run user acceptance testing myself through to sign-off before anything goes live. Beyond my own squad, I am an active member of a cross-squad Agile Guild, where I help organize offsites, All-Hands, and learning and growth sessions, and lead Squad Health Checks to raise the bar on agile practice across the wider organization.',
 
   education: [
     {
@@ -260,7 +260,7 @@ const profile: Profile = {
       'PIM (Product Information Management)',
       'Data-driven decision making',
       'AI and ML informed product recommendations',
-      'SAP sales order data',
+      'Sales & transaction data',
       'Elasticsearch',
     ],
     ecommerce: ['B2B and B2C e-commerce', 'Conversion optimization', 'Customer journey design'],
@@ -272,7 +272,6 @@ const profile: Profile = {
       'SAP',
       'Google Analytics',
       'Google Data Studio',
-      'FACT-Finder',
     ],
   },
 
