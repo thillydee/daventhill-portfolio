@@ -36,7 +36,16 @@ export interface WebDesignContent {
     items: string[];
   };
   packages: WebDesignPackage[];
+  selfBuild: {
+    name: string;
+    price: string;
+    priceSchema: string;
+    tagline: string;
+    intro: string;
+    items: string[];
+  };
   care: { name: string; price: string; intro: string };
+  handover: { name: string; price: string; priceSchema: string; intro: string };
   larger: { label: string; text: string };
   addons: { label: string; items: string[] };
   reference: { eyebrow: string; heading: string; body: string; cta: string };
@@ -161,11 +170,32 @@ const en: WebDesignContent = {
       duration: 'Quoted after the workshop',
     },
   ],
+  selfBuild: {
+    name: 'Do it yourself',
+    price: 'from CHF 1,200',
+    priceSchema: '1200',
+    tagline: 'Run your own site on my framework, with Claude.',
+    intro:
+      'Prefer to own the whole thing and keep it in-house? I set you up to build and maintain your own site on the same framework I use for mine — then hand you the keys. It pairs with how I run this very site, so you get a proven setup, not a blank page.',
+    items: [
+      'An onboarding session and your framework scaffolded, ready to run',
+      'A walkthrough of the AI-assisted workflow — how to update and extend it with Claude',
+      '2 to 4 weeks of support while you find your feet',
+      'Optional light support retainer after that',
+    ],
+  },
   care: {
     name: 'Care plan',
     price: 'CHF 45/month or CHF 480/year',
     intro:
       'Hosting, domain, updates, backups, and small changes — send me the new price or opening hours and it’s live the next day. And if you want, steady improvements over time. Included with Move; optional but recommended on every build.',
+  },
+  handover: {
+    name: 'Own it outright',
+    price: 'CHF 890 one-time',
+    priceSchema: '890',
+    intro:
+      'No lock-in, ever. At the end of any build you can take full ownership of the repository and hosting setup for a one-time fee — including a handover session and a short guide to keeping it running with Claude. Most people stay on the care plan because it’s simpler, but the door is always open.',
   },
   larger: {
     label: 'Something bigger',
@@ -371,11 +401,32 @@ const de: WebDesignContent = {
       duration: 'Offerte nach dem Workshop',
     },
   ],
+  selfBuild: {
+    name: 'In Eigenregie',
+    price: 'ab CHF 1’200',
+    priceSchema: '1200',
+    tagline: 'Ihre eigene Seite auf meinem Framework betreiben, mit Claude.',
+    intro:
+      'Lieber alles selbst besitzen und im Haus behalten? Ich richte Sie so ein, dass Sie Ihre eigene Seite auf demselben Framework bauen und pflegen, das ich für meine nutze — und übergebe Ihnen dann die Schlüssel. Es baut darauf auf, wie ich diese Seite hier betreibe: Sie bekommen ein bewährtes Setup, kein leeres Blatt.',
+    items: [
+      'Eine Einführungssitzung und Ihr Framework startklar aufgesetzt',
+      'Eine Anleitung zum KI-gestützten Workflow — wie Sie mit Claude aktualisieren und erweitern',
+      '2 bis 4 Wochen Unterstützung für den Start',
+      'Optional ein leichtes Support-Abo danach',
+    ],
+  },
   care: {
     name: 'Betreuung',
     price: 'CHF 45/Monat oder CHF 480/Jahr',
     intro:
       'Hosting, Domain, Updates, Backups und kleine Änderungen — Sie schicken mir den neuen Preis oder die neuen Öffnungszeiten, am nächsten Tag steht’s auf der Seite. Und wenn Sie möchten, laufende Verbesserungen über die Zeit. Beim Umzug inklusive; bei jedem Bau optional, aber empfohlen.',
+  },
+  handover: {
+    name: 'Selbst übernehmen',
+    price: 'CHF 890 einmalig',
+    priceSchema: '890',
+    intro:
+      'Keine Bindung, nie. Am Ende jedes Projekts können Sie das Repository und das Hosting-Setup gegen eine einmalige Gebühr vollständig übernehmen — inklusive einer Übergabesitzung und einer kurzen Anleitung, wie Sie es mit Claude am Laufen halten. Die meisten bleiben bei der Betreuung, weil es einfacher ist, aber die Tür steht immer offen.',
   },
   larger: {
     label: 'Etwas Grösseres',
