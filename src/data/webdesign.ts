@@ -139,11 +139,11 @@ const en: WebDesignContent = {
     },
     {
       name: 'The whole journey',
-      price: 'from CHF 4,900',
-      priceSchema: '4900',
+      price: 'from CHF 5,900',
+      priceSchema: '5900',
       tagline: 'From first idea to launch — and beyond.',
       intro:
-        'The full partnership. We start with your vision and go the whole way: strategy, a complete design concept and voice, content written for you, bilingual if you need it, and a site built to actually generate enquiries — plus aftercare while it finds its feet. A project on the scale of ava-beauty.ch lands around CHF 6,500 to 9,000.',
+        'The full partnership. We start with your vision and go the whole way: strategy, a complete design concept and voice, content written for you, bilingual if you need it, and a site built to actually generate enquiries — plus aftercare while it finds its feet. At full scope — bilingual, several pages, content written from scratch, like ava-beauty.ch — a project typically lands between CHF 6,500 and 9,000.',
       items: [
         'Everything from New website',
         'Deep vision and brand work: voice, tone, visual identity',
@@ -163,8 +163,8 @@ const en: WebDesignContent = {
       'Hosting, domain, updates, backups, and small changes — send me the new price or opening hours and it’s live the next day. And if you want, steady improvements over time. Included with Move; optional but recommended on every build.',
   },
   larger: {
-    label: 'Larger projects',
-    text: 'A project on the scale of ava-beauty.ch — bilingual, several service pages, portfolio, its own social preview per page — runs CHF 6,500 to 9,000. Not a fixed package, but a quote after a first conversation.',
+    label: 'Something bigger',
+    text: 'An online shop, a larger site, or ongoing campaigns go beyond the packages above — that’s a quote after a first conversation, not a fixed price.',
   },
   addons: {
     label: 'Add-ons',
@@ -345,11 +345,11 @@ const de: WebDesignContent = {
     },
     {
       name: 'Die ganze Reise',
-      price: 'ab CHF 4’900',
-      priceSchema: '4900',
+      price: 'ab CHF 5’900',
+      priceSchema: '5900',
       tagline: 'Von der ersten Idee bis zum Livegang — und darüber hinaus.',
       intro:
-        'Die volle Partnerschaft. Wir starten bei Ihrer Vision und gehen den ganzen Weg: Strategie, ein komplettes Gestaltungs- und Sprachkonzept, Texte, die für Sie geschrieben werden, zweisprachig wenn nötig, und eine Seite, die wirklich Anfragen bringt — plus Betreuung, während sie sich einspielt. Ein Projekt im Umfang von ava-beauty.ch liegt bei rund CHF 6’500 bis 9’000.',
+        'Die volle Partnerschaft. Wir starten bei Ihrer Vision und gehen den ganzen Weg: Strategie, ein komplettes Gestaltungs- und Sprachkonzept, Texte, die für Sie geschrieben werden, zweisprachig wenn nötig, und eine Seite, die wirklich Anfragen bringt — plus Betreuung, während sie sich einspielt. Im vollen Umfang — zweisprachig, mehrere Seiten, Texte von Grund auf, wie bei ava-beauty.ch — liegt ein Projekt typischerweise zwischen CHF 6’500 und 9’000.',
       items: [
         'Alles aus der neuen Website',
         'Tiefe Vision- und Markenarbeit: Stimme, Ton, visuelle Identität',
@@ -369,8 +369,8 @@ const de: WebDesignContent = {
       'Hosting, Domain, Updates, Backups und kleine Änderungen — Sie schicken mir den neuen Preis oder die neuen Öffnungszeiten, am nächsten Tag steht’s auf der Seite. Und wenn Sie möchten, laufende Verbesserungen über die Zeit. Beim Umzug inklusive; bei jedem Bau optional, aber empfohlen.',
   },
   larger: {
-    label: 'Grössere Projekte',
-    text: 'Ein Projekt im Umfang von ava-beauty.ch — zweisprachig, mehrere Leistungsseiten, Portfolio, eigene Social-Vorschau pro Seite — liegt bei CHF 6’500 bis 9’000. Kein Standardpaket, sondern eine Offerte nach einem ersten Gespräch.',
+    label: 'Etwas Grösseres',
+    text: 'Ein Online-Shop, eine umfangreichere Seite oder laufende Kampagnen gehen über die Pakete oben hinaus — dafür gibt es eine Offerte nach einem ersten Gespräch, keinen Fixpreis.',
   },
   addons: {
     label: 'Zusatzleistungen',
