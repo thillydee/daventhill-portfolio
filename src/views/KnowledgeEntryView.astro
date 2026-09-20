@@ -13,7 +13,7 @@ const { locale, entry } = Astro.props;
 const strings = t(locale);
 const { caseStudies } = getProfile(locale);
 const localizedPaths = buildLocalizedPaths(`/knowledge/${entry.id}`);
-const homePath = locale === 'de' ? '/de/' : '/';
+const homePath = locale === 'de' ? '/de' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 const knowledgePath = `${prefix}/knowledge`;
 

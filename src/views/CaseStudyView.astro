@@ -12,7 +12,7 @@ export interface Props {
 const { locale, caseStudy } = Astro.props;
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths(`/case-studies/${caseStudy.slug}`);
-const homePath = locale === 'de' ? '/de/' : '/';
+const homePath = locale === 'de' ? '/de' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 const caseStudiesPath = `${prefix}/case-studies`;
 
