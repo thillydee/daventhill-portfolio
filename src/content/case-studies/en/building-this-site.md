@@ -1,13 +1,15 @@
 ---
 faqs:
-  - question: "What is daventhill.ch built with?"
-    answer: "Astro for static site generation, Tailwind CSS for styling, and TypeScript throughout. Content lives in a single typed profile file plus a markdown knowledge base, both rendered through an i18n layer into fully static, bilingual (EN/DE) pages, and deployed on Vercel."
-  - question: "How is the site kept up to date?"
-    answer: "Through a small AI-assisted, multi-agent workflow I run myself: a written vision document sets priorities, specialist review passes (content, UX, SEO/AEO) propose changes, I sign off on what ships, and every shipped cycle is logged in a running decision log. I'm the product owner of that process, not just the person approving an AI's output."
-  - question: "Why build your own site instead of using LinkedIn or a template?"
-    answer: "Because a template proves I can pick a template, and LinkedIn is a profile I don't fully control. Owning the site end to end — architecture, content, performance, SEO — is itself evidence of the same product-ownership skills I'm applying for."
-  - question: "How does the site perform, and is it accessible?"
-    answer: "It ships as static HTML with minimal JavaScript, is built mobile-first, and is checked against WCAG-level contrast and keyboard-navigation requirements. Those aren't afterthoughts — they're part of the same performance and accessibility budget I'd hold any product I owned to."
+  - question: "How do you automate website maintenance with AI agents?"
+    answer: "Automate website maintenance by giving separate AI agents narrow, single-discipline roles — one for content, one for UX and accessibility, one for SEO/AEO — and having each review the site and propose focused changes independently. A human orchestrator then reconciles the proposals, prioritizes, and approves before anything ships. This site is maintained with exactly that loop."
+  - question: "What is a multi-agent AI content workflow?"
+    answer: "A multi-agent AI content workflow assigns each part of a website's upkeep to a specialized agent instead of one generalist prompt. Specialist agents — content, UX, SEO — each produce focused, reviewable proposals, and a human merges them and signs off. Splitting the work by discipline scales quality review far beyond what a single manual pass can cover."
+  - question: "Can a website be fully automated without losing quality control?"
+    answer: "Yes — the safeguard is a human-in-the-loop approval gate. Let automation handle the heavy lifting (review passes, drafting, checks, and builds), but require an explicit human decision before production. Keeping the final sign-off manual is what stops an automated pipeline from publishing low-quality, inaccurate, or off-brand changes."
+  - question: "How do you make a website citable by AI answer engines (AEO)?"
+    answer: "For answer engine optimization, structure the site so machines can quote it: schema.org JSON-LD (Person, CreativeWork, FAQPage), an llms.txt endpoint that maps content for AI crawlers, and question-based FAQ content that answers directly and stays quotable out of context. AEO is about being the clean, structured source ChatGPT, Perplexity, and Google AI Overviews can cite."
+  - question: "What website architecture is easiest to keep up to date?"
+    answer: "A single source of truth. Keep structured facts in one typed data file and long-form content in a markdown collection, then generate every page, language, and metadata surface from it. Update a fact once and it is correct everywhere — no hunting through templates — which is what makes frequent, low-risk updates, whether manual or AI-assisted, practical."
 ---
 
 ## Why I treated my own portfolio as a product

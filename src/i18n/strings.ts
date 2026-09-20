@@ -172,14 +172,14 @@ export const strings = {
           "Yes. At Endress+Hauser I've initiated and led AI and data driven features including a sales-data-based cross-selling engine, a relevance ranking model for product listings, and a PIM data migration designed with AI consumption in mind.",
       },
       {
-        question: 'Did you build this website yourself?',
+        question: 'Can a website be maintained with an AI-assisted, multi-agent workflow?',
         answer:
-          "Yes — I scoped, built, and maintain this site myself, treating it as a real product with its own vision, data-driven architecture, and SEO/AEO layer rather than a static resume page. See the case study on how I built and run daventhill.ch for the full breakdown.",
+          "Yes. You can run a site's upkeep as a loop of specialized AI agents — content, UX, and SEO/AEO — each proposing focused changes, with a human orchestrator prioritizing and approving before anything ships. I built and run this site that way; the 'building this site' case study breaks down the full workflow.",
       },
       {
-        question: 'Is this site built for AI search and answer engines?',
+        question: 'What is answer engine optimization (AEO), and how do you build for it?',
         answer:
-          "Yes. Beyond ranking in traditional search, I've structured the whole site — schema.org markup, a dedicated llms.txt endpoint, and structured FAQ markup on key pages — so AI answer engines can accurately cite my experience.",
+          "AEO is structuring a site so AI answer engines like ChatGPT, Perplexity, and Google AI Overviews can cite it — through schema.org structured data, an llms.txt endpoint for AI crawlers, and question-based FAQ content that answers directly. It sits on top of traditional SEO, and this whole site is built to be both ranked and quoted.",
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'DE', full: 'Deutsch' },
@@ -350,14 +350,14 @@ export const strings = {
           'Ja. Bei Endress+Hauser habe ich KI- und datengetriebene Features initiiert und geleitet, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine, ein Relevanzmodell für Produktlisten und eine PIM-Datenmigration, die gezielt auch für die Nutzung durch KI konzipiert wurde.',
       },
       {
-        question: 'Haben Sie diese Website selbst gebaut?',
+        question: 'Kann eine Website mit einem KI-gestützten Multi-Agenten-Workflow gepflegt werden?',
         answer:
-          'Ja — ich habe diese Website selbst konzipiert, gebaut und pflege sie laufend, als echtes Produkt mit eigener Vision, datengetriebener Architektur und SEO/AEO-Schicht statt als statische Lebenslauf-Seite. Die vollständige Aufschlüsselung finden Sie in der Case Study dazu, wie ich daventhill.ch gebaut habe und betreibe.',
+          'Ja. Die Pflege einer Website lässt sich als Schleife spezialisierter KI-Agenten betreiben — Content, UX und SEO/AEO —, die jeweils gezielte Änderungen vorschlagen, während ein Mensch als Orchestrator priorisiert und freigibt, bevor etwas live geht. Ich habe diese Website so gebaut und betreibe sie so; die Case Study zum Bau dieser Website erklärt den gesamten Workflow.',
       },
       {
-        question: 'Ist diese Website für KI-Suche und Antwortmaschinen gebaut?',
+        question: 'Was ist Answer Engine Optimization (AEO), und wie baut man dafür?',
         answer:
-          'Ja. Über das klassische Suchranking hinaus habe ich die gesamte Website strukturiert — schema.org-Markup, ein eigener llms.txt-Endpunkt und strukturiertes FAQ-Markup auf den wichtigsten Seiten —, damit KI-Antwortmaschinen meine Erfahrung korrekt zitieren können.',
+          'AEO bedeutet, eine Website so zu strukturieren, dass KI-Antwortmaschinen wie ChatGPT, Perplexity und Google AI Overviews sie zitieren können — über strukturierte schema.org-Daten, einen llms.txt-Endpunkt für KI-Crawler und frageorientierte FAQ-Inhalte, die direkt antworten. Es baut auf klassischem SEO auf, und diese gesamte Website ist darauf ausgelegt, sowohl gerankt als auch zitiert zu werden.',
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'EN', full: 'English' },

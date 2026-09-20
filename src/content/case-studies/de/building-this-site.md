@@ -1,13 +1,15 @@
 ---
 faqs:
-  - question: "Womit ist daventhill.ch gebaut?"
-    answer: "Astro für die statische Seitengenerierung, Tailwind CSS fürs Styling und durchgängig TypeScript. Der Content liegt in einer einzigen typisierten Profildatei plus einer Markdown-Wissensdatenbank, beide über eine i18n-Schicht in vollständig statische, zweisprachige (EN/DE) Seiten gerendert und auf Vercel deployed."
-  - question: "Wie wird die Website aktuell gehalten?"
-    answer: "Über einen kleinen, KI-gestützten Multi-Agent-Workflow, den ich selbst betreibe: Ein schriftliches Vision-Dokument setzt die Prioritäten, spezialisierte Review-Durchgänge (Content, UX, SEO/AEO) schlagen Änderungen vor, ich gebe frei, was ausgeliefert wird, und jeder abgeschlossene Zyklus wird in einem laufenden Decision Log festgehalten. Ich bin der Product Owner dieses Prozesses, nicht nur die Person, die die Ausgabe einer KI abnickt."
-  - question: "Warum eine eigene Website statt LinkedIn oder ein Template?"
-    answer: "Weil ein Template nur beweist, dass ich ein Template auswählen kann, und LinkedIn ein Profil ist, das ich nicht vollständig kontrolliere. Die Website End-to-End zu verantworten — Architektur, Content, Performance, SEO — ist selbst ein Beleg für genau die Product-Ownership-Fähigkeiten, für die ich mich bewerbe."
-  - question: "Wie performant und barrierefrei ist die Website?"
-    answer: "Sie wird als statisches HTML mit minimalem JavaScript ausgeliefert, ist Mobile-First gebaut und wird gegen WCAG-Kontrastanforderungen und Tastaturbedienbarkeit geprüft. Das sind keine Nachgedanken, sondern Teil desselben Performance- und Barrierefreiheits-Budgets, an dem ich jedes Produkt messen würde, das ich verantworte."
+  - question: "Wie automatisiert man die Website-Pflege mit KI-Agenten?"
+    answer: "Die Website-Pflege automatisiert man, indem man einzelnen KI-Agenten klar abgegrenzte, fachspezifische Rollen gibt — je einen für Content, für UX und Barrierefreiheit sowie für SEO/AEO — und jeden die Website unabhängig prüfen und gezielte Änderungen vorschlagen lässt. Ein Mensch als Orchestrator führt die Vorschläge dann zusammen, priorisiert und gibt frei, bevor etwas live geht. Genau nach dieser Schleife wird diese Website gepflegt."
+  - question: "Was ist ein Multi-Agenten-Workflow für Content mit KI?"
+    answer: "Ein Multi-Agenten-Workflow weist jeden Teil der Website-Pflege einem spezialisierten KI-Agenten zu, statt alles über einen generalistischen Prompt zu lösen. Spezialisierte Agenten — Content, UX, SEO — liefern jeweils fokussierte, überprüfbare Vorschläge, und ein Mensch führt sie zusammen und gibt frei. Die Aufteilung nach Fachbereich skaliert die Qualitätsprüfung weit über das hinaus, was ein einzelner manueller Durchgang leisten kann."
+  - question: "Kann eine Website vollständig automatisiert werden, ohne die Qualitätskontrolle zu verlieren?"
+    answer: "Ja — die Absicherung ist ein Human-in-the-Loop-Freigabeschritt. Die Automatisierung übernimmt die Fleissarbeit (Review-Durchgänge, Entwürfe, Checks und Builds), aber vor der Produktion ist eine ausdrückliche menschliche Entscheidung nötig. Die manuelle Endfreigabe verhindert, dass eine automatisierte Pipeline minderwertige, fehlerhafte oder markenfremde Änderungen veröffentlicht."
+  - question: "Wie macht man eine Website für KI-Antwortmaschinen zitierbar (AEO)?"
+    answer: "Für Answer Engine Optimization strukturiert man die Website so, dass Maschinen sie zitieren können: schema.org-JSON-LD (Person, CreativeWork, FAQPage), ein llms.txt-Endpunkt, der Inhalte für KI-Crawler abbildet, und frageorientierte FAQ-Inhalte, die direkt antworten und aus dem Kontext gelöst zitierbar bleiben. AEO heisst, die saubere, strukturierte Quelle zu sein, die ChatGPT, Perplexity und Google AI Overviews zitieren können."
+  - question: "Welche Website-Architektur ist am leichtesten aktuell zu halten?"
+    answer: "Eine Single Source of Truth. Strukturierte Fakten in einer typisierten Datendatei, Langtexte in einer Markdown-Sammlung — und daraus jede Seite, Sprache und Metadaten-Ebene generieren. Ein Fakt wird einmal aktualisiert und ist überall korrekt, ohne Templates zu durchsuchen. Genau das macht häufige, risikoarme Aktualisierungen — ob manuell oder KI-gestützt — praktikabel."
 ---
 
 ## Warum ich mein eigenes Portfolio wie ein Produkt behandelt habe
