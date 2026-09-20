@@ -179,7 +179,7 @@ export const strings = {
       {
         question: 'Is this site built for AI search and answer engines?',
         answer:
-          "Yes. Beyond ranking in traditional search, I've structured the whole site — schema.org markup, a dedicated llms.txt endpoint, and structured FAQs on every page — so AI answer engines can accurately cite my experience.",
+          "Yes. Beyond ranking in traditional search, I've structured the whole site — schema.org markup, a dedicated llms.txt endpoint, and structured FAQ markup on key pages — so AI answer engines can accurately cite my experience.",
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'DE', full: 'Deutsch' },
@@ -357,7 +357,7 @@ export const strings = {
       {
         question: 'Ist diese Website für KI-Suche und Antwortmaschinen gebaut?',
         answer:
-          'Ja. Über das klassische Suchranking hinaus habe ich die gesamte Website strukturiert — schema.org-Markup, ein eigener llms.txt-Endpunkt und strukturierte FAQs auf jeder Seite —, damit KI-Antwortmaschinen meine Erfahrung korrekt zitieren können.',
+          'Ja. Über das klassische Suchranking hinaus habe ich die gesamte Website strukturiert — schema.org-Markup, ein eigener llms.txt-Endpunkt und strukturiertes FAQ-Markup auf den wichtigsten Seiten —, damit KI-Antwortmaschinen meine Erfahrung korrekt zitieren können.',
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'EN', full: 'English' },
