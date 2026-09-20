@@ -10,7 +10,7 @@ const { locale } = Astro.props;
 const { person, experience, education, certifications } = getProfile(locale);
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths('/experience');
-const homePath = locale === 'de' ? '/de/' : '/';
+const homePath = locale === 'de' ? '/de' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 
 // Maps specific experience highlight bullets to the case study that covers them in

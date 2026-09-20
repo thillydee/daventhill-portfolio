@@ -10,7 +10,7 @@ const { locale } = Astro.props;
 const { person, skills, leadershipApproach, languages } = getProfile(locale);
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths('/skills');
-const homePath = locale === 'de' ? '/de/' : '/';
+const homePath = locale === 'de' ? '/de' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 
 const skillLinks: Record<string, string> =

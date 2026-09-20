@@ -10,7 +10,7 @@ export interface Props {
 const { locale } = Astro.props;
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths('/knowledge');
-const homePath = locale === 'de' ? '/de/' : '/';
+const homePath = locale === 'de' ? '/de' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 
 const entries = await getCollection(locale === 'de' ? 'knowledgeDe' : 'knowledgeEn');
