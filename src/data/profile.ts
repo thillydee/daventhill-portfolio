@@ -54,6 +54,7 @@ export interface Skills {
   productAndAgile: string[];
   dataAndAi: string[];
   ecommerce: string[];
+  webAndDelivery: string[];
   tools: string[];
 }
 
@@ -221,6 +222,19 @@ const profile: Profile = {
         'Customers can see stock and configuration availability up front, which shortens the path from browsing to purchase.',
       publishDate: new Date('2026-07-08'),
     },
+    {
+      title: 'This website as a product: how I scoped, built, and maintain daventhill.ch',
+      slug: 'building-this-site',
+      summary:
+        'Treating my own portfolio as a real product — a data-driven architecture, an SEO/AEO layer, and an AI-assisted workflow I use to keep it current.',
+      problem:
+        'A job search needs an asset that proves capability, not just claims it. A generic template or a static PDF turned into a webpage says nothing about whether I can actually own a digital product end to end — so I treated my own portfolio as a product, not a brochure.',
+      approach:
+        "I built this site on a data-driven architecture: a single TypeScript source of truth for my profile plus a markdown knowledge base, both rendered through an i18n layer into fully static, bilingual EN/DE pages, layered with an SEO/AEO structure (schema.org JSON-LD, a dedicated llms.txt for AI answer engines, per-page OG images) and a performance and accessibility budget. I maintain it with the same discipline I'd apply to any product I own: a written vision, a structured review process across content, UX, and SEO, and a running decision log — increasingly run through an AI-assisted, multi-agent workflow that I direct and sign off on.",
+      outcome:
+        "The result is a fast, accessible, bilingual site that's citable by AI answer engines and has been iterated on in the open, cycle by cycle, the same way I'd run a product roadmap. This case study is itself the proof — it documents the exact site you're reading it on.",
+      publishDate: new Date('2026-09-20'),
+    },
   ],
 
   leadershipApproach:
@@ -264,6 +278,16 @@ const profile: Profile = {
       'Elasticsearch',
     ],
     ecommerce: ['B2B and B2C e-commerce', 'Conversion optimization', 'Customer journey design'],
+    webAndDelivery: [
+      'Astro',
+      'TypeScript',
+      'Tailwind CSS',
+      'Web performance (Core Web Vitals)',
+      'Technical SEO & AEO',
+      'Accessibility (WCAG)',
+      'Internationalization (i18n)',
+      'CI/CD (Vercel)',
+    ],
     tools: [
       'Jira',
       'Confluence',

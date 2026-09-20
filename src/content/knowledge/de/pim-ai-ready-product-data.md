@@ -25,4 +25,4 @@ Ich verantworte das Metadaten-Management auf Produktebene für einen grossen B2B
 
 Das Ergebnis ist eine Produktdatenbasis, die in einem konkreten Sinn zukunftsfähig ist: Sie muss nicht neu aufgebaut werden, sobald ein neuer KI-gestützter Anwendungsfall auftaucht, weil die zugrunde liegende Struktur von Anfang an auf genau diese Art der Nutzung ausgelegt wurde – nicht nur auf die Darstellung einer Webseite.
 
-Das ist die Migration hinter [der PIM-Case-Study](/de/case-studies/metadata-pim-migration), und dieselbe Disziplin steht auch hinter [wie ich UAT durchführe](/de/knowledge/user-acceptance-testing) und [wie mein Squad](/de/knowledge/squad) alles andere ausliefert.
+Das ist die Migration hinter [der PIM-Case-Study](/de/case-studies/metadata-pim-migration), und dieselbe Disziplin steht auch hinter [wie ich UAT durchführe](/de/knowledge/user-acceptance-testing), [wie mein Squad](/de/knowledge/squad) alles andere ausliefert, und [wie ich diese Website selbst für KI-Antwortmaschinen strukturiert habe](/de/case-studies/building-this-site).

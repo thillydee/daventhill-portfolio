@@ -25,4 +25,4 @@ I own product-level metadata management for a large B2B product catalog and led 
 
 The result is a product data foundation that's future-proof in a concrete sense: it doesn't need to be re-architected every time a new AI-driven use case shows up, because the underlying structure was already designed with that kind of consumption in mind, not just for rendering a webpage.
 
-This is the migration behind [the PIM case study](/case-studies/metadata-pim-migration), and the same discipline behind it is what stands behind [how I run UAT](/knowledge/user-acceptance-testing) and [how my squad](/knowledge/squad) ships everything else.
+This is the migration behind [the PIM case study](/case-studies/metadata-pim-migration), and the same discipline behind it is what stands behind [how I run UAT](/knowledge/user-acceptance-testing), [how my squad](/knowledge/squad) ships everything else, and [how I structured this site itself for AI answer engines](/case-studies/building-this-site).

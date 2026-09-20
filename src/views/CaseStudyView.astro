@@ -1,6 +1,7 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import type { FaqItem } from '../components/PersonSchema.astro';
 import { t, buildLocalizedPaths, type Locale } from '../i18n';
 import type { CaseStudy } from '../data/profile';
 
@@ -20,6 +21,15 @@ const knowledgeEntries = await getCollection(locale === 'de' ? 'knowledgeDe' : '
 const relatedKnowledge = knowledgeEntries.filter((entry) =>
   entry.data.relatedCaseStudies?.includes(caseStudy.slug),
 );
+
+// Optional rich deep-dive body, matched by slug. Case studies without a
+// matching content entry (the four pre-existing ones) render unchanged.
+// Collected via getCollection + find (rather than getEntry) so a slug with no
+// deep dive doesn't log Astro's "entry was not found" warning at build time.
+const deepDiveEntries = await getCollection(locale === 'de' ? 'caseStudyDeepDe' : 'caseStudyDeepEn');
+const deepDiveEntry = deepDiveEntries.find((entry) => entry.id === caseStudy.slug);
+const DeepDiveContent = deepDiveEntry ? (await render(deepDiveEntry)).Content : undefined;
+const deepDiveFaqs: FaqItem[] | undefined = deepDiveEntry?.data.faqs;
 
 const breadcrumbs = [
   { name: strings.breadcrumbs.home, path: homePath },
@@ -42,6 +52,7 @@ const breadcrumbs = [
     path: localizedPaths[locale],
     datePublished: caseStudy.publishDate,
   }}
+  faq={deepDiveFaqs}
 >
   <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
     <a href={caseStudiesPath} class="text-sm font-semibold text-brand hover:text-brand-dark">
@@ -64,6 +75,33 @@ const breadcrumbs = [
         <p class="mt-3 text-base leading-relaxed text-ink-soft">{caseStudy.outcome}</p>
       </div>
     </div>
+
+    {DeepDiveContent && (
+      <div class="mt-16">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-muted">
+          {strings.caseStudyDetail.deepDiveHeading}
+        </h2>
+        <div class="prose prose-slate mt-4 max-w-none prose-headings:font-semibold prose-headings:text-ink prose-p:leading-relaxed prose-p:text-ink-soft prose-a:text-brand">
+          <DeepDiveContent />
+        </div>
+      </div>
+    )}
+
+    {deepDiveFaqs && deepDiveFaqs.length > 0 && (
+      <div class="mt-16">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-muted">
+          {strings.caseStudyDetail.faqHeading}
+        </h2>
+        <dl class="mt-4 space-y-6">
+          {deepDiveFaqs.map((item) => (
+            <div>
+              <dt class="text-base font-semibold text-ink">{item.question}</dt>
+              <dd class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    )}
 
     {relatedKnowledge.length > 0 && (
       <div class="mt-16">

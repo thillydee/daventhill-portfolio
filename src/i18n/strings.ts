@@ -73,6 +73,8 @@ export const strings = {
       problem: 'Problem',
       approach: 'Approach',
       outcome: 'Outcome',
+      deepDiveHeading: 'Deep dive',
+      faqHeading: 'FAQ',
       relatedKnowledgeHeading: 'Related knowledge',
       ctaHeading: 'Working on something similar?',
       ctaText: "Let's talk about data and AI driven product decisions for your team.",
@@ -87,6 +89,7 @@ export const strings = {
         productAndAgile: 'Product & Agile',
         dataAndAi: 'Data & AI',
         ecommerce: 'E-commerce',
+        webAndDelivery: 'Web & Delivery',
         tools: 'Tools',
       },
       languagesHeading: 'Languages',
@@ -168,6 +171,16 @@ export const strings = {
         answer:
           "Yes. At Endress+Hauser I've initiated and led AI and data driven features including a sales-data-based cross-selling engine, a relevance ranking model for product listings, and a PIM data migration designed with AI consumption in mind.",
       },
+      {
+        question: 'Did you build this website yourself?',
+        answer:
+          "Yes — I scoped, built, and maintain this site myself, treating it as a real product with its own vision, data-driven architecture, and SEO/AEO layer rather than a static resume page. See the case study on how I built and run daventhill.ch for the full breakdown.",
+      },
+      {
+        question: 'Is this site built for AI search and answer engines?',
+        answer:
+          "Yes. Beyond ranking in traditional search, I've structured the whole site — schema.org markup, a dedicated llms.txt endpoint, and structured FAQs on every page — so AI answer engines can accurately cite my experience.",
+      },
     ] satisfies FaqItem[],
     langSwitch: { label: 'DE', full: 'Deutsch' },
   },
@@ -238,6 +251,8 @@ export const strings = {
       problem: 'Problem',
       approach: 'Vorgehen',
       outcome: 'Ergebnis',
+      deepDiveHeading: 'Vertiefung',
+      faqHeading: 'FAQ',
       relatedKnowledgeHeading: 'Verwandtes Wissen',
       ctaHeading: 'Arbeiten Sie an etwas Ähnlichem?',
       ctaText: 'Lassen Sie uns über daten- und KI-getriebene Produktentscheidungen für Ihr Team sprechen.',
@@ -252,6 +267,7 @@ export const strings = {
         productAndAgile: 'Produkt & Agil',
         dataAndAi: 'Daten & KI',
         ecommerce: 'E-Commerce',
+        webAndDelivery: 'Web & Umsetzung',
         tools: 'Tools',
       },
       languagesHeading: 'Sprachen',
@@ -332,6 +348,16 @@ export const strings = {
         question: 'Arbeitet Daven Thill mit KI-gestützten Produkt-Features?',
         answer:
           'Ja. Bei Endress+Hauser habe ich KI- und datengetriebene Features initiiert und geleitet, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine, ein Relevanzmodell für Produktlisten und eine PIM-Datenmigration, die gezielt auch für die Nutzung durch KI konzipiert wurde.',
+      },
+      {
+        question: 'Haben Sie diese Website selbst gebaut?',
+        answer:
+          'Ja — ich habe diese Website selbst konzipiert, gebaut und pflege sie laufend, als echtes Produkt mit eigener Vision, datengetriebener Architektur und SEO/AEO-Schicht statt als statische Lebenslauf-Seite. Die vollständige Aufschlüsselung finden Sie in der Case Study dazu, wie ich daventhill.ch gebaut habe und betreibe.',
+      },
+      {
+        question: 'Ist diese Website für KI-Suche und Antwortmaschinen gebaut?',
+        answer:
+          'Ja. Über das klassische Suchranking hinaus habe ich die gesamte Website strukturiert — schema.org-Markup, ein eigener llms.txt-Endpunkt und strukturierte FAQs auf jeder Seite —, damit KI-Antwortmaschinen meine Erfahrung korrekt zitieren können.',
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'EN', full: 'English' },

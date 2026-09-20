@@ -11,6 +11,13 @@ const knowledgeSchema = z.object({
   publishDate: z.coerce.date(),
 });
 
+// Optional rich deep-dive body for a case study, matched to a `caseStudies[]`
+// entry (profile.ts/profile.de.ts) by slug/filename. Case studies without a
+// matching file here keep rendering exactly as before — this is additive.
+const caseStudyDeepSchema = z.object({
+  faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
+});
+
 export const collections = {
   knowledgeEn: defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/knowledge/en' }),
@@ -19,5 +26,13 @@ export const collections = {
   knowledgeDe: defineCollection({
     loader: glob({ pattern: '**/*.md', base: './src/content/knowledge/de' }),
     schema: knowledgeSchema,
+  }),
+  caseStudyDeepEn: defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/case-studies/en' }),
+    schema: caseStudyDeepSchema,
+  }),
+  caseStudyDeepDe: defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/case-studies/de' }),
+    schema: caseStudyDeepSchema,
   }),
 };

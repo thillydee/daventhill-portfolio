@@ -148,6 +148,19 @@ const profileDe: Profile = {
         'Kunden sehen Lager- und Konfigurationsverfügbarkeit direkt auf einen Blick, was den Weg vom Stöbern zum Kauf verkürzt.',
       publishDate: new Date('2026-07-08'),
     },
+    {
+      title: 'Diese Website als Produkt: Wie ich daventhill.ch konzipiert, gebaut und weiterentwickelt habe',
+      slug: 'building-this-site',
+      summary:
+        'Das eigene Portfolio als echtes Produkt behandelt — eine datengetriebene Architektur, eine SEO/AEO-Schicht und ein KI-gestützter Workflow, mit dem ich sie aktuell halte.',
+      problem:
+        'Eine Stellensuche braucht ein Asset, das Fähigkeiten beweist, statt sie nur zu behaupten. Ein generisches Template oder eine zur Webseite gewordene PDF sagt nichts darüber aus, ob ich ein digitales Produkt tatsächlich End-to-End verantworten kann — also habe ich mein eigenes Portfolio wie ein Produkt behandelt, nicht wie eine Broschüre.',
+      approach:
+        'Ich habe diese Website auf einer datengetriebenen Architektur aufgebaut: einer einzigen TypeScript-Datenquelle für mein Profil plus einer Markdown-Wissensdatenbank, beide über eine i18n-Schicht in vollständig statische, zweisprachige EN/DE-Seiten gerendert, ergänzt um eine SEO/AEO-Struktur (schema.org JSON-LD, ein eigenes llms.txt für KI-Antwortmaschinen, seitenspezifische OG-Bilder) sowie ein Performance- und Barrierefreiheits-Budget. Ich pflege sie mit derselben Disziplin, die ich bei jedem Produkt anwenden würde, das ich verantworte: einer schriftlichen Vision, einem strukturierten Review-Prozess über Content, UX und SEO sowie einem laufenden Decision Log — zunehmend über einen KI-gestützten Multi-Agent-Workflow, den ich selbst steuere und freigebe.',
+      outcome:
+        'Das Ergebnis ist eine schnelle, barrierefreie, zweisprachige Website, die von KI-Antwortmaschinen zitierfähig ist und offen, Zyklus für Zyklus, weiterentwickelt wurde — genau so, wie ich eine Produkt-Roadmap führen würde. Diese Case Study ist selbst der Beweis: Sie dokumentiert genau die Website, auf der Sie sie gerade lesen.',
+      publishDate: new Date('2026-09-20'),
+    },
   ],
 
   leadershipApproach:
@@ -191,6 +204,16 @@ const profileDe: Profile = {
       'Elasticsearch',
     ],
     ecommerce: ['B2B- und B2C-E-Commerce', 'Conversion-Optimierung', 'Customer-Journey-Design'],
+    webAndDelivery: [
+      'Astro',
+      'TypeScript',
+      'Tailwind CSS',
+      'Web-Performance (Core Web Vitals)',
+      'Technisches SEO & AEO',
+      'Barrierefreiheit (WCAG)',
+      'Internationalisierung (i18n)',
+      'CI/CD (Vercel)',
+    ],
     tools: [
       'Jira',
       'Confluence',
