@@ -24,6 +24,7 @@ export interface WebDesignContent {
   meta: { title: string; description: string };
   hero: { headline: string; sub: string; ctaPrimary: string; ctaSecondary: string };
   philosophy: { heading: string; body: string[] };
+  proof: { text: string; linkLabel: string };
   offer: { eyebrow: string; heading: string; intro: string };
   freeCheck: { title: string; text: string; cta: string };
   workshop: {
@@ -79,6 +80,10 @@ const en: WebDesignContent = {
       'Only then does the rest follow: the structure, the words, the look and feel, the way it gets found on Google. A good website isn’t a nice picture of your business — it’s a tool with a job, and the job is getting the right people to get in touch.',
       "And I'll tell you honestly where your real lever is. For a lot of local businesses it isn't the website at all — it's the Google Business Profile. Usually it's both, and they only work together. I'd rather point you at what actually moves the needle than sell you everything I offer.",
     ],
+  },
+  proof: {
+    text: 'This very site is a worked example — I built and maintain it as a product, from a single-source architecture to the AI-assisted workflow that keeps it current.',
+    linkLabel: 'See how I built it',
   },
   offer: {
     eyebrow: 'How we can work together',
@@ -285,6 +290,10 @@ const de: WebDesignContent = {
       'Erst danach folgt der Rest: die Struktur, die Worte, das Aussehen, die Auffindbarkeit bei Google. Eine gute Website ist kein schönes Bild Ihres Betriebs — sie ist ein Werkzeug mit einer Aufgabe, und die Aufgabe ist, dass sich die richtigen Leute bei Ihnen melden.',
       'Und ich sage Ihnen offen, wo Ihr eigentlicher Hebel liegt. Für viele lokale Betriebe ist es gar nicht die Website — sondern das Google-Unternehmensprofil. Meist ist es beides, und beides wirkt nur zusammen. Ich zeige Ihnen lieber, was wirklich etwas bewegt, als Ihnen alles zu verkaufen, was ich anbiete.',
     ],
+  },
+  proof: {
+    text: 'Diese Seite ist ein Beispiel aus der Praxis — ich habe sie als Produkt gebaut und pflege sie so, von einer Single-Source-Architektur bis zum KI-gestützten Workflow, der sie aktuell hält.',
+    linkLabel: 'So habe ich sie gebaut',
   },
   offer: {
     eyebrow: 'Wie wir zusammenarbeiten können',

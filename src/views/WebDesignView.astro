@@ -11,6 +11,8 @@ const { locale } = Astro.props;
 const content = getWebDesign(locale);
 const localizedPaths = buildLocalizedPaths('/webdesign');
 const homePath = locale === 'de' ? '/de/' : '/';
+const caseStudyHref =
+  locale === 'de' ? '/de/case-studies/building-this-site' : '/case-studies/building-this-site';
 
 const breadcrumbs = [
   { name: content.breadcrumb.home, path: homePath },
@@ -66,6 +68,12 @@ const service = {
       {content.philosophy.body.map((para) => (
         <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">{para}</p>
       ))}
+      <p class="mt-6 max-w-3xl text-base leading-relaxed text-ink-soft">
+        {content.proof.text}{' '}
+        <a href={caseStudyHref} class="font-semibold text-brand hover:text-brand-dark">
+          {content.proof.linkLabel} &rarr;
+        </a>
+      </p>
     </div>
   </section>
 

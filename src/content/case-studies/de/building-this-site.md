@@ -178,3 +178,7 @@ Nichts erreicht die Produktion ohne ein menschliches Entscheidungsgate. Für ein
 ## Was das beweist
 
 Diese Case Study beschreibt kein vergangenes Projekt — sie ist ein laufendes. Die Architektur, der Prozess und der oben beschriebene KI-gestützte Workflow sind genau die, die die Seite erzeugt haben, die Sie gerade lesen. Wer Product Ownership in Aktion sehen will, statt mir nur zu glauben, findet sie hier.
+
+## Das Ganze für jemand anderen bauen
+
+Diese Seite ist meine eigene, aber denselben Produktansatz, dieselbe Architektur und denselben KI-gestützten Workflow bringe ich in Websites ein, die ich nebenbei für lokale Betriebe in Basel baue. Wenn Sie einen Betrieb führen, ist das ein Angebot von mir — [so funktioniert es](/de/webdesign).
