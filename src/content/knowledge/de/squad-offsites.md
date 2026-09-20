@@ -5,7 +5,7 @@ type: concept
 publishDate: 2026-07-13
 faqs:
   - question: "Warum führen Produkt-Squads Offsites durch?"
-    answer: "Um bewusst Raum für persönliches Wachstum, strategisches Denken und Hackathon-artige Ideenfindung zu schaffen, den ein reguläres Backlog strukturell nicht bieten kann – und um den Teamgeist ausserhalb der gewohnten Meeting-Routine zu stärken."
+    answer: "Squads führen Offsites durch, um bewusst Raum für persönliches Wachstum, strategisches Denken und Hackathon-artige Ideenfindung zu schaffen, den ein reguläres Backlog strukturell nicht bieten kann – und um den Teamgeist ausserhalb der gewohnten Meeting-Routine zu stärken."
   - question: "Wie oft sollte ein Squad ein Offsite durchführen?"
     answer: "Vierteljährlich funktioniert gut: häufig genug, um Momentum bei längerfristigen Themen zu halten, ohne der laufenden Lieferung den Fokus zu nehmen, und planbar genug, dass grosse, unscharfe Ideen bewusst für \"das nächste Offsite\" zurückgestellt werden können, statt ins reguläre Backlog gepresst zu werden."
   - question: "Was unterscheidet ein Squad Offsite von einem gewöhnlichen Workshop oder Teammeeting?"

@@ -5,7 +5,7 @@ type: concept
 publishDate: 2026-07-13
 faqs:
   - question: "Why do product squads run offsites?"
-    answer: "To create dedicated space for personal growth, strategic thinking, and hackathon-style ideation that a regular backlog structurally can't make room for — and to strengthen team spirit outside the day-to-day meeting routine."
+    answer: "Squads run offsites to create dedicated space for personal growth, strategic thinking, and hackathon-style ideation that a regular backlog structurally can't make room for — and to strengthen team spirit outside the day-to-day meeting routine."
   - question: "How often should a squad run an offsite?"
     answer: "Quarterly works well: frequent enough to keep momentum on longer-term topics without pulling focus from ongoing delivery, and predictable enough that big, fuzzy ideas can be deliberately parked for \"the next offsite\" instead of squeezed into the regular backlog."
   - question: "How is a squad offsite different from a regular workshop or team meeting?"

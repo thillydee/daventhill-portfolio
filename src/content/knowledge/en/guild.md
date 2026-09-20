@@ -5,7 +5,7 @@ type: concept
 publishDate: 2026-07-08
 faqs:
   - question: "What is a guild in agile organizations?"
-    answer: "A voluntary, cross-team community built around a shared interest, discipline, or practice — not around delivering a specific product. Unlike a squad, it has no delivery ownership and no direct reporting line."
+    answer: "A guild is a voluntary, cross-team community built around a shared interest, discipline, or practice — not around delivering a specific product. Unlike a squad, a guild has no delivery ownership and no direct reporting line."
   - question: "What's the difference between a guild and a squad?"
     answer: "A squad owns a product outcome day to day with delivery accountability; a guild owns the health of a practice or discipline across every squad, with no delivery responsibility of its own. The same person is often part of both at once."
   - question: "What does a guild actually do day to day?"

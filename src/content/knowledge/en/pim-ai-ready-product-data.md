@@ -7,6 +7,8 @@ publishDate: 2026-07-23
 faqs:
   - question: "What is a PIM (Product Information Management) system?"
     answer: "A PIM is a system purpose-built for managing structured product data — specifications, attributes, and relationships — as reusable, machine-readable records, rather than as documents or unstructured files the way a legacy DAM (Digital Asset Management) system typically does."
+  - question: "PIM vs. DAM: what's the difference?"
+    answer: "A PIM (Product Information Management) system manages structured product data — specifications, attributes, and relationships — as reusable, machine-readable records, while a DAM (Digital Asset Management) system manages files like images, videos, and PDFs. Use a PIM for queryable product data and a DAM for media assets; many stacks run both side by side."
   - question: "Why does product data need to be 'AI-ready'?"
     answer: "AI tools that consume product data need clean, consistently structured records to work with — the same flexible, well-defined product attributes that make data usable for a modern website also make it usable for AI-driven search, recommendations, and other tooling, which is why designing for both from the start matters."
   - question: "What's involved in migrating product data from a legacy system to a PIM?"

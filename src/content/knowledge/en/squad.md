@@ -9,6 +9,8 @@ faqs:
     answer: "A squad is a small, cross-functional, largely autonomous team built around a product area rather than a single discipline — combining the people who define, design, and build a product in one team with a shared goal, instead of handing work off between separate departments."
   - question: "What's the difference between a squad and a traditional team?"
     answer: "A traditional team is usually organized by discipline and receives work handed off from elsewhere; a squad is organized around a product outcome and owns that outcome end to end, from requirements through to shipping and testing."
+  - question: "Squad vs. tribe vs. chapter vs. guild: what's the difference?"
+    answer: "In the Spotify model, a squad is a small cross-functional team that owns a product area; several squads form a tribe; a chapter connects people in the same discipline across squads; and a guild is a voluntary community of interest that can span the whole organization. Squads and tribes own delivery, while chapters and guilds align skills and practice."
   - question: "Where does the term \"squad\" come from?"
     answer: "It comes from the \"Spotify model,\" where squads are grouped into wider tribes, with chapters connecting people in the same discipline across squads and guilds as cross-tribe communities of interest. Most companies that use the term adapt it to their own structure."
 ---

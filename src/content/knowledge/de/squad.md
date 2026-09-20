@@ -9,6 +9,8 @@ faqs:
     answer: "Ein Squad ist ein kleines, interdisziplinäres, weitgehend autonomes Team, das rund um einen Produktbereich aufgebaut ist statt rund um eine einzelne Disziplin – es bringt die Personen, die ein Produkt definieren, gestalten und bauen, in einem Team mit gemeinsamem Ziel zusammen, statt Arbeit zwischen getrennten Abteilungen zu übergeben."
   - question: "Was unterscheidet ein Squad von einem klassischen Team?"
     answer: "Ein klassisches Team ist meist nach Disziplin organisiert und erhält Arbeit von anderswo übergeben; ein Squad ist rund um ein Produktergebnis organisiert und verantwortet dieses Ergebnis end-to-end, von den Anforderungen bis zur Auslieferung und zum Testen."
+  - question: "Squad vs. Tribe vs. Chapter vs. Guild: Was ist der Unterschied?"
+    answer: "Im Spotify-Modell ist ein Squad ein kleines interdisziplinäres Team, das einen Produktbereich verantwortet; mehrere Squads bilden einen Tribe; ein Chapter verbindet Personen derselben Disziplin squad-übergreifend; und eine Guild ist eine freiwillige Interessengemeinschaft, die die ganze Organisation umspannen kann. Squads und Tribes verantworten die Lieferung, während Chapters und Guilds Fähigkeiten und Praxis ausrichten."
   - question: "Woher stammt der Begriff \"Squad\"?"
     answer: "Er stammt aus dem \"Spotify-Modell\", in dem Squads zu grösseren Tribes gruppiert werden, Chapters Personen derselben Disziplin squad-übergreifend verbinden und Guilds tribe-übergreifende Interessengemeinschaften bilden. Die meisten Unternehmen, die den Begriff übernehmen, passen ihn an die eigene Struktur an."
 ---

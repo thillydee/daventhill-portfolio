@@ -7,6 +7,8 @@ publishDate: 2026-07-23
 faqs:
   - question: "Was ist ein PIM-System (Product Information Management)?"
     answer: "Ein PIM ist ein System, das gezielt für die Verwaltung strukturierter Produktdaten gebaut ist – Spezifikationen, Attribute und Beziehungen – als wiederverwendbare, maschinenlesbare Datensätze, statt als Dokumente oder unstrukturierte Dateien, wie es bei einem klassischen DAM-System (Digital Asset Management) üblich ist."
+  - question: "PIM vs. DAM: Was ist der Unterschied?"
+    answer: "Ein PIM-System (Product Information Management) verwaltet strukturierte Produktdaten – Spezifikationen, Attribute und Beziehungen – als wiederverwendbare, maschinenlesbare Datensätze, während ein DAM-System (Digital Asset Management) Dateien wie Bilder, Videos und PDFs verwaltet. Ein PIM für abfragbare Produktdaten, ein DAM für Medien-Assets; viele Setups betreiben beide parallel."
   - question: "Warum müssen Produktdaten 'KI-tauglich' sein?"
     answer: "KI-Tools, die Produktdaten nutzen, brauchen saubere, konsistent strukturierte Datensätze, um damit arbeiten zu können – dieselben flexiblen, klar definierten Produktattribute, die Daten für eine moderne Website nutzbar machen, machen sie auch für KI-gestützte Suche, Empfehlungen und andere Tools nutzbar. Deshalb lohnt es sich, von Anfang an für beides zu gestalten."
   - question: "Was gehört zur Migration von Produktdaten aus einem Altsystem in ein PIM?"

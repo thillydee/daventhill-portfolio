@@ -6,7 +6,7 @@ relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-so
 publishDate: 2026-07-08
 faqs:
   - question: "What is User Acceptance Testing (UAT)?"
-    answer: "The final check before a feature goes live: validating from the business side that what was built genuinely solves the real use case, not just that the code works."
+    answer: "User Acceptance Testing (UAT) is the final check before a feature goes live: it validates from the business side that what was built genuinely solves the real use case, not just that the code works."
   - question: "Who should run UAT — the business or QA?"
     answer: "QA checks the code works as specified; UAT checks it solves the real business use case. UAT should be owned and run by the business side, not treated as an extra QA pass."
   - question: "When should UAT be planned — before or after development?"

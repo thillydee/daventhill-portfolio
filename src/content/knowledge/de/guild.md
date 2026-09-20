@@ -5,7 +5,7 @@ type: concept
 publishDate: 2026-07-08
 faqs:
   - question: "Was ist eine Guild in agilen Organisationen?"
-    answer: "Eine freiwillige, teamübergreifende Community rund um ein gemeinsames Interesse, eine Disziplin oder eine Praxis – nicht rund um die Lieferung eines bestimmten Produkts. Im Unterschied zu einem Squad hat sie keine Lieferverantwortung und keine direkte Berichtslinie."
+    answer: "Eine Guild ist eine freiwillige, teamübergreifende Community rund um ein gemeinsames Interesse, eine Disziplin oder eine Praxis – nicht rund um die Lieferung eines bestimmten Produkts. Im Unterschied zu einem Squad hat eine Guild keine Lieferverantwortung und keine direkte Berichtslinie."
   - question: "Was unterscheidet eine Guild von einem Squad?"
     answer: "Ein Squad verantwortet ein Produktergebnis im Tagesgeschäft mit Lieferverantwortung; eine Guild verantwortet die Gesundheit einer Praxis oder Disziplin über alle Squads hinweg, ohne eigene Lieferverantwortung. Dieselbe Person ist oft Teil von beidem gleichzeitig."
   - question: "Was macht eine Guild im Alltag konkret?"

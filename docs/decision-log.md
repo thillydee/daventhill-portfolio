@@ -16,6 +16,14 @@ Template:
 
 ---
 
+## 2026-09-20 — AEO pass on knowledge-base FAQs (comparison questions + keyword-led answers)
+
+- **Changed:** Same AEO treatment extended to the knowledge-base article FAQs (EN+DE). Added two high-search comparison FAQs: "Squad vs. tribe vs. chapter vs. guild: what's the difference?" (`squad.md`) and "PIM vs. DAM: what's the difference?" (`pim-ai-ready-product-data.md`) — both target common queries the articles didn't yet answer directly. Tightened several answers to open with the keyword term for out-of-context citability: `guild.md` ("A guild is a voluntary…"), `user-acceptance-testing.md` ("User Acceptance Testing (UAT) is the final check…"), `squad-offsites.md` ("Squads run offsites to…"). Left `enhancing-elasticsearch-relevance.md` and `product-owner-vs-project-manager.md` FAQs unchanged — already question-led, keyword-rich, and answer-first (no churn for its own sake).
+- **Why:** Continuation of the FAQ AEO work at Daven's request — capture definitional/comparison queries ("X vs Y") that answer engines and featured snippets favor, and make each answer a standalone quotable statement.
+- **Verified:** `astro build` clean (only the known `/og/index.png` sandbox 403); grep-confirmed both new comparison FAQs and the refined answers render in the visible FAQ and the `FAQPage` JSON-LD, in both locales; EN/DE parity preserved.
+- **Agents involved:** none (implemented directly in the main session)
+- **PR:** developed on branch `claude/adoring-darwin-daptxa`
+
 ## 2026-09-20 — AEO-optimized the FAQs: principle-first, keyword-led questions
 
 - **Changed:** Reframed the FAQs so the *question* carries the search intent and the *answer* leads with a quotable, general principle — with the project as the proof, not the subject. On the `building-this-site` case study, replaced the four self-referential FAQs ("What is daventhill.ch built with?", "Why build your own site instead of LinkedIn?", etc.) with five how-to/what-is questions targeting the queries people actually ask: "How do you automate website maintenance with AI agents?", "What is a multi-agent AI content workflow?", "Can a website be fully automated without losing quality control?", "How do you make a website citable by AI answer engines (AEO)?", "What website architecture is easiest to keep up to date?" On the homepage, replaced the two site-specific FAQs ("Did you build this website yourself?", "Is this site built for AI search?") with "Can a website be maintained with an AI-assisted, multi-agent workflow?" and "What is answer engine optimization (AEO), and how do you build for it?" All EN+DE.
