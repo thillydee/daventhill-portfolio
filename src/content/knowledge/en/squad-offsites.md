@@ -5,7 +5,7 @@ type: concept
 publishDate: 2026-07-13
 faqs:
   - question: "Why do product squads run offsites?"
-    answer: "To create dedicated space for personal growth, strategic thinking, and hackathon-style ideation that a regular backlog structurally can't make room for — and to strengthen team spirit outside the day-to-day meeting routine."
+    answer: "Squads run offsites to create dedicated space for personal growth, strategic thinking, and hackathon-style ideation that a regular backlog structurally can't make room for — and to strengthen team spirit outside the day-to-day meeting routine."
   - question: "How often should a squad run an offsite?"
     answer: "Quarterly works well: frequent enough to keep momentum on longer-term topics without pulling focus from ongoing delivery, and predictable enough that big, fuzzy ideas can be deliberately parked for \"the next offsite\" instead of squeezed into the regular backlog."
   - question: "How is a squad offsite different from a regular workshop or team meeting?"
@@ -33,4 +33,4 @@ The obvious objection is opportunity cost — a whole squad off the backlog is r
 
 ## How I run it with my squad
 
-I've led a cross-functional [squad](/knowledge/squad) at Endress+Hauser in Switzerland for around four years, working in Kanban rather than fixed sprints, and the quarterly offsite is where we do the work continuous delivery flow structurally can't hold. It's the same instinct behind the Squad Health Checks I run with the wider [Agile Guild](/knowledge/guild): some things about a team's direction and health only surface once you deliberately step outside delivery mode to look at them. The offsite is a deliberate complement to the squad itself — the squad owns delivery day to day; the offsite is where it invests in what delivery alone won't produce.
+I've led a cross-functional [squad](/knowledge/squad) for around four years, working in Kanban rather than fixed sprints, and the quarterly offsite is where we do the work continuous delivery flow structurally can't hold. It's the same instinct behind the Squad Health Checks I run with the wider [Agile Guild](/knowledge/guild): some things about a team's direction and health only surface once you deliberately step outside delivery mode to look at them. The offsite is a deliberate complement to the squad itself — the squad owns delivery day to day; the offsite is where it invests in what delivery alone won't produce.

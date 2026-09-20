@@ -5,7 +5,7 @@ type: concept
 publishDate: 2026-07-13
 faqs:
   - question: "Warum führen Produkt-Squads Offsites durch?"
-    answer: "Um bewusst Raum für persönliches Wachstum, strategisches Denken und Hackathon-artige Ideenfindung zu schaffen, den ein reguläres Backlog strukturell nicht bieten kann – und um den Teamgeist ausserhalb der gewohnten Meeting-Routine zu stärken."
+    answer: "Squads führen Offsites durch, um bewusst Raum für persönliches Wachstum, strategisches Denken und Hackathon-artige Ideenfindung zu schaffen, den ein reguläres Backlog strukturell nicht bieten kann – und um den Teamgeist ausserhalb der gewohnten Meeting-Routine zu stärken."
   - question: "Wie oft sollte ein Squad ein Offsite durchführen?"
     answer: "Vierteljährlich funktioniert gut: häufig genug, um Momentum bei längerfristigen Themen zu halten, ohne der laufenden Lieferung den Fokus zu nehmen, und planbar genug, dass grosse, unscharfe Ideen bewusst für \"das nächste Offsite\" zurückgestellt werden können, statt ins reguläre Backlog gepresst zu werden."
   - question: "Was unterscheidet ein Squad Offsite von einem gewöhnlichen Workshop oder Teammeeting?"
@@ -33,4 +33,4 @@ Der naheliegende Einwand sind die Opportunitätskosten – ein ganzes Squad, das
 
 ## Wie ich es mit meinem Squad umsetze
 
-Ich leite seit rund vier Jahren ein interdisziplinäres [Squad](/de/knowledge/squad) bei Endress+Hauser in der Schweiz, das nach Kanban statt in festen Sprints arbeitet, und das vierteljährliche Offsite ist der Ort, an dem wir die Arbeit erledigen, die der laufende Lieferfluss strukturell nicht tragen kann. Es ist derselbe Gedanke, der hinter den Squad Health Checks steht, die ich mit der squad-übergreifenden [Agile Guild](/de/knowledge/guild) durchführe: Manches zur Ausrichtung und Gesundheit eines Teams zeigt sich erst, wenn man bewusst aus dem Liefermodus heraustritt, um hinzusehen. Das Offsite ist eine bewusste Ergänzung zum Squad selbst – das Squad verantwortet die tägliche Lieferung; das Offsite investiert in das, was Lieferung allein nicht hervorbringt.
+Ich leite seit rund vier Jahren ein interdisziplinäres [Squad](/de/knowledge/squad), das nach Kanban statt in festen Sprints arbeitet, und das vierteljährliche Offsite ist der Ort, an dem wir die Arbeit erledigen, die der laufende Lieferfluss strukturell nicht tragen kann. Es ist derselbe Gedanke, der hinter den Squad Health Checks steht, die ich mit der squad-übergreifenden [Agile Guild](/de/knowledge/guild) durchführe: Manches zur Ausrichtung und Gesundheit eines Teams zeigt sich erst, wenn man bewusst aus dem Liefermodus heraustritt, um hinzusehen. Das Offsite ist eine bewusste Ergänzung zum Squad selbst – das Squad verantwortet die tägliche Lieferung; das Offsite investiert in das, was Lieferung allein nicht hervorbringt.

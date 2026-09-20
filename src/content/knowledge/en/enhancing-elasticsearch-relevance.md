@@ -32,4 +32,4 @@ In practice, the signals worth factoring into a boost layer tend to be things a 
 
 A boost layer that's hardcoded once and never revisited goes stale as fast as a manual sort order would. What's held up well in my experience: keep the weighting logic in one clearly owned calculation model rather than scattered across queries, make it easy to add a new signal without touching existing ones, and treat any change to it like a product change — hypothesis, before/after comparison, sign-off before it ships. I lean on the same [structured, role-tailored UAT approach](/knowledge/user-acceptance-testing) my squad uses for everything else we ship.
 
-This is the model behind [the relevance boost layer I built on endress.com's onsite search](/case-studies/relevance-sorting).
+This is the model behind [the relevance boost layer I built for a B2B product search](/case-studies/relevance-sorting).

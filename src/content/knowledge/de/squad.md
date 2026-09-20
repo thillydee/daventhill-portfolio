@@ -1,6 +1,6 @@
 ---
 title: "Was ist ein Squad? Wie interdisziplinäre Squads in Produktteams funktionieren"
-description: "Eine kurze Erklärung des Squad-Modells in agilen Produktorganisationen und wie ich eines bei Endress+Hauser in der Schweiz aufgebaut und geleitet habe."
+description: "Eine kurze Erklärung des Squad-Modells in agilen Produktorganisationen und wie ich eines in einer B2B-Produktorganisation aufgebaut und geleitet habe."
 type: concept
 relatedCaseStudies: ["ai-cross-selling", "metadata-pim-migration", "relevance-sorting", "in-stock-mvp"]
 publishDate: 2026-07-08
@@ -9,6 +9,8 @@ faqs:
     answer: "Ein Squad ist ein kleines, interdisziplinäres, weitgehend autonomes Team, das rund um einen Produktbereich aufgebaut ist statt rund um eine einzelne Disziplin – es bringt die Personen, die ein Produkt definieren, gestalten und bauen, in einem Team mit gemeinsamem Ziel zusammen, statt Arbeit zwischen getrennten Abteilungen zu übergeben."
   - question: "Was unterscheidet ein Squad von einem klassischen Team?"
     answer: "Ein klassisches Team ist meist nach Disziplin organisiert und erhält Arbeit von anderswo übergeben; ein Squad ist rund um ein Produktergebnis organisiert und verantwortet dieses Ergebnis end-to-end, von den Anforderungen bis zur Auslieferung und zum Testen."
+  - question: "Squad vs. Tribe vs. Chapter vs. Guild: Was ist der Unterschied?"
+    answer: "Im Spotify-Modell ist ein Squad ein kleines interdisziplinäres Team, das einen Produktbereich verantwortet; mehrere Squads bilden einen Tribe; ein Chapter verbindet Personen derselben Disziplin squad-übergreifend; und eine Guild ist eine freiwillige Interessengemeinschaft, die die ganze Organisation umspannen kann. Squads und Tribes verantworten die Lieferung, während Chapters und Guilds Fähigkeiten und Praxis ausrichten."
   - question: "Woher stammt der Begriff \"Squad\"?"
     answer: "Er stammt aus dem \"Spotify-Modell\", in dem Squads zu grösseren Tribes gruppiert werden, Chapters Personen derselben Disziplin squad-übergreifend verbinden und Guilds tribe-übergreifende Interessengemeinschaften bilden. Die meisten Unternehmen, die den Begriff übernehmen, passen ihn an die eigene Struktur an."
 ---
@@ -17,14 +19,14 @@ Ein "Squad" ist ein kleines, interdisziplinäres, weitgehend autonomes Team, das
 
 Der Begriff stammt aus dem "Spotify-Modell", in dem Squads typischerweise zu grösseren "Tribes" gruppiert werden, "Chapters" Personen derselben Disziplin (z. B. alle UX-Designerinnen und -Designer) squad-übergreifend verbinden und "Guilds" als lockere, tribe-übergreifende Interessengemeinschaften bestehen (z. B. alle, die sich für Accessibility interessieren, oder alle, die sich für KI-Tools interessieren). Nicht jedes Unternehmen setzt das volle Modell um, und die meisten, die den Begriff übernehmen, passen ihn an die eigene Struktur an – entscheidend in der Praxis ist die zugrunde liegende Idee: kleine, ergebnisverantwortliche Teams statt Übergabeketten.
 
-## Wie ich das bei Endress+Hauser anwende
+## Wie ich das in der Praxis anwende
 
-Seit rund vier Jahren baue und leite ich ein interdisziplinäres Squad aus zwei Business Ownern, UX und IT, das am Bereich Products von endress.com arbeitet, bei Endress+Hauser in der Schweiz. Das Squad verantwortet seine Ergebnisse end-to-end: vom Dokumentieren von Business-Anforderungen, User Stories und Abnahmekriterien über die Entwicklung bis zur Durchführung der [Abnahmetests (User Acceptance Testing)](/de/knowledge/user-acceptance-testing), die ich selbst leite, bevor etwas live geht. Wir arbeiten mit Scrum und Kanban, sodass sich Prioritäten schnell verschieben können, ohne die Disziplin eines definierten Backlogs zu verlieren.
+Seit rund vier Jahren baue und leite ich ein interdisziplinäres Squad aus Business Ownern, UX und IT, das an einem grossen B2B-Produktkatalog arbeitet. Das Squad verantwortet seine Ergebnisse end-to-end: vom Dokumentieren von Business-Anforderungen, User Stories und Abnahmekriterien über die Entwicklung bis zur Durchführung der [Abnahmetests (User Acceptance Testing)](/de/knowledge/user-acceptance-testing), die ich selbst leite, bevor etwas live geht. Wir arbeiten mit Scrum und Kanban, sodass sich Prioritäten schnell verschieben können, ohne die Disziplin eines definierten Backlogs zu verlieren.
 
 Diese Struktur hat es möglich gemacht, Dinge wie die KI-gestützte Cross-Selling-Engine, die PIM-Datenmigration, das relevanzbasierte Sortiermodell und das Feature für marktspezifische Lagerverfügbarkeit auszuliefern – jedes davon brauchte eine enge, kontinuierliche Zusammenarbeit zwischen Geschäftslogik, Daten, UX und Engineering, genau wofür ein Squad gemacht ist.
 
 ## Squad vs. Guild
 
-Während ein Squad ein festes Team mit gemeinsamer Lieferverantwortung ist, ist eine Guild lockerer organisiert: eine freiwillige, teamübergreifende Gemeinschaft rund um ein gemeinsames Interesse oder eine Disziplin, ohne direkte Berichtslinien oder Lieferverantwortung. Neben meinem Squad bin ich auch aktives Mitglied der squad-übergreifenden Agile Guild von endress.com – siehe [was eine Guild ist](/de/knowledge/guild) für die Anwendung im Alltag, inklusive der Squad Health Checks, die ich leite.
+Während ein Squad ein festes Team mit gemeinsamer Lieferverantwortung ist, ist eine Guild lockerer organisiert: eine freiwillige, teamübergreifende Gemeinschaft rund um ein gemeinsames Interesse oder eine Disziplin, ohne direkte Berichtslinien oder Lieferverantwortung. Neben meinem Squad bin ich auch aktives Mitglied einer squad-übergreifenden Agile Guild – siehe [was eine Guild ist](/de/knowledge/guild) für die Anwendung im Alltag, inklusive der Squad Health Checks, die ich leite.
 
 Dies gehört auch zu meinem [Skillset](/de/skills) als Product Owner im Alltag.

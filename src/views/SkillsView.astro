@@ -10,7 +10,7 @@ const { locale } = Astro.props;
 const { person, skills, leadershipApproach, languages } = getProfile(locale);
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths('/skills');
-const homePath = locale === 'de' ? '/de/' : '/';
+const homePath = locale === 'de' ? '/de' : '/';
 const prefix = locale === 'de' ? '/de' : '';
 
 const skillLinks: Record<string, string> =
@@ -24,7 +24,15 @@ const skillLinks: Record<string, string> =
         'Metadaten-Management': '/case-studies/metadata-pim-migration',
         'PIM (Product Information Management)': '/case-studies/metadata-pim-migration',
         'KI- und ML-gestützte Produktempfehlungen': '/case-studies/ai-cross-selling',
-        'SAP-Verkaufsdaten': '/case-studies/ai-cross-selling',
+        'Verkaufs- & Transaktionsdaten': '/case-studies/ai-cross-selling',
+        Astro: '/case-studies/building-this-site',
+        TypeScript: '/case-studies/building-this-site',
+        'Tailwind CSS': '/case-studies/building-this-site',
+        'Web-Performance (Core Web Vitals)': '/case-studies/building-this-site',
+        'Technisches SEO & AEO': '/case-studies/building-this-site',
+        'Barrierefreiheit (WCAG)': '/case-studies/building-this-site',
+        'Internationalisierung (i18n)': '/case-studies/building-this-site',
+        'CI/CD (Vercel)': '/case-studies/building-this-site',
       }
     : {
         'Squad and team leadership': '/knowledge/squad',
@@ -35,13 +43,22 @@ const skillLinks: Record<string, string> =
         'Metadata management': '/case-studies/metadata-pim-migration',
         'PIM (Product Information Management)': '/case-studies/metadata-pim-migration',
         'AI and ML informed product recommendations': '/case-studies/ai-cross-selling',
-        'SAP sales order data': '/case-studies/ai-cross-selling',
+        'Sales & transaction data': '/case-studies/ai-cross-selling',
+        Astro: '/case-studies/building-this-site',
+        TypeScript: '/case-studies/building-this-site',
+        'Tailwind CSS': '/case-studies/building-this-site',
+        'Web performance (Core Web Vitals)': '/case-studies/building-this-site',
+        'Technical SEO & AEO': '/case-studies/building-this-site',
+        'Accessibility (WCAG)': '/case-studies/building-this-site',
+        'Internationalization (i18n)': '/case-studies/building-this-site',
+        'CI/CD (Vercel)': '/case-studies/building-this-site',
       };
 
 const skillGroups = [
   { label: strings.skills.groups.productAndAgile, items: skills.productAndAgile },
   { label: strings.skills.groups.dataAndAi, items: skills.dataAndAi },
   { label: strings.skills.groups.ecommerce, items: skills.ecommerce },
+  { label: strings.skills.groups.webAndDelivery, items: skills.webAndDelivery },
   { label: strings.skills.groups.tools, items: skills.tools },
 ];
 

@@ -9,7 +9,7 @@ export interface Props {
 const { locale } = Astro.props;
 const strings = t(locale);
 const localizedPaths = buildLocalizedPaths('/privacy');
-const homePath = locale === 'de' ? '/de/' : '/';
+const homePath = locale === 'de' ? '/de' : '/';
 
 const breadcrumbs = [
   { name: strings.breadcrumbs.home, path: homePath },

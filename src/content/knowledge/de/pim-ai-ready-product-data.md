@@ -7,6 +7,8 @@ publishDate: 2026-07-23
 faqs:
   - question: "Was ist ein PIM-System (Product Information Management)?"
     answer: "Ein PIM ist ein System, das gezielt für die Verwaltung strukturierter Produktdaten gebaut ist – Spezifikationen, Attribute und Beziehungen – als wiederverwendbare, maschinenlesbare Datensätze, statt als Dokumente oder unstrukturierte Dateien, wie es bei einem klassischen DAM-System (Digital Asset Management) üblich ist."
+  - question: "PIM vs. DAM: Was ist der Unterschied?"
+    answer: "Ein PIM-System (Product Information Management) verwaltet strukturierte Produktdaten – Spezifikationen, Attribute und Beziehungen – als wiederverwendbare, maschinenlesbare Datensätze, während ein DAM-System (Digital Asset Management) Dateien wie Bilder, Videos und PDFs verwaltet. Ein PIM für abfragbare Produktdaten, ein DAM für Medien-Assets; viele Setups betreiben beide parallel."
   - question: "Warum müssen Produktdaten 'KI-tauglich' sein?"
     answer: "KI-Tools, die Produktdaten nutzen, brauchen saubere, konsistent strukturierte Datensätze, um damit arbeiten zu können – dieselben flexiblen, klar definierten Produktattribute, die Daten für eine moderne Website nutzbar machen, machen sie auch für KI-gestützte Suche, Empfehlungen und andere Tools nutzbar. Deshalb lohnt es sich, von Anfang an für beides zu gestalten."
   - question: "Was gehört zur Migration von Produktdaten aus einem Altsystem in ein PIM?"
@@ -19,10 +21,10 @@ Ein PIM-System (Product Information Management) ist gezielt für die Verwaltung 
 
 Strukturierte, konsistente Produktdaten sind nicht nur für die Darstellung auf einer Website einfacher zu verarbeiten – sie sind auch die Voraussetzung dafür, dass KI-Tools mit Produktinformationen überhaupt arbeiten können. Eine KI-gestützte Suche, Empfehlung oder Antwort-Engine kann ein Produkt nur dann sinnvoll einordnen, wenn die zugrunde liegenden Daten sauber und konsistent strukturiert sind – ein Altsystem, das auf lose strukturierten Dateien aufbaut, kann das nicht zuverlässig leisten, egal wie gut die KI-Schicht darüber ist.
 
-## Was ich bei Endress+Hauser gemacht habe
+## Wie ich dabei vorgegangen bin
 
-Ich verantworte das Metadaten-Management auf Produktebene für den Bereich Products von endress.com und leitete die Migration unserer Produktspezifikationsdaten von Censhare – einem Altsystem, das nicht für die flexible, strukturierte Datennutzung ausgelegt war, die eine moderne E-Commerce-Site oder KI-Tools benötigen – in ein neues PIM-System. Das bedeutete, die beteiligten Datenstrukturen und Schnittstellen zu definieren, statt nur Datensätze zu verschieben: im Voraus festzulegen, wie ein sauberer, gut strukturierter Produktdatensatz für jeden Konsumenten dieser Daten aussieht, von der Website selbst bis zu den KI-Tools, die zunehmend direkt mit Produktdaten arbeiten müssen.
+Ich verantworte das Metadaten-Management auf Produktebene für einen grossen B2B-Produktkatalog und leitete die Migration unserer Produktspezifikationsdaten von einem Legacy-DAM – einem Altsystem, das nicht für die flexible, strukturierte Datennutzung ausgelegt war, die eine moderne E-Commerce-Site oder KI-Tools benötigen – in ein neues PIM-System. Das bedeutete, die beteiligten Datenstrukturen und Schnittstellen zu definieren, statt nur Datensätze zu verschieben: im Voraus festzulegen, wie ein sauberer, gut strukturierter Produktdatensatz für jeden Konsumenten dieser Daten aussieht, von der Website selbst bis zu den KI-Tools, die zunehmend direkt mit Produktdaten arbeiten müssen.
 
 Das Ergebnis ist eine Produktdatenbasis, die in einem konkreten Sinn zukunftsfähig ist: Sie muss nicht neu aufgebaut werden, sobald ein neuer KI-gestützter Anwendungsfall auftaucht, weil die zugrunde liegende Struktur von Anfang an auf genau diese Art der Nutzung ausgelegt wurde – nicht nur auf die Darstellung einer Webseite.
 
-Das ist die Migration hinter [der PIM-Case-Study zu den Produktdaten von endress.com](/de/case-studies/metadata-pim-migration), und dieselbe Disziplin steht auch hinter [wie ich UAT durchführe](/de/knowledge/user-acceptance-testing) und [wie mein Squad](/de/knowledge/squad) alles andere ausliefert.
+Das ist die Migration hinter [der PIM-Case-Study](/de/case-studies/metadata-pim-migration), und dieselbe Disziplin steht auch hinter [wie ich UAT durchführe](/de/knowledge/user-acceptance-testing), [wie mein Squad](/de/knowledge/squad) alles andere ausliefert, und [wie ich diese Website selbst für KI-Antwortmaschinen strukturiert habe](/de/case-studies/building-this-site).

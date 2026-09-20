@@ -64,9 +64,9 @@ export const strings = {
     caseStudies: {
       title: 'Case Studies',
       description:
-        "Data and AI driven product case studies from Daven Thill's work on endress.com, covering cross-selling, PIM data, relevance sorting, and stock availability.",
+        "Data and AI driven product case studies by Daven Thill, covering cross-selling, PIM data, relevance sorting, and stock availability.",
       intro:
-        "A closer look at data- and AI-driven product decisions from Daven Thill's work leading the Products section of endress.com.",
+        "A closer look at data- and AI-driven product decisions I've led as a Product Owner.",
       readCaseStudy: 'Read case study →',
     },
     caseStudyDetail: {
@@ -74,6 +74,8 @@ export const strings = {
       problem: 'Problem',
       approach: 'Approach',
       outcome: 'Outcome',
+      deepDiveHeading: 'Deep dive',
+      faqHeading: 'FAQ',
       relatedKnowledgeHeading: 'Related knowledge',
       ctaHeading: 'Working on something similar?',
       ctaText: "Let's talk about data and AI driven product decisions for your team.",
@@ -88,6 +90,7 @@ export const strings = {
         productAndAgile: 'Product & Agile',
         dataAndAi: 'Data & AI',
         ecommerce: 'E-commerce',
+        webAndDelivery: 'Web & Delivery',
         tools: 'Tools',
       },
       languagesHeading: 'Languages',
@@ -169,6 +172,16 @@ export const strings = {
         answer:
           "Yes. At Endress+Hauser I've initiated and led AI and data driven features including a sales-data-based cross-selling engine, a relevance ranking model for product listings, and a PIM data migration designed with AI consumption in mind.",
       },
+      {
+        question: 'Can a website be maintained with an AI-assisted, multi-agent workflow?',
+        answer:
+          "Yes. You can run a site's upkeep as a loop of specialized AI agents — content, UX, and SEO/AEO — each proposing focused changes, with a human orchestrator prioritizing and approving before anything ships. I built and run this site that way; the 'building this site' case study breaks down the full workflow.",
+      },
+      {
+        question: 'What is answer engine optimization (AEO), and how do you build for it?',
+        answer:
+          "AEO is structuring a site so AI answer engines like ChatGPT, Perplexity, and Google AI Overviews can cite it — through schema.org structured data, an llms.txt endpoint for AI crawlers, and question-based FAQ content that answers directly. It sits on top of traditional SEO, and this whole site is built to be both ranked and quoted.",
+      },
     ] satisfies FaqItem[],
     langSwitch: { label: 'DE', full: 'Deutsch' },
   },
@@ -230,9 +243,9 @@ export const strings = {
     caseStudies: {
       title: 'Case Studies',
       description:
-        'Daten- und KI-getriebene Produkt-Case-Studies aus der Arbeit von Daven Thill auf endress.com, zu Cross-Selling, PIM-Daten, Relevanz-Sortierung und Lagerverfügbarkeit.',
+        'Daten- und KI-getriebene Produkt-Case-Studies von Daven Thill, zu Cross-Selling, PIM-Daten, Relevanz-Sortierung und Lagerverfügbarkeit.',
       intro:
-        'Ein genauerer Blick auf daten- und KI-getriebene Produktentscheidungen aus Daven Thills Arbeit als Verantwortlicher des Bereichs Products von endress.com.',
+        'Ein genauerer Blick auf daten- und KI-getriebene Produktentscheidungen, die ich als Product Owner verantwortet habe.',
       readCaseStudy: 'Case Study lesen →',
     },
     caseStudyDetail: {
@@ -240,6 +253,8 @@ export const strings = {
       problem: 'Problem',
       approach: 'Vorgehen',
       outcome: 'Ergebnis',
+      deepDiveHeading: 'Vertiefung',
+      faqHeading: 'FAQ',
       relatedKnowledgeHeading: 'Verwandtes Wissen',
       ctaHeading: 'Arbeiten Sie an etwas Ähnlichem?',
       ctaText: 'Lassen Sie uns über daten- und KI-getriebene Produktentscheidungen für Ihr Team sprechen.',
@@ -254,6 +269,7 @@ export const strings = {
         productAndAgile: 'Produkt & Agil',
         dataAndAi: 'Daten & KI',
         ecommerce: 'E-Commerce',
+        webAndDelivery: 'Web & Umsetzung',
         tools: 'Tools',
       },
       languagesHeading: 'Sprachen',
@@ -334,6 +350,16 @@ export const strings = {
         question: 'Arbeitet Daven Thill mit KI-gestützten Produkt-Features?',
         answer:
           'Ja. Bei Endress+Hauser habe ich KI- und datengetriebene Features initiiert und geleitet, darunter eine auf Verkaufsdaten basierende Cross-Selling-Engine, ein Relevanzmodell für Produktlisten und eine PIM-Datenmigration, die gezielt auch für die Nutzung durch KI konzipiert wurde.',
+      },
+      {
+        question: 'Kann eine Website mit einem KI-gestützten Multi-Agenten-Workflow gepflegt werden?',
+        answer:
+          'Ja. Die Pflege einer Website lässt sich als Schleife spezialisierter KI-Agenten betreiben — Content, UX und SEO/AEO —, die jeweils gezielte Änderungen vorschlagen, während ein Mensch als Orchestrator priorisiert und freigibt, bevor etwas live geht. Ich habe diese Website so gebaut und betreibe sie so; die Case Study zum Bau dieser Website erklärt den gesamten Workflow.',
+      },
+      {
+        question: 'Was ist Answer Engine Optimization (AEO), und wie baut man dafür?',
+        answer:
+          'AEO bedeutet, eine Website so zu strukturieren, dass KI-Antwortmaschinen wie ChatGPT, Perplexity und Google AI Overviews sie zitieren können — über strukturierte schema.org-Daten, einen llms.txt-Endpunkt für KI-Crawler und frageorientierte FAQ-Inhalte, die direkt antworten. Es baut auf klassischem SEO auf, und diese gesamte Website ist darauf ausgelegt, sowohl gerankt als auch zitiert zu werden.',
       },
     ] satisfies FaqItem[],
     langSwitch: { label: 'EN', full: 'English' },
