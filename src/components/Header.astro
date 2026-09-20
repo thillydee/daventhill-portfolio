@@ -29,6 +29,7 @@ const otherLocale: Locale = locale === 'en' ? 'de' : 'en';
 const switchLabel = strings.langSwitch.label;
 const switchHref = localizedPaths[otherLocale];
 const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wechseln';
+const webdesignHref = locale === 'de' ? '/de/webdesign' : '/webdesign';
 ---
 
 <header class="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
@@ -52,6 +53,12 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
           class="text-sm font-medium text-ink-soft hover:text-ink"
         >
           {strings.nav.downloadCv}
+        </a>
+        <a
+          href={webdesignHref}
+          class="border-l border-border pl-4 text-xs text-muted hover:text-ink"
+        >
+          {strings.nav.webdesign}
         </a>
         <a
           href={switchHref}
@@ -102,6 +109,9 @@ const switchAriaLabel = locale === 'en' ? 'Switch to German' : 'Auf Englisch wec
         class="w-full py-2 text-sm font-medium text-ink-soft hover:text-ink"
       >
         {strings.nav.downloadCv}
+      </a>
+      <a href={webdesignHref} class="w-full py-2 text-sm text-muted hover:text-ink">
+        {strings.nav.webdesign}
       </a>
       <a href={switchHref} class="w-full py-2 text-sm font-medium text-ink-soft hover:text-ink">
         {switchLabel} — {strings.langSwitch.full}

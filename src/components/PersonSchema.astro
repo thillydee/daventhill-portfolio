@@ -23,17 +23,30 @@ export interface CreativeWorkInput {
   datePublished: Date;
 }
 
+export interface ServiceOfferInput {
+  name: string;
+  price: string;
+}
+
+export interface ServiceInput {
+  name: string;
+  description: string;
+  areaServed: string;
+  offers?: ServiceOfferInput[];
+}
+
 export interface Props {
   locale: Locale;
   breadcrumbs?: Breadcrumb[];
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
   creativeWork?: CreativeWorkInput;
+  service?: ServiceInput;
   publishDate?: Date;
   asProfilePage?: boolean;
 }
 
-const { locale, breadcrumbs, faq, definedTerm, creativeWork, publishDate, asProfilePage } =
+const { locale, breadcrumbs, faq, definedTerm, creativeWork, service, publishDate, asProfilePage } =
   Astro.props;
 const profile = getProfile(locale);
 const { person, experience } = profile;
@@ -106,6 +119,31 @@ if (creativeWork) {
     inLanguage: htmlLang(locale),
     author: { '@id': personNode['@id'] },
     datePublished: creativeWork.datePublished.toISOString(),
+  });
+}
+
+if (service) {
+  graph.push({
+    '@type': 'Service',
+    provider: { '@id': personNode['@id'] },
+    areaServed: service.areaServed,
+    serviceType: service.name,
+    name: service.name,
+    description: service.description,
+    ...(service.offers && service.offers.length > 0
+      ? {
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'Pakete',
+            itemListElement: service.offers.map((offer) => ({
+              '@type': 'Offer',
+              name: offer.name,
+              price: offer.price,
+              priceCurrency: 'CHF',
+            })),
+          },
+        }
+      : {}),
   });
 }
 

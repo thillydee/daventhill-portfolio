@@ -7,6 +7,7 @@ import PersonSchema, {
   type FaqItem,
   type DefinedTermInput,
   type CreativeWorkInput,
+  type ServiceInput,
 } from '../components/PersonSchema.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -24,6 +25,7 @@ export interface Props {
   faq?: FaqItem[];
   definedTerm?: DefinedTermInput;
   creativeWork?: CreativeWorkInput;
+  service?: ServiceInput;
   publishDate?: Date;
   asProfilePage?: boolean;
 }
@@ -39,6 +41,7 @@ const {
   faq,
   definedTerm,
   creativeWork,
+  service,
   publishDate,
   asProfilePage,
 } = Astro.props;
@@ -66,6 +69,7 @@ const strings = t(locale);
       faq={faq}
       definedTerm={definedTerm}
       creativeWork={creativeWork}
+      service={service}
       publishDate={publishDate}
       asProfilePage={asProfilePage}
     />

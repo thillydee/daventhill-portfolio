@@ -1,0 +1,336 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildLocalizedPaths, type Locale } from '../i18n';
+import { getWebDesign } from '../data/webdesign';
+
+export interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const content = getWebDesign(locale);
+const localizedPaths = buildLocalizedPaths('/webdesign');
+const homePath = locale === 'de' ? '/de/' : '/';
+const caseStudyHref =
+  locale === 'de' ? '/de/case-studies/building-this-site' : '/case-studies/building-this-site';
+
+const breadcrumbs = [
+  { name: content.breadcrumb.home, path: homePath },
+  { name: content.breadcrumb.self, path: localizedPaths[locale] },
+];
+
+const service = {
+  name: content.service.name,
+  description: content.service.description,
+  areaServed: content.service.areaServed,
+  offers: [
+    { name: content.workshop.name, price: content.workshop.priceSchema },
+    ...content.packages.map((pkg) => ({ name: pkg.name, price: pkg.priceSchema })),
+    { name: content.selfBuild.name, price: content.selfBuild.priceSchema },
+    { name: content.handover.name, price: content.handover.priceSchema },
+  ],
+};
+---
+
+<BaseLayout
+  title={content.meta.title}
+  description={content.meta.description}
+  path={localizedPaths[locale]}
+  ogImageSlug={locale === 'de' ? 'de/webdesign' : 'webdesign'}
+  locale={locale}
+  localizedPaths={localizedPaths}
+  breadcrumbs={breadcrumbs}
+  faq={content.faq.items}
+  service={service}
+>
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+    <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      {content.hero.headline}
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">{content.hero.sub}</p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="#kontakt"
+        class="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
+      >
+        {content.hero.ctaPrimary}
+      </a>
+      <a
+        href="#angebot"
+        class="inline-flex items-center justify-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+      >
+        {content.hero.ctaSecondary}
+      </a>
+    </div>
+  </section>
+
+  <section id="philosophie" class="scroll-mt-24 border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <h2 class="max-w-3xl text-2xl font-bold text-ink sm:text-3xl">{content.philosophy.heading}</h2>
+      {content.philosophy.body.map((para) => (
+        <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">{para}</p>
+      ))}
+      <p class="mt-6 max-w-3xl text-base leading-relaxed text-ink-soft">
+        {content.proof.text}{' '}
+        <a href={caseStudyHref} class="font-semibold text-brand hover:text-brand-dark">
+          {content.proof.linkLabel} &rarr;
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section id="angebot" class="scroll-mt-24 mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.offer.eyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.offer.heading}</h2>
+    <p class="mt-4 max-w-2xl text-base text-muted">{content.offer.intro}</p>
+
+    <div class="mt-8 rounded-xl border border-dashed border-border bg-surface-alt p-6">
+      <h3 class="text-lg font-semibold text-ink">{content.freeCheck.title}</h3>
+      <p class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.freeCheck.text}</p>
+      <a href="#kontakt" class="mt-4 inline-block text-sm font-semibold text-brand hover:text-brand-dark">
+        {content.freeCheck.cta} &rarr;
+      </a>
+    </div>
+
+    <div class="mt-6 rounded-xl border border-border bg-surface p-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="text-lg font-semibold text-ink">{content.workshop.name}</h3>
+        <p class="text-lg font-bold text-ink">{content.workshop.price}</p>
+      </div>
+      <p class="mt-1 text-sm font-medium text-brand">{content.workshop.tagline}</p>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.workshop.intro}</p>
+      <ul class="mt-4 space-y-2">
+        {content.workshop.items.map((item) => (
+          <li class="flex gap-3 text-sm text-ink-soft">
+            <span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-6 grid gap-6 sm:grid-cols-3">
+      {content.packages.map((pkg) => (
+        <div class="flex flex-col rounded-xl border border-border bg-surface p-6">
+          <h3 class="text-lg font-semibold text-ink">{pkg.name}</h3>
+          <p class="mt-1 text-2xl font-bold text-ink">{pkg.price}</p>
+          <p class="mt-1 text-sm font-medium text-brand">{pkg.tagline}</p>
+          <p class="mt-3 text-sm leading-relaxed text-ink-soft">{pkg.intro}</p>
+          <ul class="mt-4 space-y-2">
+            {pkg.items.map((item) => (
+              <li class="flex gap-3 text-sm text-ink-soft">
+                <span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="mt-4 text-xs font-semibold uppercase tracking-wide text-muted">{pkg.duration}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-6 rounded-xl border border-border bg-surface p-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="text-lg font-semibold text-ink">{content.selfBuild.name}</h3>
+        <p class="text-lg font-bold text-ink">{content.selfBuild.price}</p>
+      </div>
+      <p class="mt-1 text-sm font-medium text-brand">{content.selfBuild.tagline}</p>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.selfBuild.intro}</p>
+      <ul class="mt-4 space-y-2">
+        {content.selfBuild.items.map((item) => (
+          <li class="flex gap-3 text-sm text-ink-soft">
+            <span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-brand"></span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-6 rounded-xl border border-border bg-surface-alt p-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="text-lg font-semibold text-ink">{content.care.name}</h3>
+        <p class="text-base font-semibold text-ink">{content.care.price}</p>
+      </div>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.care.intro}</p>
+    </div>
+
+    <div class="mt-6 rounded-xl border border-border bg-surface-alt p-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="text-lg font-semibold text-ink">{content.handover.name}</h3>
+        <p class="text-base font-semibold text-ink">{content.handover.price}</p>
+      </div>
+      <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{content.handover.intro}</p>
+    </div>
+
+    <p class="mt-6 max-w-3xl text-sm leading-relaxed text-muted">
+      <strong class="text-ink-soft">{content.larger.label}:</strong> {content.larger.text}
+    </p>
+
+    <ul class="mt-4 space-y-1 text-sm text-muted">
+      {content.addons.items.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section id="referenz" class="scroll-mt-24 border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.reference.eyebrow}</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.reference.heading}</h2>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-ink-soft">{content.reference.body}</p>
+      <a
+        href="https://ava-beauty.ch"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 inline-flex items-center justify-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+      >
+        {content.reference.cta}
+      </a>
+    </div>
+  </section>
+
+  <section id="ablauf" class="scroll-mt-24 mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.ablauf.eyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.ablauf.heading}</h2>
+    <ol class="mt-8 space-y-6">
+      {content.ablauf.steps.map((step, index) => (
+        <li class="flex gap-4">
+          <span class="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand text-sm font-semibold text-white">
+            {index + 1}
+          </span>
+          <div>
+            <h3 class="text-base font-semibold text-ink">{step.title}</h3>
+            <p class="mt-1 text-sm leading-relaxed text-ink-soft">{step.text}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="faq" class="scroll-mt-24 border-t border-border bg-surface-alt">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.faq.eyebrow}</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.faq.heading}</h2>
+      <dl class="mt-8 space-y-6">
+        {content.faq.items.map((item) => (
+          <div>
+            <dt class="text-base font-semibold text-ink">{item.question}</dt>
+            <dd class="mt-2 max-w-3xl text-sm leading-relaxed text-ink-soft">{item.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section id="kontakt" class="scroll-mt-24 mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-brand">{content.contact.eyebrow}</p>
+    <h2 class="mt-2 text-2xl font-bold text-ink sm:text-3xl">{content.contact.heading}</h2>
+    <p class="mt-4 max-w-2xl text-base text-muted">{content.contact.intro}</p>
+
+    <form id="webdesign-contact-form" class="mt-8 max-w-xl" novalidate>
+      <div class="grid gap-5">
+        <div>
+          <label for="wd-name" class="text-sm font-semibold text-ink">{content.contact.form.name}</label>
+          <input
+            type="text"
+            id="wd-name"
+            name="name"
+            required
+            class="mt-1.5 w-full rounded-md border border-border bg-surface px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
+          />
+        </div>
+        <div>
+          <label for="wd-email" class="text-sm font-semibold text-ink">{content.contact.form.email}</label>
+          <input
+            type="email"
+            id="wd-email"
+            name="email"
+            required
+            class="mt-1.5 w-full rounded-md border border-border bg-surface px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
+          />
+        </div>
+        <div>
+          <label for="wd-company" class="text-sm font-semibold text-ink">
+            {content.contact.form.business} <span class="font-normal text-muted">{content.contact.form.optional}</span>
+          </label>
+          <input
+            type="text"
+            id="wd-company"
+            name="company"
+            placeholder={content.contact.form.businessPlaceholder}
+            class="mt-1.5 w-full rounded-md border border-border bg-surface px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
+          />
+        </div>
+        <div>
+          <label for="wd-message" class="text-sm font-semibold text-ink">{content.contact.form.message}</label>
+          <textarea
+            id="wd-message"
+            name="message"
+            rows="5"
+            required
+            class="mt-1.5 w-full rounded-md border border-border bg-surface px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
+          ></textarea>
+        </div>
+        <input type="hidden" name="source" value="webdesign" />
+        <div class="hidden" aria-hidden="true">
+          <label for="wd-website">Website</label>
+          <input type="text" id="wd-website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+        <button
+          type="submit"
+          class="inline-flex w-fit items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          {content.contact.form.submit}
+        </button>
+        <p
+          id="wd-form-status"
+          class="text-sm"
+          role="status"
+          aria-live="polite"
+          data-sending={content.contact.status.sending}
+          data-success={content.contact.status.success}
+          data-error={content.contact.status.error}
+        ></p>
+      </div>
+    </form>
+  </section>
+</BaseLayout>
+
+<script>
+  import { track } from '@vercel/analytics';
+
+  const form = document.getElementById('webdesign-contact-form') as HTMLFormElement;
+  const status = document.getElementById('wd-form-status') as HTMLParagraphElement;
+  const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    submitButton.disabled = true;
+    status.textContent = status.dataset.sending ?? '';
+    status.className = 'text-sm text-muted';
+
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
+      form.reset();
+      status.textContent = status.dataset.success ?? '';
+      status.className = 'text-sm text-green-700';
+      track('webdesign_contact_form_submit', { locale: document.documentElement.lang });
+    } catch (error) {
+      status.textContent = status.dataset.error ?? '';
+      status.className = 'text-sm text-red-700';
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+</script>

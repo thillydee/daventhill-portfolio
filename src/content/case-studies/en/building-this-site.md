@@ -178,3 +178,7 @@ Nothing reaches production without a human decision gate. For a site tied direct
 ## What this proves
 
 This case study isn't a description of a past project — it's a live one. The architecture, the process, and the AI-assisted workflow described above are the ones that produced the page you're reading. If you want to see product ownership in action rather than take my word for it, this is it.
+
+## Building this for someone else
+
+This site is my own, but the same product approach, architecture, and AI-assisted workflow are what I bring to websites I build for local businesses in Basel. If you run one, that's a service I offer on the side — [here's how it works](/webdesign).
